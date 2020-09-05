@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Journey to paradise</title>
+  
+  <subtitle>涂涂の博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://sunburnedxx.github.io/"/>
+  <updated>2020-09-05T10:25:12.116Z</updated>
+  <id>https://sunburnedxx.github.io/</id>
+  
+  <author>
+    <name>涂爽</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://sunburnedxx.github.io/2020/09/05/hello-world/"/>
+    <id>https://sunburnedxx.github.io/2020/09/05/hello-world/</id>
+    <published>2020-09-05T10:25:12.012Z</published>
+    <updated>2020-09-05T10:25:12.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html基础</title>
+    <link href="https://sunburnedxx.github.io/2020/06/16/html-ji-chu-zhi-shi/"/>
+    <id>https://sunburnedxx.github.io/2020/06/16/html-ji-chu-zhi-shi/</id>
+    <published>2020-06-16T07:19:51.000Z</published>
+    <updated>2020-09-05T10:25:12.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;预备知识&quot;&gt;&lt;a href=&quot;#预备知识&quot; class=&quot;headerlink&quot; title=&quot;预备知识&quot;&gt;&lt;/a&gt;预备知识&lt;/h3&gt;&lt;p&gt;web学习推荐网站:&lt;br&gt;W3C: &lt;a href=&quot;http://www.w3school.com.cn/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="html" scheme="https://sunburnedxx.github.io/categories/html/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学生信息管理系统</title>
+    <link href="https://sunburnedxx.github.io/2020/04/18/xue-sheng-xin-xi-guan-li-xi-tong/"/>
+    <id>https://sunburnedxx.github.io/2020/04/18/xue-sheng-xin-xi-guan-li-xi-tong/</id>
+    <published>2020-04-17T16:00:00.000Z</published>
+    <updated>2020-09-05T10:25:12.061Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="c语言" scheme="https://sunburnedxx.github.io/categories/c%E8%AF%AD%E8%A8%80/"/>
+    
+    
+  </entry>
+  
+</feed>
