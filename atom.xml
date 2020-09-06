@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-09-06T15:39:34.060Z</updated>
+  <updated>2020-09-06T16:17:45.596Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>ubuntu18.4.5的安装及界面调整</title>
-    <link href="https://sunburnedxx.github.io/2020/09/06/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/"/>
-    <id>https://sunburnedxx.github.io/2020/09/06/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/</id>
-    <published>2020-09-06T13:47:01.842Z</published>
-    <updated>2020-09-06T15:39:34.060Z</updated>
+    <link href="https://sunburnedxx.github.io/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/"/>
+    <id>https://sunburnedxx.github.io/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/</id>
+    <published>2020-09-07T03:42:33.000Z</published>
+    <updated>2020-09-06T16:17:45.596Z</updated>
     
     <summary type="html">
     
@@ -37,6 +37,8 @@
     
     </summary>
     
+    
+      <category term="软件安装" scheme="https://sunburnedxx.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
     
     
   </entry>
