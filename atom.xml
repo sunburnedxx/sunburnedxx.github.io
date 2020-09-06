@@ -44,6 +44,33 @@
   </entry>
   
   <entry>
+    <title>安装SQLServer并在Ubuntu上创建数据库</title>
+    <link href="https://sunburnedxx.github.io/2020/09/07/an-zhuang-sqlserver-bing-zai-ubuntu-shang-chuang-jian-shu-ju-ku/"/>
+    <id>https://sunburnedxx.github.io/2020/09/07/an-zhuang-sqlserver-bing-zai-ubuntu-shang-chuang-jian-shu-ju-ku/</id>
+    <published>2020-09-06T16:21:54.485Z</published>
+    <updated>2020-09-06T16:27:39.494Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://sunburnedxx.github.io/2020/09/05/hello-world/"/>
     <id>https://sunburnedxx.github.io/2020/09/05/hello-world/</id>
