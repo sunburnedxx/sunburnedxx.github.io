@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>ubuntu18.4.5的安装及界面调整</title>
+      <link href="/2020/09/06/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/"/>
+      <url>/2020/09/06/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/</url>
+      
+        <content type="html"><![CDATA[    <div>        <h3><a href="https://download3.vmware.com/software/wkst/file/VMware-workstation-full-15.5.6-16341506.exe?HashKey=c860d72678491886bc69f379961beb4d&amp;ext=.exe&amp;params=%7B%22custnumber%22%3A%22ZGpqdCVlamhAaA%3D%3D%22%2C%22sourcefilesize%22%3A%22552.35+MB%22%2C%22dlgcode%22%3A%22WKST-1556-WIN%22%2C%22languagecode%22%3A%22cn%22%2C%22source%22%3A%22DOWNLOADS%22%2C%22downloadtype%22%3A%22manual%22%2C%22eula%22%3A%22Y%22%2C%22downloaduuid%22%3A%228ebe8c53-68a0-4d00-a417-7105234ba563%22%2C%22purchased%22%3A%22N%22%2C%22dlgtype%22%3A%22Product+Binaries%22%2C%22productversion%22%3A%2215.5.6%22%2C%22productfamily%22%3A%22VMware+Workstation+Pro%22%7D&amp;AuthKey=1599151641_45991b11069be19e8d4dc2551350588c&amp;ext=.exe">1.下载VMware</a>        </h3>        <p>这里下载的是Vmware Workstation 15 pro(15.6版本)，官网下载很慢，就直接给下载链接了</p>        <h3> <a href="http://releases.ubuntu.com/18.04.5/ubuntu-18.04.5-desktop-amd64.iso            ">2.下载ubuntu-18.04.5-desktop-amd64</a></h3>        <p> </p><h3>3.剩下安装教程的请看<a href="https://blog.csdn.net/wangzijun_1996/article/details/80163507" target="_blank" rel="noopener">这篇</a></h3><p></p>        (自己安装的时候忘截屏了，无法以本人的例子写安装教程，阿巴阿巴阿巴~)        <p>我在安装中出现了一个问题:<strong>此主机支持 Intel VT-x，但 Intel VT-x 处于禁用状态</strong> ！！！</p>        解决方法请看<a href="https://www.cnblogs.com/tangbomao/p/6649051.html" target="_blank" rel="noopener">这篇</a> <br>        <h3>4.ubuntu界面调整</h3>         <p> 安装完后发现在VMware全屏时，Ubuntu桌面在VMware中并不能全屏显示，而是只占屏幕的一小部分 <br>        需要将界面调整一下，请参考 <a href="https://www.cnblogs.com/chenbocheng/p/10839332.html" target="_blank" rel="noopener">这篇</a>的第四部分 <br></p>        <p><strong>至此ubuntu的安装及界面调整就做好啦~~</strong></p>     </div><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/09/05/hello-world/"/>
       <url>/2020/09/05/hello-world/</url>
