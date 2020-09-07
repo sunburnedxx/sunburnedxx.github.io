@@ -29,9 +29,12 @@
       
         
         
-          
-    &lt;div&gt;
-        &lt;h3&gt;&lt;a
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
         
       
     
@@ -48,7 +51,7 @@
     <link href="https://sunburnedxx.github.io/2020/09/07/an-zhuang-sqlserver-bing-zai-ubuntu-shang-chuang-jian-shu-ju-ku/"/>
     <id>https://sunburnedxx.github.io/2020/09/07/an-zhuang-sqlserver-bing-zai-ubuntu-shang-chuang-jian-shu-ju-ku/</id>
     <published>2020-09-06T16:21:54.485Z</published>
-    <updated>2020-09-06T16:30:20.011Z</updated>
+    <updated>2020-09-07T05:23:06.663Z</updated>
     
     <summary type="html">
     
@@ -56,8 +59,11 @@
       
         
         
-          
-    &lt;a href=&quot;https://docs.microsoft.com/zh-cn/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15&quot; target=&quot;_blank&quot;
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
         
       
     
@@ -125,18 +131,6 @@
     <updated>2020-09-05T10:25:12.061Z</updated>
     
     <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
     
     </summary>
     
