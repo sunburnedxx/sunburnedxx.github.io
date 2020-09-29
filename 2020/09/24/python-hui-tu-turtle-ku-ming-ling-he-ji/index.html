@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="安装SQLServer并在Ubuntu上创建数据库, Journey to paradise">
+    <meta name="keywords" content="Python绘图turtle库命令合集, Journey to paradise">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -35,7 +35,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>安装SQLServer并在Ubuntu上创建数据库 | Journey to paradise</title>
+    <title>Python绘图turtle库命令合集 | Journey to paradise</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">安装SQLServer并在Ubuntu上创建数据库</h1>
+                    <h1 class="description center-align post-title">Python绘图turtle库命令合集</h1>
                 </div>
             </div>
         </div>
@@ -464,8 +464,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-category">
-                                软件安装
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -477,7 +477,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-07
+                    2020-09-24
                 </div>
                 
 
@@ -486,7 +486,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    81
+                    692
                 </div>
                 
 
@@ -505,9 +505,104 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 
-    <p>首先需要安装一台ubuntu虚拟机，详情请见<a href="https://icecream-tu.cn/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/" target="_blank" rel="noopener">此篇
-    </a></p>
-    <a href="https://docs.microsoft.com/zh-cn/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15" target="_blank" rel="noopener"><h2>安装SQLServer并在Ubuntu上创建数据库</h2></a>
+    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
+    <div>
+        <h3>turtle绘图的基础认识</h3>
+        <h1>1.画布（canvas）</h1>
+        <p>
+            画布是我们绘图所在的区域，我们可以改变他的初始位置和大小 <br>
+        </p><h4>1.设置画布的大小</h4>
+        turtle.screensize(canvwidth= , canvheight= , bg='' ) <br>
+        参数分别为画布的宽(默认值400px), 高(默认值300px), 背景颜色（颜色的英文单词 eg:'red'）。
+        <h4>2.设置画布的位置</h4>
+        turtle.setup(width=0.5, height=0.75, startx= , starty= ) <br>
+        参数分别为画布的宽，高（输入值为整数时表示具体像素，输入值为小数时表示画布窗口占电脑屏幕的比例），
+        (startx,starty)表示窗口左上顶点的坐标（默认值时，画布窗口在屏幕中心）
+<h1>2.画笔</h1>
+画笔呢就是小乌龟，它一开始默认是在坐标原点的，朝向x轴正方向
+<h4>画笔的属性设置</h4>
+<p>
+</p><ul>
+    <li>turtle.pensize():设置画笔的宽度也就是画线的粗细，单位为px</li>
+    <li>turtle.pencolor():设置画笔的颜色，传入参数可以是代表颜色的字符串也可以是rgb值，如果没有参数传入则返回当前画笔颜色</li>
+    <li>turtle.speed():设置画笔移动的速度，范围为[0,10]整数，数字越大移动越快</li>
+</ul>
+<p></p>
+<h3>绘图命令</h3>
+<p>
+    turtle绘图命令分为三种：运动命令，画笔控制命令和全局控制命令。
+</p><h4 textalign="center">画笔运动命令</h4>
+<ta>setheading(angle)</ta><ta>设置当前朝向为angle度</ta><table cellpadding="0" ,cellspacing="0">
+    <tbody><tr>
+        <td>命令</td>
+        <td>说明</td>
+    </tr>
+    <tr>
+        <td>turtle.forward(distance)</td>
+        <td>向当前画笔方向移动distance像素长度</td>
+    </tr>
+    <tr>
+        <td>turtle.backward(distance)</td>
+        <td>向当前画笔相反方向移动distance像素长度</td>
+    </tr>
+    <tr>
+        <td>turtle.right(degree)</td>
+        <td>顺时针移动degree°</td>
+    </tr>
+    <tr>
+        <td>turtle.left(degree)</td>
+        <td>逆时针移动degree°</td>
+    </tr>
+    <tr>
+        <td>turtle.pendown()</td>
+        <td>落笔，绘制图形</td>
+    </tr>
+    <tr>
+        <td>turtle.penup()</td>
+        <td>提笔，不绘制图型，一般用于转到另一个地方绘制</td>
+    </tr>
+    <tr>
+        <td>
+            turtle.goto(x,y)
+        </td>
+        <td>将画笔移动到位置（x,y）</td>
+    </tr>
+    <tr>
+        <td>turtle.circle(radius, extent=None, steps=None)</td>
+        <td>
+            <ul>
+            <li> radius(半径)：半径为正(负)，表示圆心在画笔的左边(右边)画圆</li>
+             <li> extent(弧度) (optional)
+                </li>
+             <li>steps (optional) :做半径为radius的圆的内切正多边形，多边形边数为steps</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>setx()</td>
+        <td>将当前x轴移动到指定位置</td>
+    </tr>
+    <tr>
+        <td>sety()</td>
+        <td>将当前y轴移动到指定位置</td>
+    </tr>
+    <tr>
+        
+        
+    </tr>
+    <tr>
+        <td>home()</td>
+        <td>设置当前画笔位置为原点，朝向x轴正方向</td>
+    </tr>
+    <tr>
+        <td>dot(r)</td>
+        <td>绘制一个指定直径和颜色的圆点</td>
+    </tr>
+</tbody></table>
+<p></p>
+</div>
+
+
 
 <script>
         document.querySelectorAll('.github-emoji')
@@ -552,7 +647,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunburnedxx.github.io/2020/09/07/an-zhuang-sqlserver-bing-zai-ubuntu-shang-chuang-jian-shu-ju-ku/">https://sunburnedxx.github.io/2020/09/07/an-zhuang-sqlserver-bing-zai-ubuntu-shang-chuang-jian-shu-ju-ku/</a>
+                    <a href="https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/">https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1018,46 +1113,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/">
+                <a href="/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="ubuntu18.4.5的安装及界面调整">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Python绘图turtle库命令合集">
                         
-                        <span class="card-title">ubuntu18.4.5的安装及界面调整</span>
+                        <span class="card-title">Python绘图turtle库命令合集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
+    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
     
-        1.下载VMware
-        
-        这里下载的是Vmware Workstation 15 pro(15.6版本)，官网下载很慢，就直接给下载链接了
-         2.下载ubuntu-1
+        turtl
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-category">
-                                    软件安装
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1068,29 +1163,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/05/hello-world/">
+                <a href="/2020/09/24/shai-fa-qiu-su-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="筛法求素数">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">筛法求素数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            什么意思？ 将规定范围内的数从大到小依次排列，从2开始依次筛去该数的倍数，因为素数的倍数一定不是素数，筛完后剩下的数即为素数。 eg:求1~100范围的素数，先去掉2的倍数，再去掉3的倍数，再去掉5的倍数…….,直到最后一个数，剩下的就是素
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            涂爽
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    C
+                                </a>
+                            
                             
                         </span>
                     </div>

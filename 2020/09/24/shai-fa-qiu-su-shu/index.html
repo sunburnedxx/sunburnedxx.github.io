@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="学生信息管理系统, Journey to paradise">
+    <meta name="keywords" content="筛法求素数, Journey to paradise">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -35,7 +35,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>学生信息管理系统 | Journey to paradise</title>
+    <title>筛法求素数 | Journey to paradise</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -48,8 +48,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -331,7 +331,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">学生信息管理系统</h1>
+                    <h1 class="description center-align post-title">筛法求素数</h1>
                 </div>
             </div>
         </div>
@@ -464,8 +464,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/c%E8%AF%AD%E8%A8%80/" class="post-category">
-                                c语言
+                            <a href="/categories/C/" class="post-category">
+                                C
                             </a>
                         
                     </div>
@@ -477,7 +477,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-18
+                    2020-09-24
                 </div>
                 
 
@@ -486,7 +486,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    941
                 </div>
                 
 
@@ -504,7 +504,82 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="什么意思？"><a href="#什么意思？" class="headerlink" title="什么意思？"></a>什么意思？</h3><p> 将规定范围内的数从大到小依次排列，从2开始依次筛去该数的倍数，因为<strong>素数的倍数一定不是素数</strong>，筛完后剩下的数即为素数。<br> eg:求1~100范围的素数，先去掉2的倍数，再去掉3的倍数，再去掉5的倍数…….,直到最后一个数，剩下的就是素数。</p>
+<h3 id="如何编程实现？"><a href="#如何编程实现？" class="headerlink" title="如何编程实现？"></a>如何编程实现？</h3><p> 根据初始数据是从大到小依次排列的整数，可考虑设一个数组，数组下标代表需判断的数，数组的值代表该数是否为素数，<br> 若为素数则数组项赋值为1，否则为0。用循环赋值下标为合数的数组项为0筛去合数，输出值为1的数组项的下标，即为所求素数。</p>
+<h3 id="可否优化？"><a href="#可否优化？" class="headerlink" title="可否优化？"></a>可否优化？</h3><p> 可。某些数被重复判断筛选，降低运行效率。<br> eg：30=2<em>15=3</em>10=5*6，30作为2、3、5、6、15的倍数会被重复筛去。</p>
+<h3 id="怎样优化？"><a href="#怎样优化？" class="headerlink" title="怎样优化？"></a>怎样优化？</h3><p>  <strong><em>线性筛法</em></strong>：让每一个合数被它最小的质因数筛到。由于<strong>每个合数最小的质因数是唯一的，由不同的最小质因数筛到的合数也不同</strong>，这样就不会重复筛到同一个合数。<br></p>
+<p>  演示：eg 求1~12之间的素数<br>   2 3 4 5 6 7 8 9 10 11 12<br>         primes：()</p>
+<p>   从头到尾遍历，第一个数是2，未被划掉，把它放进质数表：<br>    <strong>2</strong> 3 4 5 6 7 8 9 10 11 12<br>         primes：(2，)</p>
+<p>   用2去乘质数表里的每个数，划掉它们：<br>   <strong>2</strong> 3 <del>4</del> 5 6 7 8 9 10 11 12</p>
+<p>   下一个是3，加入质数表，划掉6、9：<br>   <strong>2</strong> <strong>3</strong> <del>4</del> 5 <del>6</del> 7 8 <del>9</del> 10 11 12<br>         primes:(2,3,)</p>
+<p>   下一个是4（注意这里划掉的数也要遍历，只是不加入质数表），先划掉8，但我们不划掉12，因为12 (12=2<em>6=3</em>4) 应该由它的最小质因数2筛掉，而不是3。<br>   <strong>2</strong> <strong>3</strong> <del>4</del> 5 <del>6</del> 7 <del>8</del> <del>9</del> 10 11 12<br>         primes:(2,3,)</p>
+<p>   下一个是5，加入质数表，划掉10：<br>   <strong>2</strong> <strong>3</strong> <del>4</del> 5 <del>6</del> 7 <del>8</del> <del>9</del> <del>10</del> 11 12<br>         primes:(2,3,5)<br>   ……..<br><br>   <strong>规律：对于一个数k，筛去k乘以primes数表里的数（从第一个开始）得到的合数，直到k可以整除primes中的某个数</strong></p>
+<p>   按这样的步骤进行下去，可以筛掉所有的合数，并得到一张质数表。</p>
+<h3 id="代码（普通筛）："><a href="#代码（普通筛）：" class="headerlink" title="代码（普通筛）："></a>代码（普通筛）：</h3><pre><code>#include &lt;stdio.h&gt;
+#define MAX 100
+int main(void)
+{
+int i, j;
+int isPrime[MAX + 1];
+for (i = 2; i &lt; MAX + 1; i++)    //将所有数组项赋值为1，所有数默认为素数
+isPrime[i] = 1;
+
+for (j = 2; j * j &lt; MAX; j++)    //将下标为合数的数组项赋值0，筛去合数
+　　for (i = j; i &lt; MAX + 1; i++)
+　　　　if (!(i % j))
+　　　　　　isPrime[i] = 0;
+
+for (i = 2; i &lt; MAX + 1; i++)   //输出值为1的数组项下标，即为素数
+ 　　 if (isPrime[i] == 1)
+ 　　　　 printf("%d ", i);
+
+return 0;
+}</code></pre><h3 id="优化后（线性筛）："><a href="#优化后（线性筛）：" class="headerlink" title="优化后（线性筛）："></a>优化后（线性筛）：</h3><pre><code>#include &lt;stdio.h&gt;
+#define MAX 100
+int main(void)
+{
+  int i, j, count = 0;
+  int isPrime[MAX + 1], primes[MAX + 1]={0};
+  for (i = 0; i &lt; MAX + 1; i++) //将所有isPrime数组项赋值为1，默认所有数均为素数
+    isPrime[i] = 1;
+  for (i = 2; i &lt; MAX + 1;i++) 
+     {
+
+       if(isPrime[i])        //将确认的素数存入primes数组
+         primes[count++] = i;
+       for (j = 0; j &lt;= count &amp;&amp; primes[j] * i &lt;= MAX;j++)   //用线性筛法筛去合数
+         {
+           isPrime[i * primes[j]] = 0;
+           if(i%primes[j]==0)
+             break;
+         }
+     }
+     for (i = 0; i &lt;count;i++)             //输出数组primes，即输出所求的所有素数
+       printf("%d ", primes[i]);
+
+       return 0;
+}</code></pre><blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/124068032" target="_blank" rel="noopener" style="font-size: small;text-decoration: none;color: black;">线性（欧拉)筛原理论证参考</a></p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -529,7 +604,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunburnedxx.github.io/2020/04/18/xue-sheng-xin-xi-guan-li-xi-tong/">https://sunburnedxx.github.io/2020/04/18/xue-sheng-xin-xi-guan-li-xi-tong/</a>
+                    <a href="https://sunburnedxx.github.io/2020/09/24/shai-fa-qiu-su-shu/">https://sunburnedxx.github.io/2020/09/24/shai-fa-qiu-su-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -999,32 +1074,34 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/16/html-ji-chu-zhi-shi/">
+                <a href="/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="html基础">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Python绘图turtle库命令合集">
                         
-                        <span class="card-title">html基础</span>
+                        <span class="card-title">Python绘图turtle库命令合集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            预备知识web学习推荐网站:W3C: http://www.w3school.com.cn/MDN: https://developer.mozilla.org/zh-CN/
-网页是由网页元素组成的 ， 这些元素是利用html标签描述出来，
+                            
+    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
+    
+        turtl
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/html/" class="post-category">
-                                    html
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -1038,41 +1115,45 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/18/xue-sheng-xin-xi-guan-li-xi-tong/">
+                <a href="/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="学生信息管理系统">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="ubuntu18.4.5的安装及界面调整">
                         
-                        <span class="card-title">学生信息管理系统</span>
+                        <span class="card-title">ubuntu18.4.5的安装及界面调整</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
+    
+        1.下载VMware
+        
+        这里下载的是Vmware Workstation 15 pro(15.6版本)，官网下载很慢，就直接给下载链接了
+         2.下载ubuntu-1
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/c%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    c语言
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-category">
+                                    软件安装
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1305,7 +1386,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.5k</span>&nbsp;字
+                class="white-color">5.2k</span>&nbsp;字
             
             
             
