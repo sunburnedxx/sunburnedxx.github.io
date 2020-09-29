@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-09-24T15:29:34.305Z</updated>
+  <updated>2020-09-29T16:33:29.623Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/"/>
     <id>https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/</id>
     <published>2020-09-24T10:11:05.324Z</published>
-    <updated>2020-09-24T15:29:34.305Z</updated>
+    <updated>2020-09-29T16:33:29.623Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,10 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh-CN&quot;&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;strong&gt;turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形&lt;strong&gt;
+            &lt;div&gt;
+   
         
       
     
