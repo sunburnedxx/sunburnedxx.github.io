@@ -613,12 +613,10 @@
                     <tr>
                         <td>turtle.color(color1, color2)</td>
                         <td>同时设置pencolor=color1, fillcolor=color2</td>
-
                     </tr>
                     <tr>
                         <td> turtle.filling()</td>
                         <td>返回当前是否在填充状态</td>
-
                     </tr>
                     <tr>
                         <td>turtle.begin_fill()</td>
@@ -720,69 +718,67 @@
                 </tbody></table>
                 <h5>eg:</h5>
                 <h5>turtle画国旗</h5>
-                    <textarea name="画国旗" id="" cols="30" rows="60">                        #画国旗红色方形背景
-                        import turtle
-                        turtle.goto(-120,120)
-                        turtle.color("red","red")
-                        
-                        turtle.begin_fill()
-                        turtle.forward(480)
-                        turtle.right(90)
-                        turtle.forward(320)
-                        turtle.right(90)
-                        turtle.forward(480)
-                        turtle.right(90)
-                        turtle.forward(320)
-                        turtle.end_fill()
-                        #画大五角星
-                        turtle.right(90)
-                        turtle.goto(-72,24)
-                        turtle.color("yellow","yellow")
-                        turtle.begin_fill()
-                        for _ in range(5):
-                            turtle.forward(84)
-                            turtle.right(144)
-                        turtle.end_fill()
-                        #画五个小五角星
-                        turtle.penup()
-                        turtle.goto(20,90)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        for _ in range(5):
-                            turtle.forward(35)
-                            turtle.right(144)
-                        turtle.end_fill()
-                        
-                        turtle.penup()
-                        turtle.goto(70,56)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        for _ in range(5):
-                            turtle.forward(35)
-                            turtle.right(144)
-                        turtle.end_fill()
-                        
-                        turtle.penup()
-                        turtle.goto(70,-8)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        for _ in range(5):
-                            turtle.forward(35)
-                            turtle.right(144)
-                        turtle.end_fill()
-                        
-                        turtle.penup()
-                        turtle.goto(20,-40)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        for _ in range(5):
-                            turtle.forward(35)
-                            turtle.right(144)
-                        turtle.end_fill()
-                    </textarea>   
-                        
-                <img src="../images/flag.jpg" alt="国旗">
-            </div>
+
+<pre><code>#画国旗红色方形背景
+import turtle
+turtle.goto(-120,120)
+turtle.color("red","red")
+
+turtle.begin_fill()
+turtle.forward(480)
+turtle.right(90)
+turtle.forward(320)
+turtle.right(90)
+turtle.forward(480)
+turtle.right(90)
+turtle.forward(320)
+turtle.end_fill()
+#画大五角星
+turtle.right(90)
+turtle.goto(-72,24)
+turtle.color("yellow","yellow")
+turtle.begin_fill()
+for _ in range(5):
+    turtle.forward(84)
+    turtle.right(144)
+turtle.end_fill()
+#画五个小五角星
+turtle.penup()
+turtle.goto(20,90)
+turtle.pendown()
+turtle.begin_fill()
+for _ in range(5):
+    turtle.forward(35)
+    turtle.right(144)
+turtle.end_fill()
+
+turtle.penup()
+turtle.goto(70,56)
+turtle.pendown()
+turtle.begin_fill()
+for _ in range(5):
+    turtle.forward(35)
+    turtle.right(144)
+turtle.end_fill()
+
+turtle.penup()
+turtle.goto(70,-8)
+turtle.pendown()
+turtle.begin_fill()
+for _ in range(5):
+    turtle.forward(35)
+    turtle.right(144)
+turtle.end_fill()
+
+turtle.penup()
+turtle.goto(20,-40)
+turtle.pendown()
+turtle.begin_fill()
+for _ in range(5):
+    turtle.forward(35)
+    turtle.right(144)
+turtle.end_fill()  </code></pre><p>&lt;img src=”../images/flag.jpg” alt=”国旗”,title=”国旗”&gt;</p>
+</div>
 
 
 
