@@ -29,10 +29,12 @@
       
         
         
-          
-    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
-    &lt;div&gt;
-       
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
         
       
     
@@ -82,9 +84,12 @@
       
         
         
-          
-    &lt;div&gt;
-        &lt;h3&gt;&lt;a
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
         
       
     
@@ -109,8 +114,11 @@
       
         
         
-          
-    &lt;p&gt;首先需要安装一台ubuntu虚拟机，详情请见&lt;a href=&quot;https://icecream-tu.cn/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/&quot; target=&quot;_blank&quot;
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
         
       
     

@@ -486,7 +486,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    692
+                    648
                 </div>
                 
 
@@ -504,14 +504,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python绘图turtle库命令合集</title>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body>
     turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
     <div>
         <h3>turtle绘图的基础认识</h3>
         <h1>1.画布（canvas）</h1>
         <p>
             画布是我们绘图所在的区域，我们可以改变他的初始位置和大小 <br>
-        </p><h4>1.设置画布的大小</h4>
+        <h4>1.设置画布的大小</h4>
         turtle.screensize(canvwidth= , canvheight= , bg='' ) <br>
         参数分别为画布的宽(默认值400px), 高(默认值300px), 背景颜色（颜色的英文单词 eg:'red'）。
         <h4>2.设置画布的位置</h4>
@@ -522,18 +532,18 @@
 画笔呢就是小乌龟，它一开始默认是在坐标原点的，朝向x轴正方向
 <h4>画笔的属性设置</h4>
 <p>
-</p><ul>
+<ul>
     <li>turtle.pensize():设置画笔的宽度也就是画线的粗细，单位为px</li>
     <li>turtle.pencolor():设置画笔的颜色，传入参数可以是代表颜色的字符串也可以是rgb值，如果没有参数传入则返回当前画笔颜色</li>
     <li>turtle.speed():设置画笔移动的速度，范围为[0,10]整数，数字越大移动越快</li>
 </ul>
-<p></p>
+</p>
 <h3>绘图命令</h3>
 <p>
     turtle绘图命令分为三种：运动命令，画笔控制命令和全局控制命令。
-</p><h4 textalign="center">画笔运动命令</h4>
-<ta>setheading(angle)</ta><ta>设置当前朝向为angle度</ta><table cellpadding="0" ,cellspacing="0">
-    <tbody><tr>
+<h4 textalign='center'>画笔运动命令</h4>
+<table cellpadding='0' ,cellspacing='0'>
+    <tr>
         <td>命令</td>
         <td>说明</td>
     </tr>
@@ -587,8 +597,8 @@
         <td>将当前y轴移动到指定位置</td>
     </tr>
     <tr>
-        
-        
+        <ta>setheading(angle)</ta>
+        <ta>设置当前朝向为angle度</ta>
     </tr>
     <tr>
         <td>home()</td>
@@ -598,31 +608,13 @@
         <td>dot(r)</td>
         <td>绘制一个指定直径和颜色的圆点</td>
     </tr>
-</tbody></table>
-<p></p>
+</table>
+</p>
 </div>
 
+</body>
 
-
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+</html>
             </div>
             <hr/>
 
@@ -1131,9 +1123,17 @@
                     <div class="summary block-with-text">
                         
                             
-    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
+
+
+
     
-        turtl
+    
+    Python绘图turtle库命令合集
+
+
+
+
+    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为
                         
                     </div>
                     <div class="publish-info">
@@ -1426,7 +1426,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.2k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
