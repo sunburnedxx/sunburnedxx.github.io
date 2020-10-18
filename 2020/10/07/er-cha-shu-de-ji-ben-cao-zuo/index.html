@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Journey to paradise">
+    <meta name="keywords" content="二叉树的基本操作, Journey to paradise">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -35,7 +35,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Journey to paradise</title>
+    <title>二叉树的基本操作 | Journey to paradise</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">二叉树的基本操作</h1>
                 </div>
             </div>
         </div>
@@ -454,12 +454,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                <span class="chip bg-color">二叉树</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                数据结构
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -468,7 +481,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-05
+                    2020-10-07
                 </div>
                 
 
@@ -477,7 +490,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    78
+                    339
                 </div>
                 
 
@@ -495,8 +508,47 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title: 404<br>date: 2020-04-11 13:57:10<br>type: “404”<br>layout: “404”<br>description: “Oops～，我崩溃了！找不到你想要的页面 :(“</p>
-<script>
+                
+    二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作
+    首先是包含头文件及一些准备工作
+        #include <iostream>
+        #include <fstream>
+        #include <algorithm>
+        #include <vector>
+
+<pre><code>    using namespace std;
+    typedef int T;
+
+    typedef
+    struct BiNode
+    {
+        T data;
+        BiNode *lch;                // 指向左孩子，即左子树的根指针
+        BiNode *rch;
+    } *BiTree;
+
+    ifstream fin("BitreeData.txt"); // 文件输入流,从文件BitreeData.txt读取数据建立二叉树
+
+&lt;h3&gt;构建二叉树&lt;/h3&gt;
+    /*建立二叉树,若输入&lt;=0则建立空树,返回树根指针*/
+    BiTree  Create()
+    {
+        T e;
+        fin &gt;&gt; e;        // 从文件(流)中输入一个元素值
+        if( e&lt;=0 )
+            return 0;    // 返回空树
+
+        BiTree t = new BiNode; // 生成根结点
+        t-&gt;data = e;
+
+        t-&gt;lch = Create();  // 递归建立t的左子树t-&gt;lch
+        t-&gt;rch = Create();  // 递归建立t的右子树t-&gt;rch
+
+        return t;
+    }
+&lt;h3&gt;遍历&lt;/h3&gt;
+二叉树的遍历有三种:先序遍历（根 左子树 右子树），中序遍历（ 左子树 根  右子树） ，后续遍历（ 左子树 右子树 根）。先中后的顺序是按根节点的遍历顺序规定的</code></pre>
+</vector></algorithm></fstream></iostream><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -539,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunburnedxx.github.io/404.html">https://sunburnedxx.github.io/404.html</a>
+                    <a href="https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/">https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,7 +628,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                    <span class="chip bg-color">二叉树</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1010,36 +1066,51 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/404.html">
+                <a href="/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="二叉树的基本操作">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">二叉树的基本操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            title: 404date: 2020-04-11 13:57:10type: “404”layout: “404”description: “Oops～，我崩溃了！找不到你想要的页面 :(“
-
-        document.quer
+                            
+    二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作
+    首先是包含头文件及一些准备工作
+        #include 
+        #include 
+        #include 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-07
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            涂爽
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                    数据结构
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1047,39 +1118,51 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/404.html">
+                <a href="/2020/10/03/er-fen-fa-cha-zhao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="二分法查找">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">二分法查找</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            title: 404date: 2020-04-11 13:57:10type: “404”layout: “404”description: “Oops～，我崩溃了！找不到你想要的页面 :(“
-
-        document.quer
+                            
+    二分法查找
+    思路：
+    将一些数升序地放在数组中（这里为了方便查找用数组存放数据（下标为零的不用）），确定查找范围，初始时查找范围为整个数组，下标1设为左端点left，数组最后一个元素的下标设为右端点right，中间端
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-03
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            涂爽
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/">
+                        <span class="chip bg-color">二分法</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

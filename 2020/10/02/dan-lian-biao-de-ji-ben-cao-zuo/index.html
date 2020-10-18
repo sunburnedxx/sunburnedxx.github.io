@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Journey to paradise">
+    <meta name="keywords" content="单向链表的基本操作, Journey to paradise">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -35,7 +35,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Journey to paradise</title>
+    <title>单向链表的基本操作 | Journey to paradise</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">单向链表的基本操作</h1>
                 </div>
             </div>
         </div>
@@ -454,12 +454,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/">
+                                <span class="chip bg-color">单链表</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                数据结构
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -468,7 +481,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-05
+                    2020-10-02
                 </div>
                 
 
@@ -477,7 +490,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    78
+                    3.1k
                 </div>
                 
 
@@ -495,7 +508,546 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title: 404<br>date: 2020-04-11 13:57:10<br>type: “404”<br>layout: “404”<br>description: “Oops～，我崩溃了！找不到你想要的页面 :(“</p>
+                
+    <h2>单向链表的基本操作</h2>
+    <p>链表呢是一种十分基础的数据结构类型，分为单向链表，双向链表以及循环链表，今天我们就来讲讲单向链表的基本操作。<br>
+    <img src="https://pics3.baidu.com/feed/f11f3a292df5e0fe42a2ef293382cfac5fdf7243.jpeg?token=04aa0dea143c72e0b99d72c5e5b66f82&amp;s=38867C32CD227D225AD995D30000C0B1" alt="数据结构"> 
+</p>
+<p></p> <h3>什么是单向链表</h3> 
+首先我们来看看什么是链表 <br>
+ 链表是一种储存结构，包含数据域和指针域，一个数据域配一个指针域构成一个结点，数据域存放数据，指针域存放指针也就是地址，通过将下一个结点（后继结点）的地址存放在上一个结点（前驱结点）的指针域中将四处分散的结点连接起来，也就将分散的储存空间连接起来
+ <img src="https://pics3.baidu.com/feed/f11f3a292df5e0fe42a2ef293382cfac5fdf7243.jpeg?token=04aa0dea143c72e0b99d72c5e5b66f82&amp;s=38867C32CD227D225AD995D30000C0B1" alt="链表图示"> 
+<br>
+<br>
+ <h2>单向链表的优缺点</h2>
+  从上述描述我们可以看出，链表<strong>优点</strong>在于它的储存空间不用连续，因为它可以通过指针将各处分散的储存空间连接起来，而且链表的长度可以改变，是一种动态分配内存的模式，十分方便在任意位置添加删除结点。<strong>缺点</strong>在于不能随机访问结点,需要从头开始顺次一个结点一个结点的查找（单向链表），而数组就可以通过下标值直接找到需要的值<p></p>
+ <h2>单向链表的基本操作（增,删,改,查）</h2>
+ 首先呢开始准备工作，引用头文件，定义类型...
+
+<pre><code>#include&lt;stdio.h&gt;             
+#include&lt;stdlib.h&gt;
+#define N 5                  //链表的长度（链表的位置从1开始） 
+#define X 1                  //待删除结点的起始位置
+#define Y 3                  //待删除结点的末位置 
+typedef struct node{
+    int data;
+    struct node* next;
+}node,* List;
+
+List L1,L2;</code></pre><h3>创建链表并赋值</h3>
+        <strong> 此处链表的头指针数据域不存放数据</strong>
+
+<pre><code>List CreateLinearList(List L1)       //创建单向链表并向链表中写入值 
+{
+    int i,count;
+    node *q;
+
+    L1=(List)malloc(sizeof(node));
+    L1-&gt;next=0;
+    q=L1;
+
+    printf("Enter the number of your elements in the list:\n");
+    scanf("%d",&amp;count);
+    printf("Enter %d elements for your linear list:\n",count);
+
+    for(i=0;i&lt;count;i++)                         
+    {
+        node* p=(node*)malloc(sizeof(node));  //p是创建的新结点，往链表后面插，q指向链表的尾结点 
+        scanf("%d",&amp;p-&gt;data);
+        p-&gt;next=0;
+        q-&gt;next=p;
+        q=p;
+    }
+    q-&gt;next=0;
+
+    return L1;    
+}</code></pre> <h3>插入结点</h3>
+  <br>
+<img src="https://bkimg.cdn.bcebos.com/pic/b3b7d0a20cf431adcfd51bc44a36acaf2fdd98c3?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg" alt="链表插入结点图解">
+<br>
+<br>
+<h4>头插法</h4>
+    void InsertByHead(List L)
+    {
+        node* p=(node*)malloc(sizeof(node))        //创建新结点 
+
+<pre><code>    printf("Enter the element to insert by head:\n");
+    scanf("%d",&amp;p-&gt;data);                                 //输入要插的数并存放在新结点的数据域 
+
+    p-&gt;next=L-&gt;next;                                     //将新结点插入链表头部 
+    L-&gt;next=p; 
+}</code></pre><h4>尾插法</h4>
+    void InsertByTail(List L1) 
+    {
+        node *p,*q;                        //p从头遍历找到链表的尾结点，q是要插入的新结点 
+        p=L1;
+        q=(node*)malloc(sizeof(node)) ;
+        printf("Enter an element to insert to the tail:\n");
+        scanf("%d",&amp;q-&gt;data);
+        q-&gt;next=0;
+
+<pre><code>    while(p-&gt;next)
+      {
+        p=p-&gt;next;
+      }
+    p-&gt;next=q;
+}</code></pre><h4>指定位置插</h4>
+
+<pre><code>void InsertByPosition(List L)             //向链表指定位置插值 
+{
+    int position,i;                       //position记录插值的位置 
+    node *q,*p=(node*)malloc(sizeof(node));      //q遍历链表找到待插位置的前一个结点，p存放待插的值 
+    q=L;
+
+    printf("Enter the position and value to be inserted:\n");
+    scanf("%d%d",&amp;position,&amp;p-&gt;data);
+
+    if(position&lt;=0)                        //位置不能为负值 
+    {
+        printf("Invalid Position!\n");
+        exit(-1);
+    }
+    for(i=1;i&lt;position;i++)
+    {
+        q=q-&gt;next;                       
+        if(q==0)                       //位置超过链表的最后一位的后一位 
+        {
+            printf("Invalid position!\n");
+            exit(-1);
+        }
+    }
+
+    p-&gt;next=q-&gt;next;
+    q-&gt;next=p;
+}</code></pre><h4>顺序表按顺序插</h4>
+
+<pre><code>void InsertSorted(List L) //有序表按顺序插值
+{
+    T e;
+    printf("Enter an element to be inserted:\n");
+    scanf("%d",&amp;e);
+    node* p=(node*)malloc(sizeof(node));
+    node* q=L-&gt;next;
+    p-&gt;data=e;
+    p-&gt;next=0;
+
+    while(q-&gt;next&amp;&amp;q-&gt;next-&gt;data&lt;e)
+    {
+        q=q-&gt;next;
+    }
+    p-&gt;next=q-&gt;next;
+    q-&gt;next=p;
+} </code></pre><h4>删除结点</h4>
+<br>
+<h4>按位置删除一个结点</h4>
+
+<pre><code>void DeleteElementByPosition(List L)
+{
+    int i,position;
+    node *d,*p=L;               
+    printf("Enter the position of value to be deleted:\n");
+    scanf("%d",&amp;position);
+    if(position&lt;=0)
+    {
+        printf("Invalid position!\n");    // 查询位值小于零，不合法，退出 
+        exit(-1);
+    } 
+        for(i=1;i&lt;position;i++)
+        {
+            p=p-&gt;next;     //p记录待删结点的前一个结点 
+            if(p-&gt;next==0)
+            {
+                printf("Invalid position!\n")
+                exit(-1);       //查询位置超过链表最后一个位置，不合法，退出 
+            } 
+        }
+
+        d=p-&gt;next;              //d记录待删结点
+        p-&gt;next=p-&gt;next-&gt;next;   
+
+        free(d);                 //释放待删结点 
+}</code></pre><h4>按值删除一个结点，只删第一个</h4>
+
+<pre><code>bool DeleteElement(List L)
+{
+    int e;
+    node *p=L,*q;
+    printf("Enter the value to be deleted:\n");
+    scanf("%d",&amp;e);
+
+    while(p-&gt;next!=0&amp;&amp;p-&gt;next-&gt;data!=e)
+    {
+        p=p-&gt;next;
+    }
+
+    if(p-&gt;next!=0)                   //若p-&gt;next!=0说明未遍历到链表最后一个结点 ，找到e 
+    {
+        q=p-&gt;next;                   //q指向待删值所在结点
+        p-&gt;next=q-&gt;next;
+        free(q);
+
+        return true;
+    }
+
+    else
+    {
+        printf("There are no such value in the list!\n");
+
+        return false;
+    }
+} </code></pre><h4>按值删除结点，全删</h4>
+
+<pre><code>void DeleteElements(List L)
+{
+    //反复调用函数DeleteElement（），直到返回值为false，即链表中已经没有待删值 
+    while(DeleteElement(L)) 
+    ;
+}</code></pre><h4>按值删除结点，只留一个</h4>
+
+<pre><code>void DeleteUnique(List L)
+{
+    int e;
+    node *p=L-&gt;next,*q;
+    printf("Enter the value to be deleted:\n");
+    scanf("%d",&amp;e);
+
+    while(p!=0&amp;&amp;p-&gt;data!=e)
+    {
+        p=p-&gt;next;
+    }
+    if(p!=0)  //若p-&gt;next!=0说明未遍历到链表最后一个结点 ，找到e ，p指向第一个e所在的结点 
+    {                          
+        DeleteElements(p);  //保留第一个e,调用DeleteElements（p），删除其他的e 
+    }
+    else
+    {
+        printf("There is no such value in the list!\n");
+    }
+} </code></pre><h4>删去链表中最大值</h4>
+
+<pre><code>void InsertMaxToListHead(List L1)           //将链表的最大值移到头部 
+{
+    node *max=L1-&gt;next,*p=L1,*q;
+
+    while(p-&gt;next)                                
+    {
+        if(p-&gt;next-&gt;data &gt; max-&gt;data)
+        {
+            max=p-&gt;next;
+            q=p;
+        }
+        p=p-&gt;next;
+    }    
+    q-&gt;next=max-&gt;next;
+    max-&gt;next=L1-&gt;next;
+    L1-&gt;next=max;
+}
+
+void DeleteMaxOfList(List L1)           // 删除链表中最大元素 
+{
+    node *max;
+
+    InsertMaxToListHead(L1);            //调用InsertMaxToListHead()函数将最大值移到头部 
+    max=L1-&gt;next;
+    L1-&gt;next=max-&gt;next;                 //删去结点L1-&gt;next即最大值结点 
+    free(max);
+}</code></pre><h4>更改结点的值（在删除结点程序上稍作更改即可</h4>
+
+<h4>1.通过位置更改</h4>
+<h4>2.通过值更改</h4>
+<h4>打印链表</h4>
+
+<pre><code>void PrintList(List L)           //打印链表 
+{
+    int i;
+    node *p=L-&gt;next,*q=L;
+    while(p)                     //通过循环打印链表结点的值
+    {
+        printf("%d ",p-&gt;data);
+        p=p-&gt;next;
+        if(p==L-&gt;next)           //如果是遍历循环链表，p往后遍历到表头处结束 
+        {
+            break;
+        }
+    }
+    printf("\n");
+}</code></pre><h4>其他操作:</h4>
+ <br>
+<h4>求表长</h4>
+
+<pre><code>int Len(List L)
+{
+    node *q=L;
+    int count;
+    for(count=0;q-&gt;next!=0;q=q-&gt;next,count++);
+
+    return count;     
+}</code></pre><h4>链表转置</h4>
+
+<pre><code>void Reverse(List L)        //将链表转置 
+{
+    int i;
+    node *tail,*p;           //tail指向链表的尾结点，p指向尾结点的前一个结点
+
+    for(i=1;i&lt;Len(L);i++)    //每次都从链表头开始，找到链表尾结点 
+    {
+        tail=L-&gt;next;
+        p=L;
+    while(tail-&gt;next)         //遍历链表找到尾结点 
+        {
+            tail=tail-&gt;next;
+            p=p-&gt;next;
+        } 
+
+            p-&gt;next=0;         //头插法将链表的尾结点插到链表头部 
+            tail-&gt;next=L-&gt;next;
+            L-&gt;next=tail;
+    } 
+
+}</code></pre><h4>链表排序（升序）</h4>
+<strong>冒泡法排序：</strong>
+
+<pre><code>void OrderListByAscending(List L1)      // 5.将链表按升序排序 
+{
+    int i;
+    node* p=L1;
+
+    for(i=1;i&lt;N;i++)
+    {
+        InsertMaxToListHead(p);             //多次调用InsertToMaxHead()将p链表的最大值移到p链表的头部 
+        p=p-&gt;next;                          //p往后移直至移到L1链表的最后一个结点 
+    }
+}</code></pre><h4>链表相并</h4>
+
+<pre><code>void Add(List1,List2)     //两有序链表相并(并到链表L1上) 
+{
+
+    node *p=L1-&gt;next,*q=L2-&gt;next,*tail=L1;  
+    //p遍历L1的结点，q遍历L2的结点，tail指向合并链表的尾结点
+
+    while(p&amp;&amp;q)                //当遍历到某链表的尾结点时，循环结束 
+    {
+        if(p-&gt;data &lt; q-&gt;data)  //tail指向p-&gt;data,q-&gt;data中较小的结点 
+        {
+            tail-&gt;next=p;
+            tail=p;
+            p=p-&gt;next;        
+        }
+
+        else if(p-&gt;data &gt; q-&gt;data)
+        {
+            tail-&gt;next=q;
+            tail=q;
+            q=q-&gt;next;
+
+        }
+        else
+        {
+            tail-&gt;next=q;
+            tail=q;
+            q=q-&gt;next;
+            p=p-&gt;next;
+
+        }
+    }
+
+    tail-&gt;next=(q==0?p:q);      //tail-&gt;next指向未遍历完的链表结点  
+} </code></pre><p><strong>上述有关链表操作的main函数根据需要写</strong><br>  <br><br>  <br></p>
+<h4>一个有趣的实例：多项式相加</h4>
+
+<p>思路类似于有序链表的合并<br><br><br><br><strong>完整代码如下</strong></p>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+typedef struct node{
+    int fac;         //多项式项的系数部分 
+    int e;           //多项式项的指数部分 
+    struct node* next; 
+}node,* Poly;
+
+void AddPoly(Poly P1,Poly P2) //两升序序多项式相加 
+{
+    node *p=P1-&gt;next,*q=P2-&gt;next,*tail=P1;  
+    //p遍历L1的结点，q遍历L2的结点，tail指向合并链表的尾结点
+
+    while(p&amp;&amp;q)          //当遍历到某链表的尾结点时，循环结束 
+    {
+        if(p-&gt;e &lt; q-&gt;e)  //tail指向系数较小的结点 
+        {
+            tail-&gt;next=p;
+            tail=p;
+            p=p-&gt;next;        
+        }
+
+        else if(p-&gt;e &gt; q-&gt;e)
+        {
+            tail-&gt;next=q;
+            tail=q;
+            q=q-&gt;next;
+
+        }
+        else                    //相同指数项系数相加 
+        {
+            p-&gt;fac=p-&gt;fac+q-&gt;fac; 
+            tail-&gt;next=p;
+            tail=p;
+            p=p-&gt;next;
+            q=q-&gt;next;
+
+        }
+    }
+
+    tail-&gt;next=(q==0?p:q);      //tail-&gt;next指向未遍历完的链表结点  
+ } 
+
+ Poly CreatePoly(Poly P)
+ {
+     int count,i;
+     P=(node*)malloc(sizeof(node));
+     P-&gt;next=0;                                //头结点数据域不存放数据 
+    node *m=P;
+
+    printf("Enter the number of your node:\n");
+    scanf("%d",&amp;count);
+
+    printf("Enter coefficients and index:\n"); //输入多项式的系数和指数部分 
+    for(i=0;i&lt;count;i++)
+    {
+        node *q=(node*)malloc(sizeof(node));     
+        scanf("%d%d",&amp;q-&gt;fac,&amp;q-&gt;e);           //输入项的系数和指数
+        q-&gt;next=0;
+
+        m-&gt;next=q;                             //m记录待插的位置(链尾)，q是待插的结点 
+        m=q;
+     } 
+
+     return P;
+ }
+
+ void PrintPoly(Poly P)
+ {
+    int i;
+    node *m=P-&gt;next;
+
+    while(m)        
+    {
+        printf("%dx^%d + ",m-&gt;fac,m-&gt;e);
+        m=m-&gt;next;
+    }
+    printf("\n");
+
+ }
+ int main(Void)
+ {
+     Poly P1,P2;
+     P1=CreatePoly(P1);
+     printf("P1=");
+     PrintPoly(P1);
+     P2=CreatePoly(P2);
+     printf("P2=");
+     PrintPoly(P2);
+     AddPoly(P1,P2);
+     printf("P1+P2="); 
+     PrintPoly(P1);
+
+     return 0;    
+ }</code></pre><p>运行结果无误。</p>
+<h4>链表操作的递归实现</h4>
+事实上尾递归都可以用循环实现，而递归算法十分占内存，所以上述链表中需要遍历的各种操作是没有必要用递归实现的，这里我们只做一点了解 <br> 
+<strong>代码如下（链表的头结点数据域不为空）：</strong>
+
+<pre><code>#include&lt;iostream&gt;
+#include&lt;stdio.h&gt;
+using namespace std;
+
+typedef int T;
+
+typedef struct node{
+    T data;
+    node * next;
+}node,*List;
+
+void Create(List &amp;h) //将链表分为两部分：头结点和头结点后面部分
+{                    //而头结点后面部分又可以分为同样的两部分，依次类推  
+    T e;
+    cin&gt;&gt;e;
+    if(e&lt;=0)
+    {
+        h=0;        //输入负数为结束标志 
+        return;
+    }
+
+    h=new node;
+    h-&gt;data=e;
+
+    Create(h-&gt;next);    //递归创建头结点后面的链表 
+}
+
+//此方式不是尾递归，可以不用查找链表的尾结点来遍历倒序输出链表，是一个很好的倒序输出的方法
+void ReverseTraverse(List h)     //将链表倒序输出
+{                         //若递归到尾结点的next则递归结束 
+    if(0==h)
+    {
+        return;
+    }
+    ReverseTraverse(h-&gt;next);  //过程为:先输出头结点后面部分的链表，再输出头结点
+
+    cout&lt;&lt;h-&gt;data&lt;&lt;" ";  //而头结点后面部分的链表又可以分为头结点和头结点后部分的链表,输出顺序如上一步骤
+} 
+
+void Traverse(List h)   //将链表正序输出 
+{
+    if(0==h)             //若递归到链表尾结点的后面，则返回 
+    {
+        return;
+    }
+
+    cout&lt;&lt;h-&gt;data&lt;&lt;" ";  //过程为:先输出头结点,再输出头结点后面部分的链表
+    Traverse(h-&gt;next);   //而头结点后面部分的链表又可以分为头结点和头结点后部分的链表,输出顺序如上一步骤
+
+}
+
+int Len(List &amp;h)
+{
+    if(0==h)
+    {
+        return 0;           //链表为空时结束递归，返回值 
+    }
+    return Len(h-&gt;next)+1;  // 链表的长度为头结点后面部分构成链表的长度加1（头结点） 
+}
+
+node* Locate(List h,T e)   //查找 
+{
+    if(0==h)                //递归到链表的尾结点，没找到待查值，返回地址为空 
+    {
+        return 0;
+    } 
+    if(h-&gt;data==0)          //找到待查值，返回该值的位置 
+    {
+        return h;
+    }
+
+    return Locate(h-&gt;next,e);  //查找分为两部分：头结点和头结点后面部分的链表，依次类推 
+} 
+
+void Destroy(List h)       //删除链表 
+{
+    if(0==h)                 //尾结点递归完毕，返回 
+    {
+        return;
+    }
+    Destroy(h-&gt;next);        //删除分为两部分：删除头结点和头结点后面部分的链表 
+    delete h;
+} 
+
+int main(void)
+{
+    List h=0;
+    Create(h);
+    ReverseTraverse(h);
+    cout &lt;&lt;endl;
+
+return 0;
+} </code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -539,7 +1091,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunburnedxx.github.io/404.html">https://sunburnedxx.github.io/404.html</a>
+                    <a href="https://sunburnedxx.github.io/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/">https://sunburnedxx.github.io/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,7 +1128,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/">
+                                    <span class="chip bg-color">单链表</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1005,41 +1561,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/404.html">
+                <a href="/2020/10/03/er-fen-fa-cha-zhao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="二分法查找">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">二分法查找</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            title: 404date: 2020-04-11 13:57:10type: “404”layout: “404”description: “Oops～，我崩溃了！找不到你想要的页面 :(“
-
-        document.quer
+                            
+    二分法查找
+    思路：
+    将一些数升序地放在数组中（这里为了方便查找用数组存放数据（下标为零的不用）），确定查找范围，初始时查找范围为整个数组，下标1设为左端点left，数组最后一个元素的下标设为右端点right，中间端
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-03
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            涂爽
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/">
+                        <span class="chip bg-color">二分法</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1047,39 +1614,51 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/404.html">
+                <a href="/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Python绘图turtle库命令合集">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Python绘图turtle库命令合集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            title: 404date: 2020-04-11 13:57:10type: “404”layout: “404”description: “Oops～，我崩溃了！找不到你想要的页面 :(“
-
-        document.quer
+                            
+    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
+            
+     
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            涂爽
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/turtle/">
+                        <span class="chip bg-color">turtle</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
