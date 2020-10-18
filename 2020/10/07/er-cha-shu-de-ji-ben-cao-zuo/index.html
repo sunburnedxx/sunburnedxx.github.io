@@ -490,7 +490,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    339
+                    2.2k
                 </div>
                 
 
@@ -509,46 +509,229 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 
-    二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作
+    <h3>二叉树的基础了解</h3>
+    <p>
+        二叉树是n(n&gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
+        由此可以看出二叉树根结点最多有两个子树，且分为左子树和右子树，左右子树顺序不可颠倒<br>
+        如图：<br>
+        <img src="https://upload-images.jianshu.io/upload_images/7043118-797eb7ba417745b2.png?imageMogr2/auto-orient/strip|imageView2/2/w/455" alt="二叉树"><br>
+    </p>
+    <h4>二叉树的基础性质</h4>
+    <ul>
+        <li>在二叉树的第i层上最多有2i-1 个节点 。（i&gt;=1） </li>
+        <li> 二叉树中如果深度为k,那么最多有2k-1个节点。(k&gt;=1）</li>
+        <li> n0=n2+1 n0表示度数为0的节点数，n2表示度数为2的节点数。</li>
+        <li>若对含 n 个结点的完全二叉树从上到下且从左至右进行 1 至 n 的编号，则对编号i:
+            <ul>
+                <li>双亲结点编号：i/2 （i&gt;1），若i=1则无双亲</li>
+                <li>左孩子编号：2i（2i&lt; n&gt; ,若2i&gt;n 则无左孩子</li>
+                <li>右孩子编号：2i+1（2i&lt; n）,若2i+1&gt;n则无右孩子</li>
+            </ul>
+         </li>
+    </ul>
+
+ <h4>满二叉树</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;除了叶节点，其余结点的左支树和右子树不为空的二叉树</p>
+<img src="https://upload-images.jianshu.io/upload_images/7043118-c7a557dda4ffc7da.png?imageMogr2/auto-orient/strip|imageView2/2/w/392" alt="满二叉树">
+
+<h4>完全二叉树</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;对一颗具有n个结点的二叉树按层编号，编号为i(1&lt;=i&lt;=n)的结点与同样深度的满二叉树中编号为i的结点在二叉树中位置完全相同的二叉树。</p>
+<img src="https://upload-images.jianshu.io/upload_images/7043118-132fd0379f34bcc1.png?imageMogr2/auto-orient/strip|imageView2/2/w/404" alt="完全二叉树"> 
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作,主要是递归操作完成功能，因为二叉树的结构十分对称。</p>
     首先是包含头文件及一些准备工作
-        #include <iostream>
-        #include <fstream>
-        #include <algorithm>
-        #include <vector>
 
-<pre><code>    using namespace std;
-    typedef int T;
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
 
-    typedef
-    struct BiNode
+using namespace std;
+typedef int T;
+
+typedef
+struct BiNode
+{
+    T data;
+    BiNode *lch;                // 指向左孩子，即左子树的根指针
+    BiNode *rch;
+} *BiTree;
+
+ifstream fin("BitreeData.txt"); // 文件输入流,从文件BitreeData.txt读取数据建立二叉树</code></pre> <h3>构建二叉树</h3>
+
+<pre><code>/*建立二叉树,若输入&lt;=0则建立空树,返回树根指针*/
+BiTree  Create()
+{
+    T e;
+    fin &gt;&gt; e;        // 从文件(流)中输入一个元素值
+    if( e&lt;=0 )
+        return 0;    // 返回空树
+
+    BiTree t = new BiNode; // 生成根结点
+    t-&gt;data = e;
+
+    t-&gt;lch = Create();  // 递归建立t的左子树t-&gt;lch
+    t-&gt;rch = Create();  // 递归建立t的右子树t-&gt;rch
+
+    return t;
+}</code></pre> <h3>遍历</h3>
+    &nbsp; &nbsp; &nbsp; &nbsp;二叉树的遍历有三种:先序遍历（根 左子树 右子树），中序遍历（ 左子树 根  右子树） ，后续遍历（ 左子树 右子树 根）。先中后的顺序是按根节点的遍历顺序规定的。
+
+<pre><code>/* 中序遍历--- 左子树 根 右子树*/
+
+    void Travse(BiTree t)
     {
-        T data;
-        BiNode *lch;                // 指向左孩子，即左子树的根指针
-        BiNode *rch;
-    } *BiTree;
+        if (0 == t)
+            return;
 
-    ifstream fin("BitreeData.txt"); // 文件输入流,从文件BitreeData.txt读取数据建立二叉树
-
-&lt;h3&gt;构建二叉树&lt;/h3&gt;
-    /*建立二叉树,若输入&lt;=0则建立空树,返回树根指针*/
-    BiTree  Create()
-    {
-        T e;
-        fin &gt;&gt; e;        // 从文件(流)中输入一个元素值
-        if( e&lt;=0 )
-            return 0;    // 返回空树
-
-        BiTree t = new BiNode; // 生成根结点
-        t-&gt;data = e;
-
-        t-&gt;lch = Create();  // 递归建立t的左子树t-&gt;lch
-        t-&gt;rch = Create();  // 递归建立t的右子树t-&gt;rch
-
-        return t;
+        Travse(t-&gt;lch);            // 中序遍历t的左子树
+        cout &lt;&lt; t-&gt;data &lt;&lt; "  ";   //访问根结点
+        Travse(t-&gt;rch);            // 中序遍历t的右子树 
     }
-&lt;h3&gt;遍历&lt;/h3&gt;
-二叉树的遍历有三种:先序遍历（根 左子树 右子树），中序遍历（ 左子树 根  右子树） ，后续遍历（ 左子树 右子树 根）。先中后的顺序是按根节点的遍历顺序规定的</code></pre>
-</vector></algorithm></fstream></iostream><script>
+
+只需调换Travse(t-&gt;lch); cout &lt;&lt; t-&gt;data &lt;&lt; "  ";  Travse(t-&gt;rch); 这三条语句的位置即可实现不同的遍历顺序</code></pre><h3>求树的结点数</h3>
+<h4>1.直接返回t的结点数</h4>
+
+<pre><code>int  countNode(BiTree t)
+{
+    if( 0 == t)  // 空树:0个结点
+        return 0;
+    return countNode(t-&gt;lch) + countNode(t-&gt;rch) +1; // t的结点数等于其左右子树之和+1(根节点)
+}</code></pre><h4>通过遍历求t的结点数</h4>
+
+<pre><code>/*注意n必须保留改变后的值，是引用参数*/
+void TravseCount(BiTree t, int &amp;n)
+{
+    if (0== t)
+        return;
+    ++n;       //根结点计数
+    TravseCount(t-&gt;lch,n);
+    TravseCount(t-&gt;rch,n);
+}</code></pre><h3>求二叉树的叶子数</h3>
+
+<pre><code>int countLeaves(BiTree h)
+{
+    /* 注意有两个递归出口,且顺序不可交换*/
+    if(0 == h)                 //空树返回0 
+        return 0;
+    if( 0 == h-&gt;lch &amp;&amp; 0 == h-&gt;rch )   //只有根结点左右子树为空返回1 
+        return 1;
+
+    return countLeaves(h-&gt;lch) + countLeaves(h-&gt;rch);
+}</code></pre><h3>求二叉树的高度</h3>
+
+<pre><code>int height(BiTree t)
+{
+    if( 0 == t)        //递归出口：空树返回 
+        return 0;
+    //二叉树高度为左右子树中较大高度者加一（根） 
+    return max(height(t-&gt;lch),height(t-&gt;rch))+1;   //max函数包含在头文件&lt;algorithem&gt;中 
+}</code></pre><h3>查找</h3>
+&nbsp; &nbsp; &nbsp; &nbsp;查二叉树t，值为e的结点，查找成功返回其指针，否则返回0指针
+若有重复元素，则返回最左的结点。
+
+<pre><code>BiNode* Locate(BiTree t, T e)
+{
+    if( 0 == t)
+        return 0;
+    if(t-&gt;data == e)        //根找到值返回值对应节点的指针 
+        return t;
+
+    BiNode *p = Locate(t-&gt;lch,e);   //根没找到值，到左子树查找 
+    if(p) 
+        return p;                    //左子树找到值，返回值对应节点的指针 
+    return Locate(t-&gt;rch,e);//左子树没找到值，到右子树查找，若找到返回值对应节点的指针，否则返回0指针 
+}</code></pre><h3>镜像二叉树</h3>
+
+<pre><code>void Mirror(BiTree &amp;t)
+{
+    if(0==t) //空树不用处理
+        return;
+    if(t-&gt;lch==0 &amp;&amp; t-&gt;rch == 0) // 只有根结点，也不用处理
+        return;
+    swap(t-&gt;lch,t-&gt;rch);  // 交换根结点
+    Mirror(t-&gt;lch);       // 左子树镜像
+    Mirror(t-&gt;rch);       // 右子树镜像
+}</code></pre><h3>输出路径</h3>
+&nbsp; &nbsp; &nbsp; &nbsp;输出二叉树中p所指结点到指定值为e的子孙结点的路径，向量vec保存当前路径,此法会将整个二叉树遍历一遍，如果有多个值为e的元素，输出全部路径
+
+<pre><code>void dispPath(vector&lt;BiNode*&gt; vec)  //将结点指针存放在顺序表里，vector是动态存储可任意删添元素，十分方便 
+{
+    for(int i=0; i&lt;vec.size(); ++i)  //输出存放在vec里的结点指向的data，即输出路径 
+    {
+        cout &lt;&lt; vec[i]-&gt;data &lt;&lt;" ";
+    }
+    cout &lt;&lt; "\t\t";
+}
+
+void  FindPath(BiNode* p, T e, vector&lt;BiNode*&gt; vec) // vec不是引用,返回后其状态回溯
+    {
+        if(0 == p)
+            return;
+
+        vec.push_back(p);   // 当前结点追加到向量尾部
+        if( e == p-&gt;data)   // 根找到值，当前结点即为终点，输出路径
+        {
+            dispPath(vec);
+        }
+        FindPath(p-&gt;lch, e, vec);   //根没找到值，p的左子树p-&gt;lch中 找路径
+        FindPath(p-&gt;rch, e, vec);  // p的右子树p-&gt;lch中 找路径
+    }</code></pre><h3>得到二叉树的副本</h3>
+
+<pre><code>/* 复制二叉树t，返回其副本*/
+BiTree copy(BiTree t)
+{
+    if(0==t)
+        return 0;
+
+    BiNode *tt = new BiNode; //复制根结点
+    tt-&gt;data = t-&gt;data;
+
+    tt-&gt;lch = copy(t-&gt;lch); // 复制左子树
+    tt-&gt;rch = copy(t-&gt;rch); // 复制右子树
+
+    return tt;
+}</code></pre><h3>以前序序列和中序序列构造二叉树</h3>
+&nbsp; &nbsp; &nbsp; &nbsp;以前序序列pre[pl...pr]和中序序列mid[ml...mr]构造出二叉树，假定两序列合法。<br>
+<br>
+<h4>思路</h4><h4>
+
+<p>由于前序序列先遍历根结点，故根结点在子树结点的前面，中序序列先遍历左子树结点后遍历根节点最后左子树节点，故根结点在左右子树结点中间。可通过前序序列找根结点，在中序序列找到前序序列找到的根结点，该根节点两边分别是左子树和右子树的结点左右子树结点，由此可以构造出一个二叉树。一个前序遍历和一个中序遍历可以确定一个唯一的二叉树.<br></p>
+<p> eg：已知一颗二叉树的先序序列为EBADCFHG，其中序序列为ABCDEFGH。下图说明了还原二叉树的过程：<br><img src="https://images2018.cnblogs.com/blog/1192257/201807/1192257-20180711200448113-65002712.png" alt="以前序序列和中序序列构造二叉树图解"> <br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;首先由先序序列知道二叉树的根结点为E，在中序序列中找到E，则其左子树的中序序列为ABCD，左子树有四个结点，则在先序序列中根结点E的后面四个结点BADC就是左子树先序序列，以此类推。</p>
+
+<pre><code>/*返回a[l...r]中值为e的下标*/
+int search(T a[],int l, int r,T e)
+{
+    for (int i=l; i&lt;=r; i++)
+        if( a[i] == e)
+            return i;
+
+    return -1;
+}
+
+BiTree   Create(T pre[],int pl,int pr, T mid[], int ml,int mr)
+{
+    BiNode *t;
+    T e;
+    if( pl &gt; pr )  //  序列长度为0，返回空树
+        return 0;
+
+    e = pre[pl];   // 前序序列第一个元素就是根结点
+    t = new BiNode;
+    t-&gt;data = e;
+
+    int k = search(mid,ml,mr,e);  // 在中序序列中 寻找根结点元素的位置
+    int leftLen = k - ml;         // 左子树有leftLen个结点
+    // pre[pl+1...pl+leftLen] 和 mid[ml,k-1]来建立左子树t-&gt;lch
+    t-&gt;lch = Create(pre,pl+1,pl+leftLen, mid, ml,k-1);
+    // 建立右子树t-&gt;rch
+    t-&gt;rch = Create(pre,pl+leftLen+1, pr, mid , k+1,mr);
+
+    return t;
+}</code></pre><p> 续更。。。</p>
+
+</h4><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1079,11 +1262,10 @@
                     <div class="summary block-with-text">
                         
                             
-    二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作
-    首先是包含头文件及一些准备工作
-        #include 
-        #include 
-        #include 
+    二叉树的基础了解
+    
+        二叉树是n(n&gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
+        由此可以看出二叉树根结点
                         
                     </div>
                     <div class="publish-info">
@@ -1395,7 +1577,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.9k</span>&nbsp;字
+                class="white-color">10.7k</span>&nbsp;字
             
             
             

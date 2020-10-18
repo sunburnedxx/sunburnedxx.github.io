@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-10-15T07:22:44.533Z</updated>
+  <updated>2020-10-18T13:25:21.708Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/</id>
     <published>2020-10-07T08:05:14.000Z</published>
-    <updated>2020-10-15T07:22:44.533Z</updated>
+    <updated>2020-10-18T13:25:21.708Z</updated>
     
     <summary type="html">
     
@@ -30,11 +30,10 @@
         
         
           
-    二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作
-    首先是包含头文件及一些准备工作
-        #include &lt;iostream&gt;
-        #include &lt;fstream&gt;
-        #include
+    &lt;h3&gt;二叉树的基础了解&lt;/h3&gt;
+    &lt;p&gt;
+        二叉树是n(n&amp;gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
+       
         
       
     
