@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python绘图turtle库命令合集, Journey to paradise">
+    <meta name="keywords" content="哈夫曼树和哈夫曼编码, Journey to paradise">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -35,7 +35,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python绘图turtle库命令合集 | Journey to paradise</title>
+    <title>哈夫曼树和哈夫曼编码 | Journey to paradise</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python绘图turtle库命令合集</h1>
+                    <h1 class="description center-align post-title">哈夫曼树和哈夫曼编码</h1>
                 </div>
             </div>
         </div>
@@ -456,8 +456,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/turtle/">
-                                <span class="chip bg-color">turtle</span>
+                            <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
+                                <span class="chip bg-color">哈夫曼树</span>
                             </a>
                         
                     </div>
@@ -468,8 +468,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                数据结构
                             </a>
                         
                     </div>
@@ -481,7 +481,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-24
+                    2020-10-20
                 </div>
                 
 
@@ -490,7 +490,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.4k
                 </div>
                 
 
@@ -509,284 +509,161 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 
-    <strong>turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形<strong>
-            <div>
-                <h1>turtle绘图的基础认识</h1>
-                <h3>1.画布（canvas）</h3>
-                <p>
-                    画布是我们绘图所在的区域，我们可以改变他的初始位置和大小 <br>
-                </p><h4>1.设置画布的大小</h4>
-                turtle.screensize(canvwidth= , canvheight= , bg='' ) <br>
-                参数分别为画布的宽(默认值400px), 高(默认值300px), 背景颜色（颜色的英文单词 eg:'red'）。
-                <h4>2.设置画布的位置</h4>
-                turtle.setup(width=0.5, height=0.75, startx= , starty= ) <br>
-                参数分别为画布的宽，高（输入值为整数时表示具体像素，输入值为小数时表示画布窗口占电脑屏幕的比例），
-                (startx,starty)表示窗口左上顶点的坐标（默认值时，画布窗口在屏幕中心）
-                <h3>2.画笔</h3>
-                画笔呢就是小乌龟，它一开始默认是在坐标原点的，朝向x轴正方向
-                <h5>画笔的属性设置</h5>
-                <p>
-                </p><ul>
-                    <li>turtle.pensize():设置画笔的宽度也就是画线的粗细，单位为px</li>
-                    <li>turtle.pencolor():设置画笔的颜色，传入参数可以是代表颜色的字符串也可以是rgb值，如果没有参数传入则返回当前画笔颜色</li>
-                    <li>turtle.speed():设置画笔移动的速度，范围为[0,10]整数，数字越大移动越快</li>
-                </ul>
-                <p></p>
-                <h4>绘图命令</h4>
-                <p>
-                    turtle绘图命令分为三种：运动命令，画笔控制命令和全局控制命令。
-                </p><h5 textalign="center">1.画笔运动命令</h5>
-                <ta>setheading(angle)</ta><ta>设置当前朝向为angle度</ta><table cellpadding="0" ,cellspacing="0">
-                    <tbody><tr>
-                        <td>命令</td>
-                        <td>说明</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.forward(distance)</td>
-                        <td>向当前画笔方向移动distance像素长度</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.backward(distance)</td>
-                        <td>向当前画笔相反方向移动distance像素长度</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.right(degree)</td>
-                        <td>顺时针移动degree°</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.left(degree)</td>
-                        <td>逆时针移动degree°</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.pendown()</td>
-                        <td>落笔，绘制图形</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.penup()</td>
-                        <td>提笔，不绘制图型，一般用于转到另一个地方绘制</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            turtle.goto(x,y)
-                        </td>
-                        <td>将画笔移动到位置（x,y）</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.circle(radius, extent=None, steps=None)</td>
-                        <td>
-                            <ul>
-                                <li> radius(半径)：半径为正(负)，表示圆心在画笔的左边(右边)画圆</li>
-                                <li> extent(弧度) (optional)
-                                </li>
-                                <li>steps (optional) :做半径为radius的圆的内切正多边形，多边形边数为steps</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>setx()</td>
-                        <td>将当前x轴移动到指定位置</td>
-                    </tr>
-                    <tr>
-                        <td>sety()</td>
-                        <td>将当前y轴移动到指定位置</td>
-                    </tr>
-                    <tr>
-                        
-                        
-                    </tr>
-                    <tr>
-                        <td>home()</td>
-                        <td>设置当前画笔位置为原点，朝向x轴正方向</td>
-                    </tr>
-                    <tr>
-                        <td>dot(r)</td>
-                        <td>绘制一个指定直径和颜色的圆点</td>
-                    </tr>
-                </tbody></table>
-                <p></p>
-                <h5>2.画笔控制命令</h5>
-                <table cellpadding="0" ,cellspacing="0">
-                    <tbody><tr>
-                        <td>命令</td>
-                        <td>说明</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.fillcolor(colorstring)</td>
-                        <td>填充图形的颜色</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.color(color1, color2)</td>
-                        <td>同时设置pencolor=color1, fillcolor=color2</td>
-                    </tr>
-                    <tr>
-                        <td> turtle.filling()</td>
-                        <td>返回当前是否在填充状态</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.begin_fill()</td>
-                        <td>开始填充</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.end_fill()</td>
-                        <td>结束填充</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.hideturtle()</td>
-                        <td>隐藏画笔</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.showturtle()</td>
-                        <td>显示画笔</td>
-                    </tr>
-                </tbody></table>
-                <h5>3.全局控制命令</h5>
-                <table>
-                    <tbody><tr>
-                        <td>turtle.clear()</td>
-                        <td>清空turtle窗口，turtle的位置和状态不变</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.reset()</td>
-                        <td>
-                            清空窗口，重置turtle状态为起始状态</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.undo()</td>
-                        <td>撤销上一条命令</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.isvisible()</td>
-                        <td>返回当前turtle是否可见</td>
-                    </tr>
-                    <tr>
-                        <td>stamp()</td>
-                        <td>复制当前图形</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.write(s [,font=("font-name",font_size,"font_type")])</td>
-                        <td>turtle写文本，s为文本内容，font是字体的参数，分别为字体名称，大小和类型；font为可选项，font参数也是可选项</td>
-                    </tr>
-                </tbody></table>
-                <h5>4.其他命令</h5>
-                <table cellpadding="0" ,cellspacing="0">
-                    <tbody><tr>
-                        <td>命令</td>
-                        <td>说明</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.mainloop()或turtle.done()</td>
-                        <td>启动事件循环 -调用Tkinter的mainloop函数。
-                            必须是乌龟图形程序中的最后一个语句。</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.mode(mode=None)</td>
-                        <td>
-                            设置乌龟模式（“standard”，“logo”或“world”）并执行重置。如果没有给出模式，则返回当前模式。
-                            <table cellspacing="0">
-                                <tbody><tr>
-                                    <td>模式</td>
-                                    <td>初始龟标题</td>
-                                    <td>正角度</td>
-                                </tr>
-                                <tr>
-                                    <td>standard</td>
-                                    <td>向右</td>
-                                    <td>逆时针</td>
-                                </tr>
-                                <tr>
-                                    <td>logo</td>
-                                    <td>向上</td>
-                                    <td>顺时针</td>
-                                </tr>
-                            </tbody></table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>turtle.delay(delay= )</td>
-                        <td>
-                            设置以毫秒为单位的绘图延迟</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.begin_poly()</td>
-                        <td>开始记录多边形的顶点。当前的乌龟位置是多边形的第一个顶点</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            turtle.end_poly()</td>
-                        <td>停止记录多边形的顶点。当前的乌龟位置是多边形的最后一个顶点,与第一个顶点相连。</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.get_poly()</td>
-                        <td>返回最后记录的多边形</td>
-                    </tr>
-                </tbody></table>
-                <h5>eg:</h5>
-                <h5>turtle画国旗</h5>
+    <h3>引例</h3>
+为了更好地理解哈夫曼树的用途我们先来看一个引例
+    <img src="../images/HuffmanTree1.jpg" alt=""> <br>
+    <img src="../images/Hu.jpg" alt=""> <br>
+    <img src="../images/HuffmanTree2.jpg" alt=""> <br>
 
-<pre><code>#画国旗红色方形背景
-import turtle
-turtle.goto(-120,120)
-turtle.color("red","red")
+<h3>什么是哈夫曼树？</h3>
+    <p>首先我们来了解一下什么是带权路径长度：从树根结点到任意结点的路径长度（经过的边数）与该结点上权值的乘积，称为该结点的带权路径长度。<br>
+         给定N个权值作为N个叶子结点，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。哈夫曼树并不唯一，但带权路径长度一定是相同的。利用哈夫曼树可以根据结点不同的查找频率来提高搜索效率</p>
+    <h3>怎么构建哈夫曼树？</h3>
+    算法：<br>
+    <ol>
+        <li>将叶子结点按权值从小到大排序构成森林</li>
+        <li>从森林中取出最小的两个结点构成一棵新树，两较小结点作为新树的左右子树，新树的权值为两较小结点权值之和，从森林中删去取出的结点并将构成的新树加入森林中（ <strong>注意：我们需要保证Huffman树的编码是前缀编码，因此它必须是一颗满树，同时只能在叶子节点中存储具体的字符。 </strong> ）</li>
+        <li>重复操作2，直到森林中只剩一棵树，该树即为哈夫曼树</li>
+    </ol>
+    <br>
+图示：<br>
+eg:有结点{10，20，30，40}，以这四个权值构建哈夫曼树的过程如下<br>
+<img src="../images/HuffmanTree3.jpg" alt="构建哈夫曼树图解">
+<br>
+<br>
+<h3>哈夫曼编码</h3>
+<h4>什么是哈夫曼编码？</h4>
+<p>出现频率较高的符号用较短的编码表示，出现频率较低的符号用较长的编码表示。这样就降低了编码之后的字符串长度，达到压缩数据的目的。对于一个已经压缩好的数据文件，我们只需要拥有对应的编码表，则可将其展开。 </p>
+<h3>哈夫曼树的操作</h3>
+<h4>准备工作：</h4>
 
-turtle.begin_fill()
-turtle.forward(480)
-turtle.right(90)
-turtle.forward(320)
-turtle.right(90)
-turtle.forward(480)
-turtle.right(90)
-turtle.forward(320)
-turtle.end_fill()
-#画大五角星
-turtle.right(90)
-turtle.goto(-72,24)
-turtle.color("yellow","yellow")
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(84)
-    turtle.right(144)
-turtle.end_fill()
-#画五个小五角星
-turtle.penup()
-turtle.goto(20,90)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()
+<p>有关c++优先队列(priority_queue)的用法可以看 <a href="https://blog.csdn.net/weixin_36888577/article/details/79937886" target="_blank" rel="noopener">这里</a> </p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;queue&gt;
+#include &lt;map&gt;
+#include &lt;sstream&gt;
+using namespace std;
 
-turtle.penup()
-turtle.goto(70,56)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()
+/** 定义二叉树Htree (HuffmanTree)*/
+typedef
+struct Node
+{
+    float weight;  // 权:叶子权为字符频次,有分支结点则为左右子树权值和
+    char alpha;    // 结点字符：叶子结点为编码字符，分支结点字符则为哑元'\0'
+    Node *lch;
+    Node *rch;
+    Node(float e,char ch=0,Node *lt=0, Node *rt=0) // ctor构造根结点：权值e，字符ch，左右子树lt,rt
+        :weight(e),alpha(ch),lch(lt),rch(rt) {}
+}*HTree;
 
-turtle.penup()
-turtle.goto(70,-8)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()
+/* 重载运算符()的类,其行为仿似函数,故名仿函数
+Lt定义了树之优先级:根权值大者优先级高 */
+struct Lt
+{
+    bool operator()(HTree ta, HTree tb)
+    {
+        return ta-&gt;weight &gt; tb-&gt;weight;
+    }
+};
 
-turtle.penup()
-turtle.goto(20,-40)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg" alt="国旗"></p>
-</div>
+typedef map&lt;char,string&gt; Dict; // 编码字典类型Dict：字符为键,编码为值</code></pre><h4>哈夫曼树的构建</h4> 
 
+<pre><code>/*利用字符数组alpha[0..n-1]和对应权值数组ws[0:n-1],构造HuffmanTree*/
+HTree  CreateHT(char alphs[],float ws[], int n)
+{
+    /*优先队列类：元素类型是树,底层采用顺序表vector,元素优先级采用Lt类中定义的operator()*/
+    priority_queue&lt; HTree, vector&lt;HTree&gt;, Lt &gt; forest;
 
+    for(int i=0; i&lt;n; i++)  //输入n个结点，创建结点的树林 
+    {
+        forest.push( new Node(ws[i],alphs[i]));
+    }
+    for(int i=0; i&lt;n-1; i++)   //两两合并n-1次
+    {
+        HTree t1 = forest.top();   //取出最小的树t1
+        forest.pop();              //删去t1 
+        HTree t2 = forest.top();   //再取最小的t2
+        forest.pop();              //删去t2 
 
-</strong></strong><script>
+        float w = t1-&gt;weight + t2-&gt;weight;
+        forest.push(new Node(w,0,t1,t2));   // 合并为新树,新数结点字符为'\0',加入森林
+    }
+
+    return forest.top(); // 森林中最后一棵树 即所建huffman树
+}</code></pre><h4>生成密码字典（哈夫曼编码）</h4> 
+
+<pre><code>/*通过遍历Hufman树t,生成密码字典dict*/
+void generateDict(HTree t, Dict &amp;dict)
+{
+    static string code; //字符密码
+
+    if(0==t)
+        return;
+    if(t-&gt;alpha!=0)     //达到叶子结点,得该字符的编码(唯叶子字符不为\0)
+        dict[t-&gt;alpha] = code; // 字典增一项
+
+    code +='0';  // 左走为0
+    generateDict(t-&gt;lch,dict);
+    code.erase(code.end()-1); // 回溯：删除进入左子树时,在串尾添加的0
+
+    code+='1';  // 右走为0
+    generateDict(t-&gt;rch,dict);
+    code.erase(code.end()-1); // 回溯：删除进入右子树时,在串尾添加的1
+
+    return;
+}</code></pre><h4>对字符串进行编码</h4>
+
+<pre><code>/**使用编码字典dict,返回串txt的编码*/
+string encode(string txt,  Dict dict)
+{
+    string code;
+
+    for(int i=0; i&lt;txt.size(); i++)
+        code += dict[ txt[i] ]; // 查字典dict得txt[i]的编码
+
+    return code;
+}</code></pre><h4>解码</h4>
+
+<pre><code>/**使用Huffman树t解码code，返回解码后的报文*/
+string Decode(HTree t, string code)
+{
+    string txt;
+    istringstream in(code); // 字符串输入流 in
+    Node *p = t; // 从根开始解码
+
+    char dire;
+
+    while( in&gt;&gt;dire ) // 依次读入各字符
+    {
+        p = ('0'==dire ? p-&gt;lch :p-&gt;rch);  // 0向左走,1向右走
+
+        if( p-&gt;alpha )  //到达叶子得一字符
+        {
+            txt += p-&gt;alpha;
+            p = t;  // 重新从根开始解码下一个字符
+        }
+    }
+
+    return txt;
+}</code></pre><h4>主函数</h4>
+
+<pre><code>int main()
+{
+    char alphs[] = "ABCD";
+    float ws[] = {9,4,5,2};//分别对应ABCD的权值
+    int n = 4;
+    Dict dict; // 编码字典
+
+    HTree t = CreateHT(alphs,ws, n); // 构造Huffman树t
+    generateDict(t,dict);   //以Huffman树来构造字典dict
+
+    cout &lt;&lt; encode("ABC",dict) &lt;&lt;endl;  // 输出"ABC"的编码
+    cout &lt;&lt; Decode(t,"011110");   // 输出编码"011110"的报文
+
+    return 0;
+}</code></pre><p>运行结果：<br><br>        011110<br>        ABC</p>
+
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -829,7 +706,7 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/">https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/</a>
+                    <a href="https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/">https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -867,8 +744,8 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/turtle/">
-                                    <span class="chip bg-color">turtle</span>
+                                <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
+                                    <span class="chip bg-color">哈夫曼树</span>
                                 </a>
                             
                         </div>
@@ -1299,36 +1176,92 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/">
+                <a href="/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="单向链表的基本操作">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="哈夫曼树和哈夫曼编码">
                         
-                        <span class="card-title">单向链表的基本操作</span>
+                        <span class="card-title">哈夫曼树和哈夫曼编码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-    单向链表的基本操作
-    链表呢是一种十分基础的数据结构类型，分为单向链表，双向链表以及循环链表，今天我们就来讲讲单向链表的基本操作。
+    引例
+为了更好地理解哈夫曼树的用途我们先来看一个引例
+     
+     
      
 
- 什么是单向链表 
-首先我们来看看什么是链表 
- 链表是一种储存结构，包含数据
+什么是哈夫曼树？
+    首先我们来了解一下什么是带权路径长度：从树根结点到任意结点的路径长度（经过的边数）与该结点上权值的乘积，称为该结
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-02
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                    数据结构
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
+                        <span class="chip bg-color">哈夫曼树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="二叉树的基本操作">
+                        
+                        <span class="card-title">二叉树的基本操作</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+    二叉树的基础了解
+    
+        二叉树是n(n&gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
+        由此可以看出二叉树根结点
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1344,56 +1277,10 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/">
-                        <span class="chip bg-color">单链表</span>
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="ubuntu18.4.5的安装及界面调整">
-                        
-                        <span class="card-title">ubuntu18.4.5的安装及界面调整</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-    
-        1.下载VMware
-        
-        这里下载的是Vmware Workstation 15 pro(15.6版本)，官网下载很慢，就直接给下载链接了
-         2.下载ubuntu-1
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-category">
-                                    软件安装
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>

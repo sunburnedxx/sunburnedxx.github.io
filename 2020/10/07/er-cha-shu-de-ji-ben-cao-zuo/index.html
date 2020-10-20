@@ -695,8 +695,8 @@ BiTree copy(BiTree t)
 &nbsp; &nbsp; &nbsp; &nbsp;以前序序列pre[pl...pr]和中序序列mid[ml...mr]构造出二叉树，假定两序列合法。<br>
 <br>
 <h4>思路</h4><h4>
+由于前序序列先遍历根结点，故根结点在子树结点的前面，中序序列先遍历左子树结点后遍历根节点最后左子树节点，故根结点在左右子树结点中间。可通过前序序列找根结点，在中序序列找到前序序列找到的根结点，该根节点两边分别是左子树和右子树的结点左右子树结点，由此可以构造出一个二叉树。一个前序遍历和一个中序遍历可以确定一个唯一的二叉树.<br>
 
-<p>由于前序序列先遍历根结点，故根结点在子树结点的前面，中序序列先遍历左子树结点后遍历根节点最后左子树节点，故根结点在左右子树结点中间。可通过前序序列找根结点，在中序序列找到前序序列找到的根结点，该根节点两边分别是左子树和右子树的结点左右子树结点，由此可以构造出一个二叉树。一个前序遍历和一个中序遍历可以确定一个唯一的二叉树.<br></p>
 <p> eg：已知一颗二叉树的先序序列为EBADCFHG，其中序序列为ABCDEFGH。下图说明了还原二叉树的过程：<br><img src="https://images2018.cnblogs.com/blog/1192257/201807/1192257-20180711200448113-65002712.png" alt="以前序序列和中序序列构造二叉树图解"> <br></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;首先由先序序列知道二叉树的根结点为E，在中序序列中找到E，则其左子树的中序序列为ABCD，左子树有四个结点，则在先序序列中根结点E的后面四个结点BADC就是左子树先序序列，以此类推。</p>
 
@@ -729,9 +729,9 @@ BiTree   Create(T pre[],int pl,int pr, T mid[], int ml,int mr)
     t-&gt;rch = Create(pre,pl+leftLen+1, pr, mid , k+1,mr);
 
     return t;
-}</code></pre><p> 续更。。。</p>
+}</code></pre></h4><h3> <a href="#"> 一个有趣的实例：哈夫曼树和哈夫曼编码</a></h3>
 
-</h4><script>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1244,34 +1244,37 @@ BiTree   Create(T pre[],int pl,int pr, T mid[], int ml,int mr)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/">
+                <a href="/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="二叉树的基本操作">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="哈夫曼树和哈夫曼编码">
                         
-                        <span class="card-title">二叉树的基本操作</span>
+                        <span class="card-title">哈夫曼树和哈夫曼编码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-    二叉树的基础了解
-    
-        二叉树是n(n&gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
-        由此可以看出二叉树根结点
+    引例
+为了更好地理解哈夫曼树的用途我们先来看一个引例
+     
+     
+     
+
+什么是哈夫曼树？
+    首先我们来了解一下什么是带权路径长度：从树根结点到任意结点的路径长度（经过的边数）与该结点上权值的乘积，称为该结
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-07
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1284,12 +1287,11 @@ BiTree   Create(T pre[],int pl,int pr, T mid[], int ml,int mr)
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <span class="chip bg-color">二叉树</span>
+                    <a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
+                        <span class="chip bg-color">哈夫曼树</span>
                     </a>
                     
                 </div>
@@ -1577,7 +1579,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.7k</span>&nbsp;字
+                class="white-color">13.1k</span>&nbsp;字
             
             
             

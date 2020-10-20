@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python绘图turtle库命令合集, Journey to paradise">
+    <meta name="keywords" content="循环链表的基本操作, Journey to paradise">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -35,7 +35,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python绘图turtle库命令合集 | Journey to paradise</title>
+    <title>循环链表的基本操作 | Journey to paradise</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -331,7 +331,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python绘图turtle库命令合集</h1>
+                    <h1 class="description center-align post-title">循环链表的基本操作</h1>
                 </div>
             </div>
         </div>
@@ -456,8 +456,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/turtle/">
-                                <span class="chip bg-color">turtle</span>
+                            <a href="/tags/%E5%8D%95%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/">
+                                <span class="chip bg-color">单循环链表</span>
                             </a>
                         
                     </div>
@@ -468,8 +468,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                数据结构
                             </a>
                         
                     </div>
@@ -481,7 +481,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-24
+                    2020-10-02
                 </div>
                 
 
@@ -490,7 +490,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    940
                 </div>
                 
 
@@ -509,282 +509,104 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 
-    <strong>turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形<strong>
-            <div>
-                <h1>turtle绘图的基础认识</h1>
-                <h3>1.画布（canvas）</h3>
-                <p>
-                    画布是我们绘图所在的区域，我们可以改变他的初始位置和大小 <br>
-                </p><h4>1.设置画布的大小</h4>
-                turtle.screensize(canvwidth= , canvheight= , bg='' ) <br>
-                参数分别为画布的宽(默认值400px), 高(默认值300px), 背景颜色（颜色的英文单词 eg:'red'）。
-                <h4>2.设置画布的位置</h4>
-                turtle.setup(width=0.5, height=0.75, startx= , starty= ) <br>
-                参数分别为画布的宽，高（输入值为整数时表示具体像素，输入值为小数时表示画布窗口占电脑屏幕的比例），
-                (startx,starty)表示窗口左上顶点的坐标（默认值时，画布窗口在屏幕中心）
-                <h3>2.画笔</h3>
-                画笔呢就是小乌龟，它一开始默认是在坐标原点的，朝向x轴正方向
-                <h5>画笔的属性设置</h5>
-                <p>
-                </p><ul>
-                    <li>turtle.pensize():设置画笔的宽度也就是画线的粗细，单位为px</li>
-                    <li>turtle.pencolor():设置画笔的颜色，传入参数可以是代表颜色的字符串也可以是rgb值，如果没有参数传入则返回当前画笔颜色</li>
-                    <li>turtle.speed():设置画笔移动的速度，范围为[0,10]整数，数字越大移动越快</li>
-                </ul>
-                <p></p>
-                <h4>绘图命令</h4>
-                <p>
-                    turtle绘图命令分为三种：运动命令，画笔控制命令和全局控制命令。
-                </p><h5 textalign="center">1.画笔运动命令</h5>
-                <ta>setheading(angle)</ta><ta>设置当前朝向为angle度</ta><table cellpadding="0" ,cellspacing="0">
-                    <tbody><tr>
-                        <td>命令</td>
-                        <td>说明</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.forward(distance)</td>
-                        <td>向当前画笔方向移动distance像素长度</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.backward(distance)</td>
-                        <td>向当前画笔相反方向移动distance像素长度</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.right(degree)</td>
-                        <td>顺时针移动degree°</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.left(degree)</td>
-                        <td>逆时针移动degree°</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.pendown()</td>
-                        <td>落笔，绘制图形</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.penup()</td>
-                        <td>提笔，不绘制图型，一般用于转到另一个地方绘制</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            turtle.goto(x,y)
-                        </td>
-                        <td>将画笔移动到位置（x,y）</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.circle(radius, extent=None, steps=None)</td>
-                        <td>
-                            <ul>
-                                <li> radius(半径)：半径为正(负)，表示圆心在画笔的左边(右边)画圆</li>
-                                <li> extent(弧度) (optional)
-                                </li>
-                                <li>steps (optional) :做半径为radius的圆的内切正多边形，多边形边数为steps</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>setx()</td>
-                        <td>将当前x轴移动到指定位置</td>
-                    </tr>
-                    <tr>
-                        <td>sety()</td>
-                        <td>将当前y轴移动到指定位置</td>
-                    </tr>
-                    <tr>
-                        
-                        
-                    </tr>
-                    <tr>
-                        <td>home()</td>
-                        <td>设置当前画笔位置为原点，朝向x轴正方向</td>
-                    </tr>
-                    <tr>
-                        <td>dot(r)</td>
-                        <td>绘制一个指定直径和颜色的圆点</td>
-                    </tr>
-                </tbody></table>
-                <p></p>
-                <h5>2.画笔控制命令</h5>
-                <table cellpadding="0" ,cellspacing="0">
-                    <tbody><tr>
-                        <td>命令</td>
-                        <td>说明</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.fillcolor(colorstring)</td>
-                        <td>填充图形的颜色</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.color(color1, color2)</td>
-                        <td>同时设置pencolor=color1, fillcolor=color2</td>
-                    </tr>
-                    <tr>
-                        <td> turtle.filling()</td>
-                        <td>返回当前是否在填充状态</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.begin_fill()</td>
-                        <td>开始填充</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.end_fill()</td>
-                        <td>结束填充</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.hideturtle()</td>
-                        <td>隐藏画笔</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.showturtle()</td>
-                        <td>显示画笔</td>
-                    </tr>
-                </tbody></table>
-                <h5>3.全局控制命令</h5>
-                <table>
-                    <tbody><tr>
-                        <td>turtle.clear()</td>
-                        <td>清空turtle窗口，turtle的位置和状态不变</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.reset()</td>
-                        <td>
-                            清空窗口，重置turtle状态为起始状态</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.undo()</td>
-                        <td>撤销上一条命令</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.isvisible()</td>
-                        <td>返回当前turtle是否可见</td>
-                    </tr>
-                    <tr>
-                        <td>stamp()</td>
-                        <td>复制当前图形</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.write(s [,font=("font-name",font_size,"font_type")])</td>
-                        <td>turtle写文本，s为文本内容，font是字体的参数，分别为字体名称，大小和类型；font为可选项，font参数也是可选项</td>
-                    </tr>
-                </tbody></table>
-                <h5>4.其他命令</h5>
-                <table cellpadding="0" ,cellspacing="0">
-                    <tbody><tr>
-                        <td>命令</td>
-                        <td>说明</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.mainloop()或turtle.done()</td>
-                        <td>启动事件循环 -调用Tkinter的mainloop函数。
-                            必须是乌龟图形程序中的最后一个语句。</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.mode(mode=None)</td>
-                        <td>
-                            设置乌龟模式（“standard”，“logo”或“world”）并执行重置。如果没有给出模式，则返回当前模式。
-                            <table cellspacing="0">
-                                <tbody><tr>
-                                    <td>模式</td>
-                                    <td>初始龟标题</td>
-                                    <td>正角度</td>
-                                </tr>
-                                <tr>
-                                    <td>standard</td>
-                                    <td>向右</td>
-                                    <td>逆时针</td>
-                                </tr>
-                                <tr>
-                                    <td>logo</td>
-                                    <td>向上</td>
-                                    <td>顺时针</td>
-                                </tr>
-                            </tbody></table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>turtle.delay(delay= )</td>
-                        <td>
-                            设置以毫秒为单位的绘图延迟</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.begin_poly()</td>
-                        <td>开始记录多边形的顶点。当前的乌龟位置是多边形的第一个顶点</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            turtle.end_poly()</td>
-                        <td>停止记录多边形的顶点。当前的乌龟位置是多边形的最后一个顶点,与第一个顶点相连。</td>
-                    </tr>
-                    <tr>
-                        <td>turtle.get_poly()</td>
-                        <td>返回最后记录的多边形</td>
-                    </tr>
-                </tbody></table>
-                <h5>eg:</h5>
-                <h5>turtle画国旗</h5>
+    <h3>什么是单循环链表？</h3>
+    在单链表中，终端结点的指针域NULL指向表头结点或开始结点<br>
+图示：<img src="http://c.biancheng.net/uploads/allimg/190426/1H422A22-0.png" alt="单循环链表图示"><br>
+<strong>在循环链表中依旧存在头指针和首元节点，循环链表和普通链表相比，唯一的不同就是循环链表首尾相连，其他都完全一样。<strong>
+    <h3>单循环链表的基本操作：</h3>
+    单循环链表的一些操作与单向链表的一些操作思路类似，详情请看  <a href="https://icecream-tu.cn/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/" target="_blank" rel="noopener">单链表的就基本操作</a> 在这里不过多介绍，就讲讲单循环链表的创建，相邻节点交换以及遍历。<br>
+<h4>准备工作</h4>
 
-<pre><code>#画国旗红色方形背景
-import turtle
-turtle.goto(-120,120)
-turtle.color("red","red")
+<pre><code>#include&lt;stdio.h&gt;             
+#include&lt;stdlib.h&gt;
+#define N 5  
+typedef struct node{
+    int data;
+    struct node* next;
+}node,* List;
+List L2;</code></pre><h4 id="创建单循环链表">创建单循环链表</h4>
 
-turtle.begin_fill()
-turtle.forward(480)
-turtle.right(90)
-turtle.forward(320)
-turtle.right(90)
-turtle.forward(480)
-turtle.right(90)
-turtle.forward(320)
-turtle.end_fill()
-#画大五角星
-turtle.right(90)
-turtle.goto(-72,24)
-turtle.color("yellow","yellow")
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(84)
-    turtle.right(144)
-turtle.end_fill()
-#画五个小五角星
-turtle.penup()
-turtle.goto(20,90)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()
+<pre><code>List CreateCirculList(List L2)      //创建单向循环链表并写入N个值 
+{
+    int i;
+    node* tail;
 
-turtle.penup()
-turtle.goto(70,56)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()
+    L2=(List)malloc(sizeof(node));
+    L2-&gt;next=L2;                                      
+    tail=L2;
+    printf("Enter %d elements for your circul list:\n",N);
+    scanf("%d",&amp;L2-&gt;data);
+    for(i=1;i&lt;N;i++)
+    {
+        node *p=(node*)malloc(sizeof(node));
+        scanf("%d",&amp;p-&gt;data); 
+        tail-&gt;next=p;                  //tail-&gt;next指向最新结点 
+        p-&gt;next=L2;                    //最新结点的next指向链表头，整个链表完成循环 
+        tail=p;
+    }
 
-turtle.penup()
-turtle.goto(70,-8)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()
+    return L2; 
+}</code></pre><h4>将单循环链表相邻的两个结点交换</h4>
 
-turtle.penup()
-turtle.goto(20,-40)
-turtle.pendown()
-turtle.begin_fill()
-for _ in range(5):
-    turtle.forward(35)
-    turtle.right(144)
-turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg" alt="国旗"></p>
-</div>
+<pre><code>    void ExchangeNodeOfCirculList(List L2)       // 将循环链表中的某个结点与其下一个结点交换 
+{
+    node *p,*q;
+    p=L2-&gt;next;                              //p是L2的后继结点
+    q=p-&gt;next;                               //q是p的后继结点，要将结点p和结点q交换 
 
+    L2-&gt;next=q;
+    p-&gt;next=q-&gt;next;
+    q-&gt;next=p;  
+}</code></pre><h4>单循环链表的遍历(单链表也可以用)</h4>
 
+<pre><code>    void PrintList(List L)           //打印链表 
+{
+    int i;
+    node *p=L-&gt;next,*q=L;
+    while(p)        
+    {
+        printf("%d ",p-&gt;data);
+        p=p-&gt;next;
+        if(p==L-&gt;next)           //如果是遍历循环链表，p往后遍历到表头处结束 
+        {
+            break;
+        }
+    }
+    printf("\n");
+}</code></pre><h3>一个有趣的实例：约瑟夫环(也叫丢手绢问题)</h3>
+<h4>题意：</h4><h4>
+已知 n 个人（分别用编号 1，2，3，…，n 表示）沿顺时针围坐在一张圆桌周围，从编号为 k 的人开始从1顺时针报数，数到 m 的那个人出列，他的下一个人又从 1 开始沿顺时针报数，数到 m 的那个人又出列，依次重复下去，直到圆桌上剩余一个人，输出最后一个人的编号。<br>
+约瑟夫环问题是一个经典的循环链表例题，当然用其他方法也可以实现，这里只讲用循环链表怎么实现。
+</h4><h4>代码如下：</h4>  
+   首先创建一个循环链表来存放编号，详情请见上文 <a href="#创建单循环链表">创建单循环链表</a>
+
+<pre><code>int JosephCircle(List L2)   //返回最后剩下人的编号 
+{
+    int i,k,m;
+    L2=CreateCirculList(L2);  //创建一个循环链表来存放编号
+    node *p=L2,*q;            //p最终指向每一轮报数m的人，q指向p的前一个结点 
+
+    printf("Enter the beginer's number k and end-counting number m:\n"); 
+    scanf("%d%d",&amp;k,&amp;m);       //输入k和m
+
+    while(p-&gt;data!=k)
+    {
+        p=p-&gt;next;
+    }
+    while(p-&gt;next!=p)      //当循环链表中只有一个结点即只剩下一个人时结束循环 
+    {
+        for(i=1;i&lt;m;i++)
+        {
+            q=p;       //p指向每一轮报数的人，q指向p的前一个结点
+            p=p-&gt;next;
+        }
+        q-&gt;next=p-&gt;next;
+        free(p);     //删去报数m的人
+        p=q-&gt;next;   //下一轮报数从报数m的下一个人即q-&gt;next开始 
+    }
+
+    return (p-&gt;data);  //返回最后一个人的编号 
+}</code></pre><p>main 函数根据需求写，程序运行结果无误。</p>
 
 </strong></strong><script>
         document.querySelectorAll('.github-emoji')
@@ -829,7 +651,7 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/">https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/</a>
+                    <a href="https://sunburnedxx.github.io/2020/10/02/xun-huan-lian-biao-de-ji-ben-cao-zuo/">https://sunburnedxx.github.io/2020/10/02/xun-huan-lian-biao-de-ji-ben-cao-zuo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -867,8 +689,8 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/turtle/">
-                                    <span class="chip bg-color">turtle</span>
+                                <a href="/tags/%E5%8D%95%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/">
+                                    <span class="chip bg-color">单循环链表</span>
                                 </a>
                             
                         </div>
@@ -1303,6 +1125,58 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/10/03/er-fen-fa-cha-zhao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="二分法查找">
+                        
+                        <span class="card-title">二分法查找</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+    二分法查找
+    思路：
+    将一些数升序地放在数组中（这里为了方便查找用数组存放数据（下标为零的不用）），确定查找范围，初始时查找范围为整个数组，下标1设为左端点left，数组最后一个元素的下标设为右端点right，中间端
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/">
+                        <span class="chip bg-color">二分法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/">
                     <div class="card-image">
                         
@@ -1326,9 +1200,9 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1348,52 +1222,6 @@ turtle.end_fill()  </code></pre><p>运行结果:<br><img src="../images/flag.jpg
                         <span class="chip bg-color">单链表</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="ubuntu18.4.5的安装及界面调整">
-                        
-                        <span class="card-title">ubuntu18.4.5的安装及界面调整</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-    
-        1.下载VMware
-        
-        这里下载的是Vmware Workstation 15 pro(15.6版本)，官网下载很慢，就直接给下载链接了
-         2.下载ubuntu-1
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-category">
-                                    软件安装
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>

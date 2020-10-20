@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-10-18T13:25:21.708Z</updated>
+  <updated>2020-10-20T15:41:53.176Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>哈夫曼树和哈夫曼编码</title>
+    <link href="https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/"/>
+    <id>https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/</id>
+    <published>2020-10-20T10:10:13.000Z</published>
+    <updated>2020-10-20T15:41:53.176Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;h3&gt;引例&lt;/h3&gt;
+为了更好地理解哈夫曼树的用途我们先来看一个引例
+    &lt;img src=&quot;../images/HuffmanTree1.jpg&quot; alt=&quot;&quot;&gt; &lt;br&gt;
+    &lt;img src=&quot;../images/Hu.jpg&quot; alt=&quot;&quot;&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="https://sunburnedxx.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="哈夫曼树" scheme="https://sunburnedxx.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>二叉树的基本操作</title>
     <link href="https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/</id>
     <published>2020-10-07T08:05:14.000Z</published>
-    <updated>2020-10-18T13:25:21.708Z</updated>
+    <updated>2020-10-20T10:12:57.982Z</updated>
     
     <summary type="html">
     
@@ -78,6 +109,36 @@
   </entry>
   
   <entry>
+    <title>循环链表的基本操作</title>
+    <link href="https://sunburnedxx.github.io/2020/10/02/xun-huan-lian-biao-de-ji-ben-cao-zuo/"/>
+    <id>https://sunburnedxx.github.io/2020/10/02/xun-huan-lian-biao-de-ji-ben-cao-zuo/</id>
+    <published>2020-10-02T10:23:06.000Z</published>
+    <updated>2020-10-19T23:04:22.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;h3&gt;什么是单循环链表？&lt;/h3&gt;
+    在单链表中，终端结点的指针域NULL指向表头结点或开始结点&lt;br&gt;
+图示：&lt;img src=&quot;http://c.biancheng.net/uploads/allimg/190426/1H422A22-0.png&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="https://sunburnedxx.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="单循环链表" scheme="https://sunburnedxx.github.io/tags/%E5%8D%95%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>单向链表的基本操作</title>
     <link href="https://sunburnedxx.github.io/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/</id>
@@ -112,7 +173,7 @@
     <link href="https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/"/>
     <id>https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/</id>
     <published>2020-09-24T10:11:05.324Z</published>
-    <updated>2020-10-04T07:28:09.771Z</updated>
+    <updated>2020-10-20T15:41:41.059Z</updated>
     
     <summary type="html">
     
