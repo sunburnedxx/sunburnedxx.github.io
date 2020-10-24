@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-10-20T15:41:53.176Z</updated>
+  <updated>2020-10-24T11:15:26.455Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>生活杂记</title>
+    <link href="https://sunburnedxx.github.io/2020/10/24/sheng-huo-za-ji/"/>
+    <id>https://sunburnedxx.github.io/2020/10/24/sheng-huo-za-ji/</id>
+    <published>2020-10-24T09:24:38.668Z</published>
+    <updated>2020-10-24T11:15:26.455Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;h3&gt;无题&lt;/h3&gt;
+    &lt;p&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="生活杂记" scheme="https://sunburnedxx.github.io/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>哈夫曼树和哈夫曼编码</title>
     <link href="https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/"/>
     <id>https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/</id>
     <published>2020-10-20T10:10:13.000Z</published>
-    <updated>2020-10-20T15:41:53.176Z</updated>
+    <updated>2020-10-22T23:09:28.795Z</updated>
     
     <summary type="html">
     
@@ -32,8 +59,8 @@
           
     &lt;h3&gt;引例&lt;/h3&gt;
 为了更好地理解哈夫曼树的用途我们先来看一个引例
-    &lt;img src=&quot;../images/HuffmanTree1.jpg&quot; alt=&quot;&quot;&gt; &lt;br&gt;
-    &lt;img src=&quot;../images/Hu.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;../images/HuffmanTree1.jpg&quot; alt=&quot;哈夫曼树引例&quot;&gt; &lt;br&gt;
+    &lt;img src=&quot;../images/Hu.jpg&quot;
         
       
     
@@ -52,7 +79,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/</id>
     <published>2020-10-07T08:05:14.000Z</published>
-    <updated>2020-10-20T10:12:57.982Z</updated>
+    <updated>2020-10-22T23:06:45.949Z</updated>
     
     <summary type="html">
     
@@ -173,7 +200,7 @@
     <link href="https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/"/>
     <id>https://sunburnedxx.github.io/2020/09/24/python-hui-tu-turtle-ku-ming-ling-he-ji/</id>
     <published>2020-09-24T10:11:05.324Z</published>
-    <updated>2020-10-22T14:14:01.037Z</updated>
+    <updated>2020-10-22T23:08:30.229Z</updated>
     
     <summary type="html">
     
