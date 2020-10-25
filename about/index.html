@@ -609,7 +609,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"数据结构","value":4},{"name":"Python","value":1},{"name":"html","value":1},{"name":"软件安装","value":2},{"name":"算法","value":1},{"name":"生活杂记","value":1}],
+                data: [{"name":"数据结构","value":4},{"name":"Python","value":1},{"name":"html","value":1},{"name":"算法","value":1},{"name":"软件安装","value":2},{"name":"生活杂记","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -633,7 +633,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["turtle","二叉树","二分法","单链表","哈夫曼树","单循环链表"]
+                data: ["turtle","二分法","二叉树","单链表","哈夫曼树","单循环链表"]
             }
         ],
         yAxis: [
@@ -775,6 +775,65 @@
 
             </div>
         </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-content article-card-content">
+                    <div class="title center-align" data-aos="zoom-in-up">
+                        <i class="fa fa-address-book"></i>&nbsp;&nbsp;个人简历
+                     </div>
+                        <div id="articleContent" data-aos="fade-up">
+                            
+    <h3>基本介绍</h3>
+ <table align="center" ;="" cellpadding="0" cellspacing="0">
+<tbody><tr>
+    <th>姓名：</th>
+    <td>涂爽</td>
+    <td rowspan="3"> <img src="#" alt="照片"> </td>
+</tr>
+<tr>
+    <th>学校：</th>
+    <td>武汉纺织大学</td>
+
+</tr>
+<tr>
+    <th>专业：</th>
+    <td>计算计科学与技术</td>
+
+</tr>
+<tr>
+        <th>联系方式：</th>
+        <td>qq：3033766681</td>
+        <td>tel：15802752079</td>
+</tr>
+</tbody></table>
+<br>
+<h3>在校经历</h3>
+
+<p><strong>本科：</strong>划水中。。。</p>
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+                        </div>
+                  </div>
+             </div>
+       </div>
     </div>
 </main>
 
@@ -1051,7 +1110,9 @@ $(function () {
     WIDGET = {FID: '1tFpFZ5Mtj'}
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
-
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
 </body>
 
 </html>
