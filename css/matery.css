@@ -250,7 +250,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, rgb(253, 75, 5) 0%, #ee6d31 100%);
+    opacity: 0.8;
 }
 
 .text-color {
