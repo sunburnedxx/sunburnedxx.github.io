@@ -511,7 +511,7 @@
             <div id="articleContent">
                 
     Prim算法可用来构造图的最小生成树
-    <h3>大概思路：<br> 将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。在第二部分中找出距离第一部分中顶点最近的顶点以及对应的距离，将该顶点加入第一部分，依次类推，直到所有顶点都加入第一部分</h3>
+    <h3>大概思路：</h3><h3><br> 将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。在第二部分中找出距离第一部分中顶点最近的顶点以及对应的距离，将该顶点加入第一部分，依次类推，直到所有顶点都加入第一部分</h3> <br>
     <h3>算法步骤:</h3>
     <ol>
         <li>创建一个结构数组，数组的序号代表顶点的编号。数组元素包括每个未在最小生成树中的顶点离最小生成树中哪一个顶点(adindex)最近和相应的距离(closedge)，若距离为零则该顶点已在最小生成树中。</li>
@@ -519,9 +519,9 @@
         <li>找出数组中lowcost最小值及对应的顶点，将该顶点放入MST，该顶点的lowcost置为0</li>
         <li>分别将lowcost不为0（不在MST中）的顶点v到最新加入MST的顶点的距离与 到与v的adjvex值对应的顶点的距离相比较，选出较小值及对应的顶点，更新lowcast</li>
         <li>重复步骤2，3直到数组中所有的lowcost为0，即所有顶点均加入MST，最小生成树MST就此生成</li>
-    </ol>
+    </ol><br>
     <h3>图例说明:</h3>
-eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt="图例说明"> <br>
+eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt="图例说明"> <br> <br>
 1.任选一顶点V1放入最小生成树中，记录其余顶点到v1的距离lowcost（x表示不能一条边连通，无穷远）
 <table>
     <tbody><tr>
@@ -551,7 +551,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>x</td>
         <td>x</td>
     </tr>
-</tbody></table>
+</tbody></table><br>
 2.找出lowcost最小值1及对应的顶点v3，将v3放入MST，v3的lowcost为0 <br>
 <table>
     <tbody><tr>
@@ -582,7 +582,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>x</td>
     </tr>
 </tbody></table>
-<img src="https://img-blog.csdn.net/20140816181809296" alt="图例说明"> <br>
+<img src="https://img-blog.csdn.net/20140816181809296" alt="图例说明"> <br><br>
 3.分别将lowcost不为0（不在MST中）的顶点到新加入MST的v3的距离与到与序号相对应的adjvex值的顶点距离相比较（eg：选序号顶点v2，序号2中adjvex为1，则将v2到v1的距离与v2到v3的距离相比较），选出较小值及对应的顶点，更新lowcast,eg:v2距离v1为6，距离v3为5，v2离v3更近，则将序号为2的元素中adjvex更新为3，lowcost更新为5，依此类推。<br>
 <table>
     <tbody><tr>
@@ -612,7 +612,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>6</td>
         <td>4</td>
     </tr>
-</tbody></table>
+</tbody></table><br>
 4.找出lowcast最小值为4，对应顶点v6，将v6放入MST中，v6的lowcast为0 <br>
 <table>
     <tbody><tr>
@@ -643,7 +643,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>0</td>
     </tr>
 </tbody></table>
-<img src="https://img-blog.csdn.net/20140816182214390" alt="图例说明"> <br>
+<img src="https://img-blog.csdn.net/20140816182214390" alt="图例说明"> <br><br>
 5.分别将lowcost不为0（不在MST中）的顶点到新加入MST的v3的距离与到上一加入MST的v1的距离相比较，选出较小值及对应的顶点，更新lowcast <br>
 <table>
     <tbody><tr>
@@ -673,7 +673,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>6</td>
         <td>0</td>
     </tr>
-</tbody></table>
+</tbody></table><br>
 6.找出lowcast最小值为2，对应顶点v4，将v4放入MST中，v4的lowcast为0
 <table>
     <tbody><tr>
@@ -704,7 +704,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>0</td>
     </tr>
 </tbody></table>
-<img src="https://img-blog.csdn.net/20140816182451906" alt="图例"> <br>
+<img src="https://img-blog.csdn.net/20140816182451906" alt="图例"> <br><br>
 7.依次类推，最后得到的数组及最小生成树如下：<br>
 <table>
     <tbody><tr>
@@ -736,7 +736,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
     </tr>
 </tbody></table>
 <img src="https://img-blog.csdn.net/20140816183241396" alt="图例"> <br>
-<br>
+<br><br>
 <h3>代码：</h3>
 
 <pre><code>/**prime算法：从u号顶点出发构造最小生成树(MST)*/
