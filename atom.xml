@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-10-24T11:19:48.745Z</updated>
+  <updated>2020-10-27T14:52:37.681Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>生活杂记</title>
-    <link href="https://sunburnedxx.github.io/2020/10/24/sheng-huo-za-ji/"/>
-    <id>https://sunburnedxx.github.io/2020/10/24/sheng-huo-za-ji/</id>
+    <title>Prim算法详解</title>
+    <link href="https://sunburnedxx.github.io/2020/10/27/prim-suan-fa-xiang-jie/"/>
+    <id>https://sunburnedxx.github.io/2020/10/27/prim-suan-fa-xiang-jie/</id>
+    <published>2020-10-27T05:03:00.000Z</published>
+    <updated>2020-10-27T14:52:37.681Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    Prim算法可用来构造图的最小生成树
+    &lt;h3&gt;大概思路：&lt;br&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://sunburnedxx.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="Prim算法" scheme="https://sunburnedxx.github.io/tags/Prim%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小确幸</title>
+    <link href="https://sunburnedxx.github.io/2020/10/24/xiao-que-xing/"/>
+    <id>https://sunburnedxx.github.io/2020/10/24/xiao-que-xing/</id>
     <published>2020-10-24T09:24:38.668Z</published>
-    <updated>2020-10-24T11:19:48.745Z</updated>
+    <updated>2020-10-27T13:49:11.172Z</updated>
     
     <summary type="html">
     
@@ -38,7 +67,7 @@
     </summary>
     
     
-      <category term="生活杂记" scheme="https://sunburnedxx.github.io/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/"/>
+      <category term="小确幸" scheme="https://sunburnedxx.github.io/categories/%E5%B0%8F%E7%A1%AE%E5%B9%B8/"/>
     
     
   </entry>
@@ -48,7 +77,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/"/>
     <id>https://sunburnedxx.github.io/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/</id>
     <published>2020-10-20T10:10:13.000Z</published>
-    <updated>2020-10-22T23:09:28.795Z</updated>
+    <updated>2020-10-26T13:43:17.168Z</updated>
     
     <summary type="html">
     
@@ -79,7 +108,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/07/er-cha-shu-de-ji-ben-cao-zuo/</id>
     <published>2020-10-07T08:05:14.000Z</published>
-    <updated>2020-10-22T23:06:45.949Z</updated>
+    <updated>2020-10-26T15:17:09.246Z</updated>
     
     <summary type="html">
     
@@ -110,7 +139,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/03/er-fen-fa-cha-zhao/"/>
     <id>https://sunburnedxx.github.io/2020/10/03/er-fen-fa-cha-zhao/</id>
     <published>2020-10-03T06:27:12.000Z</published>
-    <updated>2020-10-04T11:03:53.265Z</updated>
+    <updated>2020-10-26T13:43:17.168Z</updated>
     
     <summary type="html">
     
@@ -140,7 +169,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/02/xun-huan-lian-biao-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/02/xun-huan-lian-biao-de-ji-ben-cao-zuo/</id>
     <published>2020-10-02T10:23:06.000Z</published>
-    <updated>2020-10-19T23:04:22.736Z</updated>
+    <updated>2020-10-26T13:42:54.361Z</updated>
     
     <summary type="html">
     

@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Journey to paradise">
+    <meta name="keywords" content="Prim算法详解, Journey to paradise">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -35,7 +35,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Journey to paradise</title>
+    <title>Prim算法详解 | Journey to paradise</title>
     <link rel="icon" type="image/png" href="/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -327,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Prim算法详解</h1>
                 </div>
             </div>
         </div>
@@ -455,12 +455,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Prim%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">Prim算法</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -469,7 +482,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-05
+                    2020-10-27
                 </div>
                 
 
@@ -478,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    78
+                    1.2k
                 </div>
                 
 
@@ -496,7 +509,282 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title: 404<br>date: 2020-04-11 13:57:10<br>type: “404”<br>layout: “404”<br>description: “Oops～，我崩溃了！找不到你想要的页面 :(“</p>
+                
+    Prim算法可用来构造图的最小生成树
+    <h3>大概思路：<br> 将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。在第二部分中找出距离第一部分中顶点最近的顶点以及对应的距离，将该顶点加入第一部分，依次类推，直到所有顶点都加入第一部分</h3>
+    <h3>算法步骤:</h3>
+    <ol>
+        <li>创建一个结构数组，数组的序号代表顶点的编号。数组元素包括每个未在最小生成树中的顶点离最小生成树中哪一个顶点(adindex)最近和相应的距离(closedge)，若距离为零则该顶点已在最小生成树中。</li>
+        <li>初始时，任选一顶点V1放入最小生成树中，记录其余顶点到v1的距离lowcost（x表示不能一条边连通，无穷远）</li>
+        <li>找出数组中lowcost最小值及对应的顶点，将该顶点放入MST，该顶点的lowcost置为0</li>
+        <li>分别将lowcost不为0（不在MST中）的顶点v到最新加入MST的顶点的距离与 到与v的adjvex值对应的顶点的距离相比较，选出较小值及对应的顶点，更新lowcast</li>
+        <li>重复步骤2，3直到数组中所有的lowcost为0，即所有顶点均加入MST，最小生成树MST就此生成</li>
+    </ol>
+    <h3>图例说明:</h3>
+eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt="图例说明"> <br>
+1.任选一顶点V1放入最小生成树中，记录其余顶点到v1的距离lowcost（x表示不能一条边连通，无穷远）
+<table>
+    <tbody><tr>
+        <th>index</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>adjvex</th>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>lowcost</th>
+        <td>0</td>
+        <td>6</td>
+        <td>1</td>
+        <td>5</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+</tbody></table>
+2.找出lowcost最小值1及对应的顶点v3，将v3放入MST，v3的lowcost为0 <br>
+<table>
+    <tbody><tr>
+        <th>index</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>adjvex</th>
+        <td>1</td>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>lowcost</th>
+        <td>0</td>
+        <td>6</td>
+        <td>0</td>
+        <td>5</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+</tbody></table>
+<img src="https://img-blog.csdn.net/20140816181809296" alt="图例说明"> <br>
+3.分别将lowcost不为0（不在MST中）的顶点到新加入MST的v3的距离与到与序号相对应的adjvex值的顶点距离相比较（eg：选序号顶点v2，序号2中adjvex为1，则将v2到v1的距离与v2到v3的距离相比较），选出较小值及对应的顶点，更新lowcast,eg:v2距离v1为6，距离v3为5，v2离v3更近，则将序号为2的元素中adjvex更新为3，lowcost更新为5，依此类推。<br>
+<table>
+    <tbody><tr>
+        <th>index</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>adjvex</th>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>lowcost</th>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>5</td>
+        <td>6</td>
+        <td>4</td>
+    </tr>
+</tbody></table>
+4.找出lowcast最小值为4，对应顶点v6，将v6放入MST中，v6的lowcast为0 <br>
+<table>
+    <tbody><tr>
+        <th>index</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>adjvex</th>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>lowcost</th>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>5</td>
+        <td>6</td>
+        <td>0</td>
+    </tr>
+</tbody></table>
+<img src="https://img-blog.csdn.net/20140816182214390" alt="图例说明"> <br>
+5.分别将lowcost不为0（不在MST中）的顶点到新加入MST的v3的距离与到上一加入MST的v1的距离相比较，选出较小值及对应的顶点，更新lowcast <br>
+<table>
+    <tbody><tr>
+        <th>index</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>adjvex</th>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>6</td>
+        <td>6</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>lowcost</th>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>2</td>
+        <td>6</td>
+        <td>0</td>
+    </tr>
+</tbody></table>
+6.找出lowcast最小值为2，对应顶点v4，将v4放入MST中，v4的lowcast为0
+<table>
+    <tbody><tr>
+        <th>index</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>adjvex</th>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>6</td>
+        <td>6</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>lowcost</th>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>6</td>
+        <td>0</td>
+    </tr>
+</tbody></table>
+<img src="https://img-blog.csdn.net/20140816182451906" alt="图例"> <br>
+7.依次类推，最后得到的数组及最小生成树如下：<br>
+<table>
+    <tbody><tr>
+        <th>index</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>adjvex</th>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>6</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>lowcost</th>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+</tbody></table>
+<img src="https://img-blog.csdn.net/20140816183241396" alt="图例"> <br>
+<br>
+<h3>代码：</h3>
+
+<pre><code>/**prime算法：从u号顶点出发构造最小生成树(MST)*/
+void miniSpan(MGraph g, int u)
+{
+    closedge[u].lowcost = 0;  // S集(已经纳入生成树的点)初始仅有u顶点
+
+    // 其余顶点i距S集最近的邻接点是u顶点(初始仅有u顶点)，距离即(u,i)的长度
+    for(int i=1; i&lt;=g.vexnum; i++)
+    {
+        if(i!=u)
+        {
+            closedge[i].adjvex = u;
+            closedge[i].lowcost = g.matrix[u][i];
+        }
+    }
+
+    /**进行n-1次选择:将所有顶点逐个加入S集,对应最近边即为是MST的边，输出此边*/
+    for(int i=1; i&lt;g.vexnum; i++)
+    {
+        /** 寻找closedge中lowcost最小,且 lowcost！=0(只考察在S集外的点)的顶点k
+        k号顶点即为S集外，距S集合中某点最近的点*/
+        int k;
+        for(k=1; closedge[k].lowcost == 0; k++) // 先找到第一个locaost不等于0的顶点k
+            ;
+        for(int t=k+1; t&lt;=g.vexnum; t++)
+        {
+            if(closedge[t].lowcost&gt;0 &amp;&amp;  closedge[t].lowcost&lt; closedge[k].lowcost)
+            {
+                k = t;
+            }
+        }
+
+        printf("%d  --- %d\n", closedge[k].adjvex, k);  // 输出一条边
+        closedge[k].lowcost = 0;  // k号顶点加入S集合
+
+        /*因为k新加入S集合，需以此更新closedge：逐一考察各顶点是否与k顶点的边更近*/
+        for (int j=1; j&lt;=g.vexnum; j++)
+        {
+            if(g.matrix[k][j] &lt;closedge[j].lowcost) // j距离k点更短 则以此更新
+            {
+                closedge[j].adjvex = k;
+                closedge[j].lowcost = g.matrix[k][j];
+            }
+        }
+    }
+
+}</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -540,7 +828,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunburnedxx.github.io/404.html">https://sunburnedxx.github.io/404.html</a>
+                    <a href="https://sunburnedxx.github.io/2020/10/27/prim-suan-fa-xiang-jie/">https://sunburnedxx.github.io/2020/10/27/prim-suan-fa-xiang-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -577,7 +865,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Prim%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">Prim算法</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1011,36 +1303,48 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/404.html">
+                <a href="/2020/10/27/prim-suan-fa-xiang-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Prim算法详解">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Prim算法详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            title: 404date: 2020-04-11 13:57:10type: “404”layout: “404”description: “Oops～，我崩溃了！找不到你想要的页面 :(“
-
-        document.quer
+                            
+    Prim算法可用来构造图的最小生成树
+    大概思路： 将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。在第二部分中找出距离第一部分中顶点最近的顶点以及对应
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-27
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            涂爽
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Prim%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">Prim算法</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1048,39 +1352,42 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/404.html">
+                <a href="/2020/10/24/xiao-que-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="小确幸">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">小确幸</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            title: 404date: 2020-04-11 13:57:10type: “404”layout: “404”description: “Oops～，我崩溃了！找不到你想要的页面 :(“
-
-        document.quer
+                            
+    无题
+     &nbsp;&nbsp;&nbsp;&nbsp; 窗前摆着一轧书靠着生锈的铁栏杆，挂在墙上的旧蜘蛛网由于停电不再被窗帘遮盖，终于重见天日。大团大团的云挤在一起，透过蒙着灰的窗玻璃映在我的眼里，云后的光映得云泛黄发亮
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            涂爽
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B0%8F%E7%A1%AE%E5%B9%B8/" class="post-category">
+                                    小确幸
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
