@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    548
+                    513
                 </div>
                 
 
@@ -509,7 +509,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二分法查找</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
     <h3>二分法查找</h3>
     <h2>思路：</h2>
     <p style="line-height: 40px;">将一些数升序地放在数组中（这里为了方便查找用数组存放数据（下标为零的不用）），确定查找范围，初始时查找范围为整个数组，下标1设为左端点left，数组最后一个元素的下标设为右端点right，中间端点mid为左右端点下标和的一半。将中间端点处的值与待查值e比较，若大于e则说明e在mid左半侧，将右端点移至下标为mid-1处,缩小查找范围,更改mid值为新左右端点下标和的一半;若比较小于e则e在mid右侧，将左端点移至mid+1处，缩小查找范围,更改mid值为新左右端点下标和的一半;若等于e,则找到待查值，返回待查值在数组中的下标。通过不断缩小查找范围至两个数最后确定待查值的位置。</p>
@@ -541,9 +554,9 @@ int main()
     Position P;
 
     L = ReadInput();               //向数组里写数 
-    scanf("%d", &amp;X);               //输入待查找的数 
+    scanf(&quot;%d&quot;, &amp;X);               //输入待查找的数 
     P = BinarySearch( L, X );      //二分法查找 
-    printf("%d\n", P);             //输出待查数的下标 
+    printf(&quot;%d\n&quot;, P);             //输出待查数的下标 
 
     return 0;
 }
@@ -553,11 +566,11 @@ List ReadInput()
     List A;
     int i;
 
-    scanf("%d",&amp;A-&gt;Last);
+    scanf(&quot;%d&quot;,&amp;A-&gt;Last);
 
     for(i=1;i&lt;=A-&gt;Last;i++)            /*元素从下标1开始存储 */
     {
-        scanf("%d",&amp;A-&gt;Data[i]);
+        scanf(&quot;%d&quot;,&amp;A-&gt;Data[i]);
     }
 
     return A;
@@ -587,26 +600,8 @@ Position BinarySearch(List L,ElementType X)       //二分法查找
 
     return NotFound;
 }</code></pre><p>该算法时间复杂度为O(logn),当查找范围十分大时,二分法查找比顺次查找（复杂度O(n)）效率高得多。</p>
-
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+</body>
+</html>
             </div>
             <hr/>
 
@@ -1118,10 +1113,18 @@ Position BinarySearch(List L,ElementType X)       //二分法查找
                     <div class="summary block-with-text">
                         
                             
-    二叉树的基础了解
+
+
     
-        二叉树是n(n&gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
-        由此可以看出二叉树根结点
+    
+    二叉树的基本操作
+    
+.lines{
+        line-height: 20px;
+        }
+    a {
+        text-decoration: none;
+    }
                         
                     </div>
                     <div class="publish-info">
@@ -1171,11 +1174,21 @@ Position BinarySearch(List L,ElementType X)       //二分法查找
                     <div class="summary block-with-text">
                         
                             
+
+
+    
+    
+    单循环链表的基本操作
+    
+        a {
+            text-decoration: none;
+        }
+    
+
+
+
     什么是单循环链表？
-    在单链表中，终端结点的指针域NULL指向表头结点或开始结点
-图示：
-在循环链表中依旧存在头指针和首元节点，循环链表和普通链表相比，唯一的不同就是循环链表首尾相连，其他都完全一样。
-    单循环链表的基
+    在单链表
                         
                     </div>
                     <div class="publish-info">
@@ -1434,7 +1447,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.1k</span>&nbsp;字
+                class="white-color">19.8k</span>&nbsp;字
             
             
             

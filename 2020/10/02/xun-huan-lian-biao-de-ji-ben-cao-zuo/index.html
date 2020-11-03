@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    940
+                    917
                 </div>
                 
 
@@ -509,7 +509,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单循环链表的基本操作</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
     <h3>什么是单循环链表？</h3>
     在单链表中，终端结点的指针域NULL指向表头结点或开始结点<br>
 图示：<img src="http://c.biancheng.net/uploads/allimg/190426/1H422A22-0.png" alt="单循环链表图示"><br>
@@ -535,12 +548,12 @@ List L2;</code></pre><h4 id="创建单循环链表">创建单循环链表</h4>
     L2=(List)malloc(sizeof(node));
     L2-&gt;next=L2;                                      
     tail=L2;
-    printf("Enter %d elements for your circul list:\n",N);
-    scanf("%d",&amp;L2-&gt;data);
+    printf(&quot;Enter %d elements for your circul list:\n&quot;,N);
+    scanf(&quot;%d&quot;,&amp;L2-&gt;data);
     for(i=1;i&lt;N;i++)
     {
         node *p=(node*)malloc(sizeof(node));
-        scanf("%d",&amp;p-&gt;data); 
+        scanf(&quot;%d&quot;,&amp;p-&gt;data); 
         tail-&gt;next=p;                  //tail-&gt;next指向最新结点 
         p-&gt;next=L2;                    //最新结点的next指向链表头，整个链表完成循环 
         tail=p;
@@ -566,19 +579,19 @@ List L2;</code></pre><h4 id="创建单循环链表">创建单循环链表</h4>
     node *p=L-&gt;next,*q=L;
     while(p)        
     {
-        printf("%d ",p-&gt;data);
+        printf(&quot;%d &quot;,p-&gt;data);
         p=p-&gt;next;
         if(p==L-&gt;next)           //如果是遍历循环链表，p往后遍历到表头处结束 
         {
             break;
         }
     }
-    printf("\n");
+    printf(&quot;\n&quot;);
 }</code></pre><h3>一个有趣的实例：约瑟夫环(也叫丢手绢问题)</h3>
-<h4>题意：</h4><h4>
+<h4>题意：<h4>
 已知 n 个人（分别用编号 1，2，3，…，n 表示）沿顺时针围坐在一张圆桌周围，从编号为 k 的人开始从1顺时针报数，数到 m 的那个人出列，他的下一个人又从 1 开始沿顺时针报数，数到 m 的那个人又出列，依次重复下去，直到圆桌上剩余一个人，输出最后一个人的编号。<br>
 约瑟夫环问题是一个经典的循环链表例题，当然用其他方法也可以实现，这里只讲用循环链表怎么实现。
-</h4><h4>代码如下：</h4>  
+<h4>代码如下：</h4>  
    首先创建一个循环链表来存放编号，详情请见上文 <a href="#创建单循环链表">创建单循环链表</a>
 
 <pre><code>int JosephCircle(List L2)   //返回最后剩下人的编号 
@@ -587,8 +600,8 @@ List L2;</code></pre><h4 id="创建单循环链表">创建单循环链表</h4>
     L2=CreateCirculList(L2);  //创建一个循环链表来存放编号
     node *p=L2,*q;            //p最终指向每一轮报数m的人，q指向p的前一个结点 
 
-    printf("Enter the beginer's number k and end-counting number m:\n"); 
-    scanf("%d%d",&amp;k,&amp;m);       //输入k和m
+    printf(&quot;Enter the beginer&apos;s number k and end-counting number m:\n&quot;); 
+    scanf(&quot;%d%d&quot;,&amp;k,&amp;m);       //输入k和m
 
     while(p-&gt;data!=k)
     {
@@ -608,26 +621,8 @@ List L2;</code></pre><h4 id="创建单循环链表">创建单循环链表</h4>
 
     return (p-&gt;data);  //返回最后一个人的编号 
 }</code></pre><p>main 函数根据需求写，程序运行结果无误。</p>
-
-</strong></strong><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+</body>
+</html>
             </div>
             <hr/>
 
@@ -1139,9 +1134,22 @@ List L2;</code></pre><h4 id="创建单循环链表">创建单循环链表</h4>
                     <div class="summary block-with-text">
                         
                             
+
+
+    
+    
+    二分法查找
+    
+        a {
+            text-decoration: none;
+        }
+    
+
+
+
     二分法查找
     思路：
-    将一些数升序地放在数组中（这里为了方便查找用数组存放数据（下标为零的不用）），确定查找范围，初始时查找范围为整个数组，下标1设为左端点left，数组最后一个元素的下标设为右端点right，中间端
+    将一些数升
                         
                     </div>
                     <div class="publish-info">
@@ -1191,13 +1199,20 @@ List L2;</code></pre><h4 id="创建单循环链表">创建单循环链表</h4>
                     <div class="summary block-with-text">
                         
                             
+
+
+    
+    
+    单向链表的基本操作
+
+
+
     单向链表的基本操作
     链表呢是一种十分基础的数据结构类型，分为单向链表，双向链表以及循环链表，今天我们就来讲讲单向链表的基本操作。
      
 
  什么是单向链表 
-首先我们来看看什么是链表 
- 链表是一种储存结构，包含数据
+
                         
                     </div>
                     <div class="publish-info">
@@ -1456,7 +1471,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.1k</span>&nbsp;字
+                class="white-color">19.8k</span>&nbsp;字
             
             
             

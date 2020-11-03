@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    344
                 </div>
                 
 
@@ -509,37 +509,53 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二叉树的基本操作</title>
+    <style type="text/css">
+.lines{
+        line-height: 20px;
+        }
+    a {
+        text-decoration: none;
+    }
+ </style>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body class=lines>
     <h3>二叉树的基础了解</h3>
     <p>
-        二叉树是n(n&gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
+        二叉树是n(n>=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
         由此可以看出二叉树根结点最多有两个子树，且分为左子树和右子树，左右子树顺序不可颠倒<br>
         如图：<br>
         <img src="https://upload-images.jianshu.io/upload_images/7043118-797eb7ba417745b2.png?imageMogr2/auto-orient/strip|imageView2/2/w/455" alt="二叉树"><br>
     </p>
     <h4>二叉树的基础性质</h4>
     <ul>
-        <li>在二叉树的第i层上最多有2i-1 个节点 。（i&gt;=1） </li>
-        <li> 二叉树中如果深度为k,那么最多有2k-1个节点。(k&gt;=1）</li>
+        <li>在二叉树的第i层上最多有2i-1 个节点 。（i>=1） </li>
+        <li> 二叉树中如果深度为k,那么最多有2k-1个节点。(k>=1）</li>
         <li> n0=n2+1 n0表示度数为0的节点数，n2表示度数为2的节点数。</li>
         <li>若对含 n 个结点的完全二叉树从上到下且从左至右进行 1 至 n 的编号，则对编号i:
             <ul>
-                <li>双亲结点编号：i/2 （i&gt;1），若i=1则无双亲</li>
-                <li>左孩子编号：2i（2i&lt; n&gt; ,若2i&gt;n 则无左孩子</li>
-                <li>右孩子编号：2i+1（2i&lt; n）,若2i+1&gt;n则无右孩子</li>
+                <li>双亲结点编号：i/2 （i>1），若i=1则无双亲</li>
+                <li>左孩子编号：2i（2i< n> ,若2i>n 则无左孩子</li>
+                <li>右孩子编号：2i+1（2i< n）,若2i+1>n则无右孩子</li>
             </ul>
          </li>
     </ul>
 
  <h4>满二叉树</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;除了叶节点，其余结点的左支树和右子树不为空的二叉树</p>
+<p>&nbsp&nbsp&nbsp&nbsp除了叶节点，其余结点的左支树和右子树不为空的二叉树</p>
 <img src="https://upload-images.jianshu.io/upload_images/7043118-c7a557dda4ffc7da.png?imageMogr2/auto-orient/strip|imageView2/2/w/392" alt="满二叉树">
 
 <h4>完全二叉树</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;对一颗具有n个结点的二叉树按层编号，编号为i(1&lt;=i&lt;=n)的结点与同样深度的满二叉树中编号为i的结点在二叉树中位置完全相同的二叉树。</p>
+<p>&nbsp&nbsp&nbsp&nbsp对一颗具有n个结点的二叉树按层编号，编号为i(1<=i<=n)的结点与同样深度的满二叉树中编号为i的结点在二叉树中位置完全相同的二叉树。</p>
 <img src="https://upload-images.jianshu.io/upload_images/7043118-132fd0379f34bcc1.png?imageMogr2/auto-orient/strip|imageView2/2/w/404" alt="完全二叉树"> 
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作,主要是递归操作完成功能，因为二叉树的结构十分对称。</p>
+<p> &nbsp&nbsp&nbsp&nbsp&nbsp二叉树是树中最基本也最重要的一种树结构，有必要好好总结一下关于二叉树的一些基本操作,主要是递归操作完成功能，因为二叉树的结构十分对称。</p>
     首先是包含头文件及一些准备工作
 
 <pre><code>#include &lt;iostream&gt;
@@ -558,7 +574,7 @@ struct BiNode
     BiNode *rch;
 } *BiTree;
 
-ifstream fin("BitreeData.txt"); // 文件输入流,从文件BitreeData.txt读取数据建立二叉树</code></pre> <h3>构建二叉树</h3>
+ifstream fin(&quot;BitreeData.txt&quot;); // 文件输入流,从文件BitreeData.txt读取数据建立二叉树</code></pre> <h3>构建二叉树</h3>
 
 <pre><code>/*建立二叉树,若输入&lt;=0则建立空树,返回树根指针*/
 BiTree  Create()
@@ -576,7 +592,7 @@ BiTree  Create()
 
     return t;
 }</code></pre> <h3>遍历</h3>
-    &nbsp; &nbsp; &nbsp; &nbsp;二叉树的遍历有三种:先序遍历（根 左子树 右子树），中序遍历（ 左子树 根  右子树） ，后续遍历（ 左子树 右子树 根）。先中后的顺序是按根节点的遍历顺序规定的。
+    &nbsp &nbsp &nbsp &nbsp二叉树的遍历有三种:先序遍历（根 左子树 右子树），中序遍历（ 左子树 根  右子树） ，后续遍历（ 左子树 右子树 根）。先中后的顺序是按根节点的遍历顺序规定的。
 
 <pre><code>/* 中序遍历--- 左子树 根 右子树*/
 
@@ -586,11 +602,11 @@ BiTree  Create()
             return;
 
         Travse(t-&gt;lch);            // 中序遍历t的左子树
-        cout &lt;&lt; t-&gt;data &lt;&lt; "  ";   //访问根结点
+        cout &lt;&lt; t-&gt;data &lt;&lt; &quot;  &quot;;   //访问根结点
         Travse(t-&gt;rch);            // 中序遍历t的右子树 
     }
 
-只需调换Travse(t-&gt;lch); cout &lt;&lt; t-&gt;data &lt;&lt; "  ";  Travse(t-&gt;rch); 这三条语句的位置即可实现不同的遍历顺序</code></pre><h3>求树的结点数</h3>
+只需调换Travse(t-&gt;lch); cout &lt;&lt; t-&gt;data &lt;&lt; &quot;  &quot;;  Travse(t-&gt;rch); 这三条语句的位置即可实现不同的遍历顺序</code></pre><h3>求树的结点数</h3>
 <h4>1.直接返回t的结点数</h4>
 
 <pre><code>int  countNode(BiTree t)
@@ -608,7 +624,7 @@ void TravseCount(BiTree t, int &amp;n)
     ++n;       //根结点计数
     TravseCount(t-&gt;lch,n);
     TravseCount(t-&gt;rch,n);
-}</code></pre><h3>求二叉树的叶子数</h3>
+}</code></pre><h3>求二叉树的叶子数</h5>
 
 <pre><code>int countLeaves(BiTree h)
 {
@@ -628,7 +644,7 @@ void TravseCount(BiTree t, int &amp;n)
     //二叉树高度为左右子树中较大高度者加一（根） 
     return max(height(t-&gt;lch),height(t-&gt;rch))+1;   //max函数包含在头文件&lt;algorithem&gt;中 
 }</code></pre><h3>查找</h3>
-&nbsp; &nbsp; &nbsp; &nbsp;查二叉树t，值为e的结点，查找成功返回其指针，否则返回0指针
+&nbsp &nbsp &nbsp &nbsp查二叉树t，值为e的结点，查找成功返回其指针，否则返回0指针
 若有重复元素，则返回最左的结点。
 
 <pre><code>BiNode* Locate(BiTree t, T e)
@@ -654,15 +670,15 @@ void TravseCount(BiTree t, int &amp;n)
     Mirror(t-&gt;lch);       // 左子树镜像
     Mirror(t-&gt;rch);       // 右子树镜像
 }</code></pre><h3>输出路径</h3>
-&nbsp; &nbsp; &nbsp; &nbsp;输出二叉树中p所指结点到指定值为e的子孙结点的路径，向量vec保存当前路径,此法会将整个二叉树遍历一遍，如果有多个值为e的元素，输出全部路径
+&nbsp &nbsp &nbsp &nbsp输出二叉树中p所指结点到指定值为e的子孙结点的路径，向量vec保存当前路径,此法会将整个二叉树遍历一遍，如果有多个值为e的元素，输出全部路径
 
 <pre><code>void dispPath(vector&lt;BiNode*&gt; vec)  //将结点指针存放在顺序表里，vector是动态存储可任意删添元素，十分方便 
 {
     for(int i=0; i&lt;vec.size(); ++i)  //输出存放在vec里的结点指向的data，即输出路径 
     {
-        cout &lt;&lt; vec[i]-&gt;data &lt;&lt;" ";
+        cout &lt;&lt; vec[i]-&gt;data &lt;&lt;&quot; &quot;;
     }
-    cout &lt;&lt; "\t\t";
+    cout &lt;&lt; &quot;\t\t&quot;;
 }
 
 void  FindPath(BiNode* p, T e, vector&lt;BiNode*&gt; vec) // vec不是引用,返回后其状态回溯
@@ -693,13 +709,13 @@ BiTree copy(BiTree t)
 
     return tt;
 }</code></pre><h3>以前序序列和中序序列构造二叉树</h3>
-&nbsp; &nbsp; &nbsp; &nbsp;以前序序列pre[pl...pr]和中序序列mid[ml...mr]构造出二叉树，假定两序列合法。<br>
+&nbsp &nbsp &nbsp &nbsp以前序序列pre[pl...pr]和中序序列mid[ml...mr]构造出二叉树，假定两序列合法。<br>
 <br>
-<h4>思路</h4><h4>
+<h4>思路<h4>
 由于前序序列先遍历根结点，故根结点在子树结点的前面，中序序列先遍历左子树结点后遍历根节点最后左子树节点，故根结点在左右子树结点中间。可通过前序序列找根结点，在中序序列找到前序序列找到的根结点，该根节点两边分别是左子树和右子树的结点左右子树结点，由此可以构造出一个二叉树。一个前序遍历和一个中序遍历可以确定一个唯一的二叉树.<br>
 
 <p> eg：已知一颗二叉树的先序序列为EBADCFHG，其中序序列为ABCDEFGH。下图说明了还原二叉树的过程：<br><img src="https://images2018.cnblogs.com/blog/1192257/201807/1192257-20180711200448113-65002712.png" alt="以前序序列和中序序列构造二叉树图解"> <br></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;首先由先序序列知道二叉树的根结点为E，在中序序列中找到E，则其左子树的中序序列为ABCD，左子树有四个结点，则在先序序列中根结点E的后面四个结点BADC就是左子树先序序列，以此类推。</p>
+<p>&nbsp&nbsp&nbsp&nbsp首先由先序序列知道二叉树的根结点为E，在中序序列中找到E，则其左子树的中序序列为ABCD，左子树有四个结点，则在先序序列中根结点E的后面四个结点BADC就是左子树先序序列，以此类推。</p>
 
 <pre><code>/*返回a[l...r]中值为e的下标*/
 int search(T a[],int l, int r,T e)
@@ -734,27 +750,9 @@ BiTree   Create(T pre[],int pl,int pr, T mid[], int ml,int mr)
 <pre><code>1 2  4 0 0  5 6 0 0  0   3 0 7 0 0
 
 本序列 是前序方式建立二叉树的输入序列，0代表空(子)树
-请画出此二叉树，对照运行结果</code></pre></h4><h3> <a href="https://icecream-tu.cn/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/" target="_blank" rel="noopener"> 一个有趣的实例：哈夫曼树和哈夫曼编码</a></h3>
-
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+请画出此二叉树，对照运行结果</code></pre><h3> <a href="https://icecream-tu.cn/2020/10/20/ha-fu-man-shu-he-ha-fu-man-bian-ma/" target="_blank" rel="noopener"> 一个有趣的实例：哈夫曼树和哈夫曼编码</a></h3>
+</body>
+</html>
             </div>
             <hr/>
 
@@ -1266,14 +1264,21 @@ BiTree   Create(T pre[],int pl,int pr, T mid[], int ml,int mr)
                     <div class="summary block-with-text">
                         
                             
-    引例
-为了更好地理解哈夫曼树的用途我们先来看一个引例
-     
-     
-     
 
-什么是哈夫曼树？
-    首先我们来了解一下什么是带权路径长度：从树根结点到任意结点的路径长度（经过的边数）与该结点上权值的乘积，称为该结
+
+    
+    
+    哈夫曼树和哈夫曼编码
+    
+        a {
+            text-decoration: none;
+        }
+    
+
+
+
+    引例
+为了更好地理解哈夫曼树的用途我
                         
                     </div>
                     <div class="publish-info">
@@ -1323,9 +1328,22 @@ BiTree   Create(T pre[],int pl,int pr, T mid[], int ml,int mr)
                     <div class="summary block-with-text">
                         
                             
+
+
+    
+    
+    二分法查找
+    
+        a {
+            text-decoration: none;
+        }
+    
+
+
+
     二分法查找
     思路：
-    将一些数升序地放在数组中（这里为了方便查找用数组存放数据（下标为零的不用）），确定查找范围，初始时查找范围为整个数组，下标1设为左端点left，数组最后一个元素的下标设为右端点right，中间端
+    将一些数升
                         
                     </div>
                     <div class="publish-info">
@@ -1584,7 +1602,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.1k</span>&nbsp;字
+                class="white-color">19.8k</span>&nbsp;字
             
             
             

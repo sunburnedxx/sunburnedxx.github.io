@@ -509,9 +509,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Floyd算法详解</title>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
     <h3>Floyd算法概述</h3>
-    <p>Floyd算法又称为插点法，是一种利用动态规划的思想寻找给定的加权图中任意两顶点之间最短路径的算法，与<a href="#"> Dijkstra算法</a>类似。<br>
+    <p>Floyd算法又称为插点法，是一种利用动态规划的思想寻找给定的加权图中任意两顶点之间最短路径的算法，与<a href="https://icecream-tu.cn/2020/10/27/dijkstra-suan-fa-xiang-jie/" target="_blank" rel="noopener"> Dijkstra算法</a>类似都是属于贪心算法。<br>
         基本思路：首先定义两个数组，数组D[i][j]记录顶点i到顶点j的最短距离，数组prior[i][j]记录i到j最短距离经过的一个顶点。在顶点i，j之间找到一个中间点m，若i到m的距离加m到j的距离小于原来i到j的距离则更新D[i][j],并将prior[i][j]更新为m，m用所有顶点一个一个试，最终得到i到j的最短距离和最短路径。对任意两个顶点进行上述操作，得到任意两个顶点的最短距离和最短路径所要经过的一个中间顶点，从中间顶点到起始顶点也有一个最短路径的中间顶点，依次类推，通过任一局部的最短路径达到整体路径最短。<br>
         Floyd算法不适用于负权回路，因为负权回路可以不断循环，没有最小值。
     </p>
@@ -572,13 +580,13 @@ void Floyd_SP(MGraph g)
 
     Floyd(g,D,prior); // 调用Floyd算法,D存储任意两点间SP长度,prior存储各SP
 
-    cout &lt;&lt; "任意顶点对的最短路径(SP)长度 矩阵(INF为无限大):" &lt;&lt; endl;
+    cout &lt;&lt; &quot;任意顶点对的最短路径(SP)长度 矩阵(INF为无限大):&quot; &lt;&lt; endl;
     for(i=0; i&lt;n; i++)
     {
         for(j=0; j&lt;n; j++)
         {
             if( D[i][j] == INFINITY)
-                cout  &lt;&lt; "   "&lt;&lt; "INF" ;
+                cout  &lt;&lt; &quot;   &quot;&lt;&lt; &quot;INF&quot; ;
             else
                 cout &lt;&lt; setw(6) &lt;&lt; D[i][j];
         }
@@ -586,7 +594,7 @@ void Floyd_SP(MGraph g)
         cout &lt;&lt; endl;
     }
 
-    cout &lt;&lt; "\n任意顶点对的最短路径(SP) " &lt;&lt; endl;
+    cout &lt;&lt; &quot;\n任意顶点对的最短路径(SP) &quot; &lt;&lt; endl;
     for(i=0; i&lt;n; i++)
     {
             for(j=0; j&lt;n; j++)
@@ -594,7 +602,7 @@ void Floyd_SP(MGraph g)
             if(i==j || D[i][j] == INFINITY) // i与j不连通,则无输出
                 continue;
             Traceback(g,prior[i],j);  // 输出i到j的SP
-            cout &lt;&lt; "\t";
+            cout &lt;&lt; &quot;\t&quot;;
         }
         cout &lt;&lt; endl;
     }
@@ -612,26 +620,8 @@ A C     A E D   A E     A E D F
 B C     B C D   B C D F
 C D     C D F
 D F
-E D     E D F</code></pre> 
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+E D     E D F</code></pre> </body>
+</html>
             </div>
             <hr/>
 
@@ -1144,9 +1134,16 @@ E D     E D F</code></pre>
                     <div class="summary block-with-text">
                         
                             
+
+
+    
+    
+    Floyd算法详解
+
+
+
     Floyd算法概述
-    Floyd算法又称为插点法，是一种利用动态规划的思想寻找给定的加权图中任意两顶点之间最短路径的算法，与 Dijkstra算法类似。
-        基本思路：首先定义两个数组，数组D[i][j]记录顶点
+    Floyd算法又称为插点法，是一种利用动态规划的思想寻找给定的加权图中任意两顶点之间最短路径的算法，与 Dijkstra算法类似都是属于贪心算法
                         
                     </div>
                     <div class="publish-info">
@@ -1197,8 +1194,16 @@ E D     E D F</code></pre>
                     <div class="summary block-with-text">
                         
                             
+
+
+    
+    
+    其他问题合集
+
+
+
     python连接数据库报错:(20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect:
-    解决方法： https://www.cnblogs.c
+    解
                         
                     </div>
                     <div class="publish-info">
@@ -1457,7 +1462,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.1k</span>&nbsp;字
+                class="white-color">19.8k</span>&nbsp;字
             
             
             
