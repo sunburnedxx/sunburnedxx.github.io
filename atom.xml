@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-10-28T05:13:42.258Z</updated>
+  <updated>2020-11-03T09:54:24.941Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Floyd算法详解</title>
+    <link href="https://sunburnedxx.github.io/2020/10/30/floyd-suan-fa-xiang-jie/"/>
+    <id>https://sunburnedxx.github.io/2020/10/30/floyd-suan-fa-xiang-jie/</id>
+    <published>2020-10-30T05:02:00.000Z</published>
+    <updated>2020-11-03T09:54:24.941Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;h3&gt;Floyd算法概述&lt;/h3&gt;
+    &lt;p&gt;Floyd算法又称为插点法，是一种利用动态规划的思想寻找给定的加权图中任意两顶点之间最短路径的算法，与&lt;a href=&quot;#&quot;&gt; Dijkstra算法&lt;/a&gt;类似。&lt;br&gt;
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://sunburnedxx.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="Floyd算法" scheme="https://sunburnedxx.github.io/tags/Floyd%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>其他问题合集</title>
+    <link href="https://sunburnedxx.github.io/2020/10/29/qi-ta-wen-ti/"/>
+    <id>https://sunburnedxx.github.io/2020/10/29/qi-ta-wen-ti/</id>
+    <published>2020-10-29T05:07:10.000Z</published>
+    <updated>2020-10-29T05:20:56.006Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;h3&gt;python连接数据库报错:(20009, b&#39;DB-Lib error message 20009, severity 9:\nUnable to connect:&lt;/h3&gt;
+    解决方法：
+        
+      
+    
+    </summary>
+    
+    
+      <category term="其它问题合集" scheme="https://sunburnedxx.github.io/categories/%E5%85%B6%E5%AE%83%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/"/>
+    
+    
+      <category term="数据库连接" scheme="https://sunburnedxx.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dijkstra算法详解</title>
+    <link href="https://sunburnedxx.github.io/2020/10/27/dijkstra-suan-fa-xiang-jie/"/>
+    <id>https://sunburnedxx.github.io/2020/10/27/dijkstra-suan-fa-xiang-jie/</id>
+    <published>2020-10-27T15:03:00.000Z</published>
+    <updated>2020-11-03T09:54:24.941Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    Dijkstra算法与&lt;a href=&quot;https://icecream-tu.cn/2020/10/27/prim-suan-fa-xiang-jie/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://sunburnedxx.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="Dijkstra算法" scheme="https://sunburnedxx.github.io/tags/Dijkstra%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Prim算法详解</title>
@@ -45,11 +132,40 @@
   </entry>
   
   <entry>
-    <title>小确幸</title>
-    <link href="https://sunburnedxx.github.io/2020/10/24/xiao-que-xing/"/>
-    <id>https://sunburnedxx.github.io/2020/10/24/xiao-que-xing/</id>
+    <title>图的基本操作</title>
+    <link href="https://sunburnedxx.github.io/2020/10/24/tu-de-ji-ben-cao-zuo/"/>
+    <id>https://sunburnedxx.github.io/2020/10/24/tu-de-ji-ben-cao-zuo/</id>
+    <published>2020-10-24T11:29:00.000Z</published>
+    <updated>2020-11-03T09:57:28.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;h3&gt;图的基本常识&lt;/h3&gt;
+   
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="https://sunburnedxx.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="图" scheme="https://sunburnedxx.github.io/tags/%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>碎碎念</title>
+    <link href="https://sunburnedxx.github.io/2020/10/24/sui-sui-nian/"/>
+    <id>https://sunburnedxx.github.io/2020/10/24/sui-sui-nian/</id>
     <published>2020-10-24T09:24:38.668Z</published>
-    <updated>2020-10-27T13:49:11.172Z</updated>
+    <updated>2020-11-02T23:00:11.854Z</updated>
     
     <summary type="html">
     
@@ -66,7 +182,7 @@
     </summary>
     
     
-      <category term="小确幸" scheme="https://sunburnedxx.github.io/categories/%E5%B0%8F%E7%A1%AE%E5%B9%B8/"/>
+      <category term="碎碎念" scheme="https://sunburnedxx.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
     
   </entry>
