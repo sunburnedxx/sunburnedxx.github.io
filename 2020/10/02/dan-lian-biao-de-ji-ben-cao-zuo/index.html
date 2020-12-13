@@ -23,8 +23,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="单向链表的基本操作, Journey to paradise">
-    <meta name="description" content="">
+    <meta name="keywords" content="单向链表的基本操作, HTML,CSS,JavaScript,React,数据结构与算法等">
+    <meta name="description" content="个人技术学习记录总结，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,7 +36,7 @@
 
 
     <title>单向链表的基本操作 | Journey to paradise</title>
-    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -60,7 +60,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/favicon.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Journey to paradise</span>
                 </a>
@@ -158,12 +158,12 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/favicon.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Journey to paradise</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            个人技术学习记录总结，分享知识
             
         </div>
     </div>
@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    3.1k
                 </div>
                 
 
@@ -509,27 +509,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>单向链表的基本操作</title>
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-<body>
+                
     <h2>单向链表的基本操作</h2>
     <p>链表呢是一种十分基础的数据结构类型，分为单向链表，双向链表以及循环链表，今天我们就来讲讲单向链表的基本操作。<br>
-    <img src="https://pics3.baidu.com/feed/f11f3a292df5e0fe42a2ef293382cfac5fdf7243.jpeg?token=04aa0dea143c72e0b99d72c5e5b66f82&s=38867C32CD227D225AD995D30000C0B1" alt="数据结构"> 
+    <img src="https://pics3.baidu.com/feed/f11f3a292df5e0fe42a2ef293382cfac5fdf7243.jpeg?token=04aa0dea143c72e0b99d72c5e5b66f82&amp;s=38867C32CD227D225AD995D30000C0B1" alt="数据结构"> 
 </p>
-</p> <h3>什么是单向链表</h3> 
+<p></p> <h3>什么是单向链表</h3> 
 首先我们来看看什么是链表 <br>
  链表是一种储存结构，包含数据域和指针域，一个数据域配一个指针域构成一个结点，数据域存放数据，指针域存放指针也就是地址，通过将下一个结点（后继结点）的地址存放在上一个结点（前驱结点）的指针域中将四处分散的结点连接起来，也就将分散的储存空间连接起来
- <img src="https://pics3.baidu.com/feed/f11f3a292df5e0fe42a2ef293382cfac5fdf7243.jpeg?token=04aa0dea143c72e0b99d72c5e5b66f82&s=38867C32CD227D225AD995D30000C0B1" alt="链表图示"> 
+ <img src="https://pics3.baidu.com/feed/f11f3a292df5e0fe42a2ef293382cfac5fdf7243.jpeg?token=04aa0dea143c72e0b99d72c5e5b66f82&amp;s=38867C32CD227D225AD995D30000C0B1" alt="链表图示"> 
 <br>
 <br>
  <h2>单向链表的优缺点</h2>
-  从上述描述我们可以看出，链表<strong>优点</strong>在于它的储存空间不用连续，因为它可以通过指针将各处分散的储存空间连接起来，而且链表的长度可以改变，是一种动态分配内存的模式，十分方便在任意位置添加删除结点。<strong>缺点</strong>在于不能随机访问结点,需要从头开始顺次一个结点一个结点的查找（单向链表），而数组就可以通过下标值直接找到需要的值</p>
+  从上述描述我们可以看出，链表<strong>优点</strong>在于它的储存空间不用连续，因为它可以通过指针将各处分散的储存空间连接起来，而且链表的长度可以改变，是一种动态分配内存的模式，十分方便在任意位置添加删除结点。<strong>缺点</strong>在于不能随机访问结点,需要从头开始顺次一个结点一个结点的查找（单向链表），而数组就可以通过下标值直接找到需要的值<p></p>
  <h2>单向链表的基本操作（增,删,改,查）</h2>
  首先呢开始准备工作，引用头文件，定义类型...
 
@@ -555,14 +547,14 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
     L1-&gt;next=0;
     q=L1;
 
-    printf(&quot;Enter the number of your elements in the list:\n&quot;);
-    scanf(&quot;%d&quot;,&amp;count);
-    printf(&quot;Enter %d elements for your linear list:\n&quot;,count);
+    printf("Enter the number of your elements in the list:\n");
+    scanf("%d",&amp;count);
+    printf("Enter %d elements for your linear list:\n",count);
 
     for(i=0;i&lt;count;i++)                         
     {
         node* p=(node*)malloc(sizeof(node));  //p是创建的新结点，往链表后面插，q指向链表的尾结点 
-        scanf(&quot;%d&quot;,&amp;p-&gt;data);
+        scanf("%d",&amp;p-&gt;data);
         p-&gt;next=0;
         q-&gt;next=p;
         q=p;
@@ -580,8 +572,8 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
     {
         node* p=(node*)malloc(sizeof(node))        //创建新结点 
 
-<pre><code>    printf(&quot;Enter the element to insert by head:\n&quot;);
-    scanf(&quot;%d&quot;,&amp;p-&gt;data);                                 //输入要插的数并存放在新结点的数据域 
+<pre><code>    printf("Enter the element to insert by head:\n");
+    scanf("%d",&amp;p-&gt;data);                                 //输入要插的数并存放在新结点的数据域 
 
     p-&gt;next=L-&gt;next;                                     //将新结点插入链表头部 
     L-&gt;next=p; 
@@ -592,8 +584,8 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
         p=L1;
         q=(node*)malloc(sizeof(node)) ;
         printf("Enter an element to insert to the tail:\n");
-        scanf("%d",&q->data);
-        q->next=0;
+        scanf("%d",&amp;q-&gt;data);
+        q-&gt;next=0;
 
 <pre><code>    while(p-&gt;next)
       {
@@ -608,12 +600,12 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
     node *q,*p=(node*)malloc(sizeof(node));      //q遍历链表找到待插位置的前一个结点，p存放待插的值 
     q=L;
 
-    printf(&quot;Enter the position and value to be inserted:\n&quot;);
-    scanf(&quot;%d%d&quot;,&amp;position,&amp;p-&gt;data);
+    printf("Enter the position and value to be inserted:\n");
+    scanf("%d%d",&amp;position,&amp;p-&gt;data);
 
     if(position&lt;=0)                        //位置不能为负值 
     {
-        printf(&quot;Invalid Position!\n&quot;);
+        printf("Invalid Position!\n");
         exit(-1);
     }
     for(i=1;i&lt;position;i++)
@@ -621,7 +613,7 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
         q=q-&gt;next;                       
         if(q==0)                       //位置超过链表的最后一位的后一位 
         {
-            printf(&quot;Invalid position!\n&quot;);
+            printf("Invalid position!\n");
             exit(-1);
         }
     }
@@ -633,8 +625,8 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
 <pre><code>void InsertSorted(List L) //有序表按顺序插值
 {
     T e;
-    printf(&quot;Enter an element to be inserted:\n&quot;);
-    scanf(&quot;%d&quot;,&amp;e);
+    printf("Enter an element to be inserted:\n");
+    scanf("%d",&amp;e);
     node* p=(node*)malloc(sizeof(node));
     node* q=L-&gt;next;
     p-&gt;data=e;
@@ -654,11 +646,11 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
 {
     int i,position;
     node *d,*p=L;               
-    printf(&quot;Enter the position of value to be deleted:\n&quot;);
-    scanf(&quot;%d&quot;,&amp;position);
+    printf("Enter the position of value to be deleted:\n");
+    scanf("%d",&amp;position);
     if(position&lt;=0)
     {
-        printf(&quot;Invalid position!\n&quot;);    // 查询位值小于零，不合法，退出 
+        printf("Invalid position!\n");    // 查询位值小于零，不合法，退出 
         exit(-1);
     } 
         for(i=1;i&lt;position;i++)
@@ -666,7 +658,7 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
             p=p-&gt;next;     //p记录待删结点的前一个结点 
             if(p-&gt;next==0)
             {
-                printf(&quot;Invalid position!\n&quot;)
+                printf("Invalid position!\n")
                 exit(-1);       //查询位置超过链表最后一个位置，不合法，退出 
             } 
         }
@@ -681,8 +673,8 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
 {
     int e;
     node *p=L,*q;
-    printf(&quot;Enter the value to be deleted:\n&quot;);
-    scanf(&quot;%d&quot;,&amp;e);
+    printf("Enter the value to be deleted:\n");
+    scanf("%d",&amp;e);
 
     while(p-&gt;next!=0&amp;&amp;p-&gt;next-&gt;data!=e)
     {
@@ -700,7 +692,7 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
 
     else
     {
-        printf(&quot;There are no such value in the list!\n&quot;);
+        printf("There are no such value in the list!\n");
 
         return false;
     }
@@ -717,8 +709,8 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
 {
     int e;
     node *p=L-&gt;next,*q;
-    printf(&quot;Enter the value to be deleted:\n&quot;);
-    scanf(&quot;%d&quot;,&amp;e);
+    printf("Enter the value to be deleted:\n");
+    scanf("%d",&amp;e);
 
     while(p!=0&amp;&amp;p-&gt;data!=e)
     {
@@ -730,7 +722,7 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
     }
     else
     {
-        printf(&quot;There is no such value in the list!\n&quot;);
+        printf("There is no such value in the list!\n");
     }
 } </code></pre><h4>删去链表中最大值</h4>
 
@@ -772,14 +764,14 @@ void DeleteMaxOfList(List L1)           // 删除链表中最大元素
     node *p=L-&gt;next,*q=L;
     while(p)                     //通过循环打印链表结点的值
     {
-        printf(&quot;%d &quot;,p-&gt;data);
+        printf("%d ",p-&gt;data);
         p=p-&gt;next;
         if(p==L-&gt;next)           //如果是遍历循环链表，p往后遍历到表头处结束 
         {
             break;
         }
     }
-    printf(&quot;\n&quot;);
+    printf("\n");
 }</code></pre><h4>其他操作:</h4>
  <br>
 <h4>求表长</h4>
@@ -915,14 +907,14 @@ void AddPoly(Poly P1,Poly P2) //两升序序多项式相加
      P-&gt;next=0;                                //头结点数据域不存放数据 
     node *m=P;
 
-    printf(&quot;Enter the number of your node:\n&quot;);
-    scanf(&quot;%d&quot;,&amp;count);
+    printf("Enter the number of your node:\n");
+    scanf("%d",&amp;count);
 
-    printf(&quot;Enter coefficients and index:\n&quot;); //输入多项式的系数和指数部分 
+    printf("Enter coefficients and index:\n"); //输入多项式的系数和指数部分 
     for(i=0;i&lt;count;i++)
     {
         node *q=(node*)malloc(sizeof(node));     
-        scanf(&quot;%d%d&quot;,&amp;q-&gt;fac,&amp;q-&gt;e);           //输入项的系数和指数
+        scanf("%d%d",&amp;q-&gt;fac,&amp;q-&gt;e);           //输入项的系数和指数
         q-&gt;next=0;
 
         m-&gt;next=q;                             //m记录待插的位置(链尾)，q是待插的结点 
@@ -939,23 +931,23 @@ void AddPoly(Poly P1,Poly P2) //两升序序多项式相加
 
     while(m)        
     {
-        printf(&quot;%dx^%d + &quot;,m-&gt;fac,m-&gt;e);
+        printf("%dx^%d + ",m-&gt;fac,m-&gt;e);
         m=m-&gt;next;
     }
-    printf(&quot;\n&quot;);
+    printf("\n");
 
  }
  int main(Void)
  {
      Poly P1,P2;
      P1=CreatePoly(P1);
-     printf(&quot;P1=&quot;);
+     printf("P1=");
      PrintPoly(P1);
      P2=CreatePoly(P2);
-     printf(&quot;P2=&quot;);
+     printf("P2=");
      PrintPoly(P2);
      AddPoly(P1,P2);
-     printf(&quot;P1+P2=&quot;); 
+     printf("P1+P2="); 
      PrintPoly(P1);
 
      return 0;    
@@ -1000,7 +992,7 @@ void ReverseTraverse(List h)     //将链表倒序输出
     }
     ReverseTraverse(h-&gt;next);  //过程为:先输出头结点后面部分的链表，再输出头结点
 
-    cout&lt;&lt;h-&gt;data&lt;&lt;&quot; &quot;;  //而头结点后面部分的链表又可以分为头结点和头结点后部分的链表,输出顺序如上一步骤
+    cout&lt;&lt;h-&gt;data&lt;&lt;" ";  //而头结点后面部分的链表又可以分为头结点和头结点后部分的链表,输出顺序如上一步骤
 } 
 
 void Traverse(List h)   //将链表正序输出 
@@ -1010,7 +1002,7 @@ void Traverse(List h)   //将链表正序输出
         return;
     }
 
-    cout&lt;&lt;h-&gt;data&lt;&lt;&quot; &quot;;  //过程为:先输出头结点,再输出头结点后面部分的链表
+    cout&lt;&lt;h-&gt;data&lt;&lt;" ";  //过程为:先输出头结点,再输出头结点后面部分的链表
     Traverse(h-&gt;next);   //而头结点后面部分的链表又可以分为头结点和头结点后部分的链表,输出顺序如上一步骤
 
 }
@@ -1057,8 +1049,26 @@ int main(void)
 
 return 0;
 } </code></pre><p> 至此大功告成！代码有点幼稚QAQ，思路值得学习~           </p>
-</body>
-</html>
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1570,21 +1580,11 @@ return 0;
                     <div class="summary block-with-text">
                         
                             
-
-
-    
-    
-    单循环链表的基本操作
-    
-        a {
-            text-decoration: none;
-        }
-    
-
-
-
     什么是单循环链表？
-    在单链表
+    在单链表中，终端结点的指针域NULL指向表头结点或开始结点
+图示：
+在循环链表中依旧存在头指针和首元节点，循环链表和普通链表相比，唯一的不同就是循环链表首尾相连，其他都完全一样。
+    单循环链表的基
                         
                     </div>
                     <div class="publish-info">
@@ -1634,17 +1634,9 @@ return 0;
                     <div class="summary block-with-text">
                         
                             
-
-
-
-    
-    
-    Python绘图turtle库命令合集
-
-
-
-
-    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为
+    turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形
+            
+     
                         
                     </div>
                     <div class="publish-info">
@@ -1903,7 +1895,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.8k</span>&nbsp;字
+                class="white-color">22.2k</span>&nbsp;字
             
             
             

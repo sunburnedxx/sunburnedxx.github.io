@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-11-03T10:05:57.312Z</updated>
+  <updated>2020-11-04T10:15:28.300Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/30/floyd-suan-fa-xiang-jie/"/>
     <id>https://sunburnedxx.github.io/2020/10/30/floyd-suan-fa-xiang-jie/</id>
     <published>2020-10-30T05:02:00.000Z</published>
-    <updated>2020-11-03T10:05:57.312Z</updated>
+    <updated>2020-11-04T10:15:28.300Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,9 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=, initial-scale=1.0&quot;&gt;
-   
+          
+&lt;h3&gt;Floyd算法概述&lt;/h3&gt;
+    &lt;p&gt;Floyd算法又称为插点法，是一种利用动态规划的思想寻找给定的加权图中任意两顶点之间最短路径的算法，与&lt;a
         
       
     
@@ -61,11 +58,9 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h3&gt;python连接数据库报错:(20009, b&#39;DB-Lib error message 20009, severity 9:\nUnable to connect:&lt;/h3&gt;
+    解决方法：
         
       
     
@@ -84,7 +79,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/27/dijkstra-suan-fa-xiang-jie/"/>
     <id>https://sunburnedxx.github.io/2020/10/27/dijkstra-suan-fa-xiang-jie/</id>
     <published>2020-10-27T15:03:00.000Z</published>
-    <updated>2020-11-03T09:54:24.941Z</updated>
+    <updated>2020-11-04T10:16:05.516Z</updated>
     
     <summary type="html">
     
@@ -92,11 +87,8 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    Dijkstra算法与&lt;a href=&quot;https://icecream-tu.cn/2020/10/27/prim-suan-fa-xiang-jie/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
         
       
     
@@ -115,7 +107,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/27/prim-suan-fa-xiang-jie/"/>
     <id>https://sunburnedxx.github.io/2020/10/27/prim-suan-fa-xiang-jie/</id>
     <published>2020-10-27T05:03:00.000Z</published>
-    <updated>2020-10-28T05:13:42.258Z</updated>
+    <updated>2020-11-26T09:44:10.968Z</updated>
     
     <summary type="html">
     
@@ -123,11 +115,8 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+   
         
       
     
@@ -146,7 +135,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/24/tu-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/24/tu-de-ji-ben-cao-zuo/</id>
     <published>2020-10-24T11:29:00.000Z</published>
-    <updated>2020-11-03T10:05:18.505Z</updated>
+    <updated>2020-11-14T08:56:16.494Z</updated>
     
     <summary type="html">
     
@@ -154,11 +143,9 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h3&gt;图的基本常识&lt;/h3&gt;
+   
         
       
     
@@ -185,11 +172,9 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h3&gt;无题&lt;/h3&gt;
+    &lt;p&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
         
       
     
@@ -214,11 +199,11 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h3&gt;引例&lt;/h3&gt;
+为了更好地理解哈夫曼树的用途我们先来看一个引例
+    &lt;img src=&quot;../images/HuffmanTree1.jpg&quot; alt=&quot;哈夫曼树引例&quot;&gt; &lt;br&gt;
+    &lt;img src=&quot;../images/Hu.jpg&quot;
         
       
     
@@ -245,11 +230,11 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h3&gt;二叉树的基础了解&lt;/h3&gt;
+    &lt;p&gt;
+        二叉树是n(n&amp;gt;=0)个结点的有限集合，该集合由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成,或者为空集（称为空二叉树。
+       
         
       
     
@@ -276,11 +261,10 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h3&gt;二分法查找&lt;/h3&gt;
+    &lt;h2&gt;思路：&lt;/h2&gt;
+    &lt;p style=&quot;line-height:
         
       
     
@@ -307,11 +291,10 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h3&gt;什么是单循环链表？&lt;/h3&gt;
+    在单链表中，终端结点的指针域NULL指向表头结点或开始结点&lt;br&gt;
+图示：&lt;img src=&quot;http://c.biancheng.net/uploads/allimg/190426/1H422A22-0.png&quot;
         
       
     
@@ -338,11 +321,10 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh-CN&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;h2&gt;单向链表的基本操作&lt;/h2&gt;
+    &lt;p&gt;链表呢是一种十分基础的数据结构类型，分为单向链表，双向链表以及循环链表，今天我们就来讲讲单向链表的基本操作。&lt;br&gt;
+    &lt;img
         
       
     
@@ -369,12 +351,10 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh-CN&quot;&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;strong&gt;turtle库是python中用来绘制图像的函数库，turtle：乌龟，小乌龟从坐标原点（默认值）开始，服从我们输入的指令在画布（有一个以画布中心为坐标原点的坐标轴）中移动，形成我们绘制的图形&lt;strong&gt;
+            &lt;div&gt;
+   
         
       
     
@@ -401,12 +381,9 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh-CN&quot;&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;div&gt;
+        &lt;h3&gt;&lt;a
         
       
     
@@ -431,11 +408,8 @@
       
         
         
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+          
+    &lt;p&gt;首先需要安装一台ubuntu虚拟机，详情请见&lt;a href=&quot;https://icecream-tu.cn/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/&quot; target=&quot;_blank&quot;
         
       
     

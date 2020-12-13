@@ -23,8 +23,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于, Journey to paradise">
-    <meta name="description" content="">
+    <meta name="keywords" content="关于, HTML,CSS,JavaScript,React,数据结构与算法等">
+    <meta name="description" content="个人技术学习记录总结，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,7 +36,7 @@
 
 
     <title>关于 | Journey to paradise</title>
-    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -60,7 +60,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/favicon.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Journey to paradise</span>
                 </a>
@@ -158,12 +158,12 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/favicon.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Journey to paradise</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            个人技术学习记录总结，分享知识
             
         </div>
     </div>
@@ -546,7 +546,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11"]
+            data: ["2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12"]
         },
         yAxis: {
             type: 'value',
@@ -556,7 +556,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,1,0,0,4,11,0],
+                data: [0,0,0,0,0,0,1,0,0,4,11,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -598,7 +598,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"算法","value":4},{"name":"Python","value":1},{"name":"软件安装","value":2},{"name":"数据结构","value":5},{"name":"html","value":1},{"name":"其它问题合集","value":1},{"name":"碎碎念","value":1}],
+                data: [{"name":"算法","value":4},{"name":"数据结构","value":5},{"name":"Python","value":1},{"name":"软件安装","value":2},{"name":"html","value":1},{"name":"其它问题合集","value":1},{"name":"碎碎念","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -622,7 +622,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Floyd算法","Dijkstra算法","turtle","Prim算法","二分法","二叉树","数据库连接","哈夫曼树","单循环链表","图"]
+                data: ["Prim算法","turtle","Dijkstra算法","Floyd算法","二分法","数据库连接","哈夫曼树","图","二叉树","单链表"]
             }
         ],
         yAxis: [
@@ -771,19 +771,10 @@
                         <i class="fa fa-address-book"></i>&nbsp;&nbsp;个人简历
                      </div>
                         <div id="articleContent" data-aos="fade-up">
-                            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
-
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-<body>
+                            
     <h3>基本介绍</h3>
- <table align="center"; cellpadding="0"; cellspacing="0">
-<tr>
+ <table align="center" ;="" cellpadding="0" cellspacing="0">
+<tbody><tr>
     <th>姓名：</th>
     <td>涂爽</td>
     <td rowspan="3"> <img src="#" alt="照片"> </td>
@@ -803,13 +794,31 @@
         <td>qq：3033766681</td>
         <td>tel：15802752079</td>
 </tr>
-</table>
+</tbody></table>
 <br>
 <h3>在校经历</h3>
 
 <p><strong>本科：</strong>划水中。。。</p>
-</body>
-</html>
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
                         </div>
                   </div>
              </div>
@@ -876,7 +885,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.8k</span>&nbsp;字
+                class="white-color">22.2k</span>&nbsp;字
             
             
             

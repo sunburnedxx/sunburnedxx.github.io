@@ -23,8 +23,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Prim算法详解, Journey to paradise">
-    <meta name="description" content="">
+    <meta name="keywords" content="Prim算法详解, HTML,CSS,JavaScript,React,数据结构与算法等">
+    <meta name="description" content="个人技术学习记录总结，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,7 +36,7 @@
 
 
     <title>Prim算法详解 | Journey to paradise</title>
-    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -60,7 +60,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/favicon.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Journey to paradise</span>
                 </a>
@@ -158,12 +158,12 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/favicon.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Journey to paradise</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            个人技术学习记录总结，分享知识
             
         </div>
     </div>
@@ -509,31 +509,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prim算法</title>
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-<body>
+                
     Prim算法可用来构造图的最小生成树
-<h3>大概思路:<h3>
-&nbsp&nbsp&nbsp&nbsp&nbsp将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。在第二部分中找出距离第一部分中顶点最近的顶点以及对应的距离，将该顶点加入第一部分，依次类推，直到所有顶点都加入第一部分 <br>
-<h3>算法步骤:</h3>
+<h3>大概思路:</h3><h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。在第二部分中找出距离第一部分中顶点最近的顶点以及对应的距离，将该顶点加入第一部分，依次类推，直到所有顶点都加入第一部分 <br>
+</h3><h3>算法步骤:</h3>
     <ol>
         <li>创建一个结构数组，数组的序号代表顶点的编号。数组元素包括每个未在最小生成树中的顶点离最小生成树中哪一个顶点(adindex)最近和相应的距离(closedge)，若距离为零则该顶点已在最小生成树中。</li>
         <li>初始时，任选一顶点V1放入最小生成树中，记录其余顶点到v1的距离lowcost（x表示不能一条边连通，无穷远）</li>
         <li>找出数组中lowcost最小值及对应的顶点，将该顶点放入MST，该顶点的lowcost置为0</li>
         <li>分别将lowcost不为0（不在MST中）的顶点v到最新加入MST的顶点的距离与 到与v的adjvex值对应的顶点的距离相比较，选出较小值及对应的顶点，更新lowcast</li>
         <li>重复步骤2，3直到数组中所有的lowcost为0，即所有顶点均加入MST，最小生成树MST就此生成</li>
-    </ol><BR>
+    </ol><br>
     <h3>图例说明:</h3>
 eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt="图例说明"> <br> <br>
 1.任选一顶点V1放入最小生成树中，记录其余顶点到v1的距离lowcost（x表示不能一条边连通，无穷远）
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>1</td>
         <td>2</td>
@@ -560,10 +552,10 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>x</td>
         <td>x</td>
     </tr>
-</table><br>
+</tbody></table><br>
 2.找出lowcost最小值1及对应的顶点v3，将v3放入MST，v3的lowcost为0 <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>1</td>
         <td>2</td>
@@ -590,11 +582,11 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>x</td>
         <td>x</td>
     </tr>
-</table>
+</tbody></table>
 <img src="https://img-blog.csdn.net/20140816181809296" alt="图例说明"> <br><br>
 3.分别将lowcost不为0（不在MST中）的顶点到新加入MST的v3的距离与到与序号相对应的adjvex值的顶点距离相比较（eg：选序号顶点v2，序号2中adjvex为1，则将v2到v1的距离与v2到v3的距离相比较），选出较小值及对应的顶点，更新lowcast,eg:v2距离v1为6，距离v3为5，v2离v3更近，则将序号为2的元素中adjvex更新为3，lowcost更新为5，依此类推。<br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>1</td>
         <td>2</td>
@@ -621,10 +613,10 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>6</td>
         <td>4</td>
     </tr>
-</table><br>
+</tbody></table><br>
 4.找出lowcast最小值为4，对应顶点v6，将v6放入MST中，v6的lowcast为0 <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>1</td>
         <td>2</td>
@@ -651,11 +643,11 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>6</td>
         <td>0</td>
     </tr>
-</table>
+</tbody></table>
 <img src="https://img-blog.csdn.net/20140816182214390" alt="图例说明"> <br><br>
 5.分别将lowcost不为0（不在MST中）的顶点到新加入MST的v3的距离与到上一加入MST的v1的距离相比较，选出较小值及对应的顶点，更新lowcast <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>1</td>
         <td>2</td>
@@ -682,10 +674,10 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>6</td>
         <td>0</td>
     </tr>
-</table><br>
+</tbody></table><br>
 6.找出lowcast最小值为2，对应顶点v4，将v4放入MST中，v4的lowcast为0
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>1</td>
         <td>2</td>
@@ -712,11 +704,11 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>6</td>
         <td>0</td>
     </tr>
-</table>
+</tbody></table>
 <img src="https://img-blog.csdn.net/20140816182451906" alt="图例"> <br><br>
 7.依次类推，最后得到的数组及最小生成树如下：<br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>1</td>
         <td>2</td>
@@ -743,7 +735,7 @@ eg:对于原图：<br><img src="https://img-blog.csdn.net/20140816180420993" alt
         <td>0</td>
         <td>0</td>
     </tr>
-</table>
+</tbody></table>
 <img src="https://img-blog.csdn.net/20140816183241396" alt="图例"> <br>
 <br><br>
 <h3>代码：</h3>
@@ -779,7 +771,7 @@ void miniSpan(MGraph g, int u)
             }
         }
 
-        printf(&quot;%d  --- %d\n&quot;, closedge[k].adjvex, k);  // 输出一条边
+        printf("%d  --- %d\n", closedge[k].adjvex, k);  // 输出一条边
         closedge[k].lowcost = 0;  // k号顶点加入S集合
 
         /*因为k新加入S集合，需以此更新closedge：逐一考察各顶点是否与k顶点的边更近*/
@@ -793,8 +785,26 @@ void miniSpan(MGraph g, int u)
         }
     }
 
-}</code></pre></body>
-</html>
+}</code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1306,18 +1316,10 @@ void miniSpan(MGraph g, int u)
                     <div class="summary block-with-text">
                         
                             
-
-
-    
-    
-    Dijkstra算法详解
-
-
-
     Dijkstra算法与 Prim算法思路很类似，都是通过所有局部最优达到整体最优（贪心算法）。
 Dijkstra算法概述：
 
-&nbsp&nbsp&nbsp&nbsp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;迪杰斯特拉(Dijkstra)算法是典型最短
                         
                     </div>
                     <div class="publish-info">
@@ -1367,16 +1369,8 @@ Dijkstra算法概述：
                     <div class="summary block-with-text">
                         
                             
-
-
-    
-    
-    Document
-
-
-
     图的基本常识
-    &nbsp&nbsp&nbsp&nbsp&nbsp图表现的是多对多的关系（链表表现的是一对一的关系，而树表现的是一对多的关系，树是图的特例）。图中储存数
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图表现的是多对多的关系（链表表现的是一对一的关系，而树表现的是一对多的关系，树是图的特例）。图中储存数据元素的结构体称为顶点（通常用Vi表示）；从一
                         
                     </div>
                     <div class="publish-info">
@@ -1635,7 +1629,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.8k</span>&nbsp;字
+                class="white-color">22.2k</span>&nbsp;字
             
             
             

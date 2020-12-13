@@ -23,8 +23,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="图的基本操作, Journey to paradise">
-    <meta name="description" content="">
+    <meta name="keywords" content="图的基本操作, HTML,CSS,JavaScript,React,数据结构与算法等">
+    <meta name="description" content="个人技术学习记录总结，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,7 +36,7 @@
 
 
     <title>图的基本操作 | Journey to paradise</title>
-    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -60,7 +60,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/favicon.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Journey to paradise</span>
                 </a>
@@ -158,12 +158,12 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/favicon.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Journey to paradise</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            个人技术学习记录总结，分享知识
             
         </div>
     </div>
@@ -509,17 +509,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-<body>
+                
     <h3>图的基本常识</h3>
-    <p>&nbsp&nbsp&nbsp&nbsp&nbsp<strong>图</strong>表现的是多对多的关系（链表表现的是一对一的关系，而树表现的是一对多的关系，树是图的特例）。图中储存数据元素的结构体称为<strong>顶点</strong>（通常用Vi表示）；从一个顶点到另一顶点所经过的所有顶点组成的序列称作一条 <strong> 路径</strong>；将顶点连接起来的线称作   <strong>边</strong>（有向图中称作弧）；图分为有向图和无向图，<strong>有向图</strong>中每条路径都是有方向的，且构成路径的序列顺序沿弧的方向排列，不可反向，就像单行路不可逆行一样。<em>无向图中描述两顶点V1 和 V2之间的关系可以用 (V1,V2) 来表示，而有向图中描述从V1到V2的单向关系用 <V1,V2>表示<em>；<strong>权</strong>表示某边（弧）在图中的重要程度，就像路线图中有主干通道和小路一样，权通常标在边上；带权的图称作 <strong>网</strong></p> <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>图</strong>表现的是多对多的关系（链表表现的是一对一的关系，而树表现的是一对多的关系，树是图的特例）。图中储存数据元素的结构体称为<strong>顶点</strong>（通常用Vi表示）；从一个顶点到另一顶点所经过的所有顶点组成的序列称作一条 <strong> 路径</strong>；将顶点连接起来的线称作   <strong>边</strong>（有向图中称作弧）；图分为有向图和无向图，<strong>有向图</strong>中每条路径都是有方向的，且构成路径的序列顺序沿弧的方向排列，不可反向，就像单行路不可逆行一样。<em>无向图中描述两顶点V1 和 V2之间的关系可以用 (V1,V2) 来表示，而有向图中描述从V1到V2的单向关系用 <v1,v2>表示<em>；<strong>权</strong>表示某边（弧）在图中的重要程度，就像路线图中有主干通道和小路一样，权通常标在边上；带权的图称作 <strong>网</strong></em></v1,v2></em></p><em><em> <br>
     <img src="http://data.biancheng.net/uploads/allimg/190103/2-1Z1032054241T.gif" alt="无向图">
     <img src="http://data.biancheng.net/uploads/allimg/190103/2-1Z1032055151L.gif" alt="有向图">
     <img src="http://data.biancheng.net/uploads/allimg/190103/2-1Z10321001LT.gif" alt="网">
@@ -538,7 +530,7 @@ const int MAX = 20;    // 常量：最多顶点数，用来分配数组长度
 const int INF = 99999; // 常量：无限大,带权图中表示不邻接的两顶点的距离
 
 typedef char T;  // 元素类型   </code></pre><h3>图的邻接表储存</h3>
-    <p>&nbsp&nbsp&nbsp&nbsp图是一个多对多的关系，那么如何将图中的各个顶点储存并且可以表现顶点与顶点之间的关系呢？<br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;图是一个多对多的关系，那么如何将图中的各个顶点储存并且可以表现顶点与顶点之间的关系呢？<br>
     这里我们介绍邻接表的储存方式：<br>将图的所有顶点储存在一个结构体数组中，每个顶点结构体包括顶点数据和一个指向顶点邻接顶点的指针域，而邻接顶点结点包括邻接顶点的数据和指向下一个临界结点的指针，这样一来一个顶点的所有临界顶点就构成了一个链表。此种储存方式中，通过顶点构成的数组的下标可以不重复地找到所有顶点，而每个顶点的邻接顶点可以通过顶点的指针域指向的链表找到，这样既可以得到所有顶点的数据又可以很清晰地表示顶点与顶点之间的关系。<br></p> 
     <img src="https://upload-images.jianshu.io/upload_images/4064751-38001183923906c6.png?imageMogr2/auto-orient/strip|imageView2/2" alt="邻接表储存图示"> <br><br>
     代码：
@@ -604,12 +596,12 @@ ALGraph crateGraph(char* fn)
     return alg;
 }</code></pre><br>
 <h3>图的遍历</h3>
-&nbsp&nbsp&nbsp&nbsp&nbsp图的遍历分为两种：基于深度优先搜索（DFS）的遍历和基于广度优先搜索的遍历（WFS），下面我们将一一介绍。<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图的遍历分为两种：基于深度优先搜索（DFS）的遍历和基于广度优先搜索的遍历（WFS），下面我们将一一介绍。<br><br>
 <h4>深搜（DFS）</h4>
 <strong>大概思路</strong>：<br> 图的深搜类似于树的前序遍历，先访问一个未被访问过的顶点，访问它的一个邻接顶点，访问邻接顶点的一个邻接顶点，将访问过的顶点标记，若遇到访问过的顶点则回到上一个顶点，访问上一个顶点的另一个邻接顶点，直到所有的相邻的顶点均被访问。从上述可以看出，深搜可以将所有连续相邻的顶点访问到，如果是连通图一次深搜就可以将所有顶点访问到，而对于非连通图一次深搜是不能将所有顶点都访问到的<br>
 <strong>连接表分析：</strong> <br><br>
 eg：对于<img src="https://upload-images.jianshu.io/upload_images/4064751-38001183923906c6.png?imageMogr2/auto-orient/strip|imageView2/2/w/795" alt="连接表"> <br>
-假设所有顶点都未被访问过,且为单向访问（抱歉该图有双向的路径，请改为单向，A->C,B->C ），则访问过程如下：<br><br>
+假设所有顶点都未被访问过,且为单向访问（抱歉该图有双向的路径，请改为单向，A-&gt;C,B-&gt;C ,A-&gt;C），则访问过程如下：<br><br>
 <ol>
     <li>从A开始，在顶点数组中找到A，访问A，标记A，在A的边链表中找到A的邻接顶点B</li>
     <li>在顶点数组中找到B，访问B，标记B，在B的边链表中找到B的邻接结点C</li>
@@ -632,7 +624,7 @@ eg：对于<img src="https://upload-images.jianshu.io/upload_images/4064751-3800
 void DFS(ALGraph g, int v)
 {
     Visited[v] = true;  
-    cout &lt;&lt; g.vertices[v].data &lt;&lt;&quot; &quot;;
+    cout &lt;&lt; g.vertices[v].data &lt;&lt;" ";
 
     /*从v各未被访问的邻接点出发DFS*/
     for(ArcNode *p=g.vertices[v].firstArc; p; p=p-&gt;nextArc )
@@ -642,7 +634,7 @@ void DFS(ALGraph g, int v)
     }
 }</code></pre><br>
 <h4>基于DFS的遍历</h4>
-<strong>思路：</strong>对每一个顶点进行深搜，每次深搜之前都要将访问标记归零
+<strong>思路：</strong>对每一个顶点进行深搜，每次深搜之前都要将访问标记归零 <br>
 <strong>代码：</strong>
 
 <pre><code>/**对邻接表图g进行基于DFS的遍历*/
@@ -660,7 +652,7 @@ void DFSTraverse(ALGraph g)
     }
 }</code></pre><br>
 <h4>广搜（WFS）</h4>
-<strong>大概思路：</strong> 广搜类似于树的层次遍历，将一个顶点的所有邻接顶点访问完后，在分别访问每一个临接顶点的所有邻接顶点
+<strong>大概思路：</strong> 广搜类似于树的层次遍历，将一个顶点的所有邻接顶点访问完后，在分别访问每一个临接顶点的所有邻接顶点 <br>
 <strong>连接表分析：</strong>
 还是上图 <br>
 <ol>
@@ -671,7 +663,7 @@ void DFSTraverse(ALGraph g)
             <li>在顶点数组中找到C，在C的边链表中，A，B，已被访问过，跳过</li>
             <li>在顶点数组中找到D，在D的边链表中，D的邻接结点为空。</li>
         </ol>
-    </li>
+    </li><br>
  B，C，D所有邻接结点访问完毕，访问结束。
 </ol>
 
@@ -681,7 +673,7 @@ void DFSTraverse(ALGraph g)
     <li>
         依次访问每一个邻接顶点的所有邻接顶点，而邻接结点可能也有邻接顶点，故用双层循环实现，外层循环输出起始顶点的邻接顶点，循环条件为起始顶点的邻接结点未被完全访问，即队列不为空；内层循环访问每一个邻接结点的邻接结点，循环条件为边链表结点未被完全访问。
     </li>
-</ol>
+</ol><br>
 <strong>代码：</strong>
 
 <pre><code>void BFS(ALGraph g, int v)
@@ -691,7 +683,7 @@ void DFSTraverse(ALGraph g)
     if( Visited[v])  // 访问过的顶点,不再盘
         return;
 
-    cout &lt;&lt; g.vertices[v].data &lt;&lt; &quot; &quot;;
+    cout &lt;&lt; g.vertices[v].data &lt;&lt; " ";
     Visited[v] = true;
     q.push(v);         //先访问的顶点先放入队列
 
@@ -706,14 +698,14 @@ void DFSTraverse(ALGraph g)
             if(!Visited[w])
             {
                 Visited[w] = true;
-                cout &lt;&lt; g.vertices[w].data &lt;&lt; &quot; &quot;;
+                cout &lt;&lt; g.vertices[w].data &lt;&lt; " ";
                 q.push(w);     //未被访问过的顶点放入队列，之后再访问它的邻接顶点
             }
         }
     }
 }</code></pre><br>
 <h4>基于WFS的遍历</h4>
-<strong>思路：</strong>对每一个顶点进行深搜
+<strong>思路：</strong>对每一个顶点进行深搜<br>
 <strong>代码：</strong>
 
 <pre><code>/**对邻接表图g进行基于BFS的遍历*/
@@ -743,8 +735,8 @@ void BFSTravse(ALGraph g)
 <pre><code>    if(v==d)          //始终顶点相同，递归结束，回溯，输出路径
     {
         for(int i=0; i&lt;path.size(); i++)
-            cout &lt;&lt; g.vertices[path[i]].data &lt;&lt; &quot;,&quot;;
-        cout &lt;&lt; endl&lt;&lt;&quot;----&quot;&lt;&lt;endl;
+            cout &lt;&lt; g.vertices[path[i]].data &lt;&lt; ",";
+        cout &lt;&lt; endl&lt;&lt;"----"&lt;&lt;endl;
     }
 
     for(ArcNode *p=g.vertices[v].firstArc; p; p=p-&gt;nextArc ) //对每一个邻接结点进行递归搜索 
@@ -756,13 +748,31 @@ void BFSTravse(ALGraph g)
 <h3>构造最小生成树</h3>
 <h4>什么是最小生成树？</h4>
 <p>用最少的边将图中所有顶点连接起来且要使边权和最小，而将n个顶点全都连起来所需的最少边数为n-1。也就是说找出图中n-1条边使得n个结点都是连通的，但是边权值总和最小而产生的一个子图叫最小生成树。</p>
-这里介绍 <a href="#"> <strong>prim算法</strong></a>构造最小生成树。
+这里介绍 <a href="https://icecream-tu.cn/2020/10/27/prim-suan-fa-xiang-jie/" target="_blank" rel="noopener"> <strong>prim算法</strong></a>构造最小生成树。
 <br><br>
 <h3>求两顶点之间的最短路径</h3>
 这里介绍两种算法：<a href="https://icecream-tu.cn/2020/10/27/dijkstra-suan-fa-xiang-jie/" target="_blank" rel="noopener">Dijkstra算法</a>和 <a href="https://icecream-tu.cn/2020/10/30/floyd-suan-fa-xiang-jie/" target="_blank" rel="noopener">Floyd算法</a>求两顶点之间的最短路径。 <br>
 <strong> 求单源点无负边最短路径用Dijkstra，而求所有点最短路径用Floyd。</strong>
-</body>
-</html>
+
+</int></em></em><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1274,17 +1284,9 @@ void BFSTravse(ALGraph g)
                     <div class="summary block-with-text">
                         
                             
-
-
-    
-    
-    Prim算法
-
-
-
     Prim算法可用来构造图的最小生成树
 大概思路:
-&nbsp&nbsp&nbsp&nbsp&nbsp将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。
                         
                     </div>
                     <div class="publish-info">
@@ -1334,17 +1336,8 @@ void BFSTravse(ALGraph g)
                     <div class="summary block-with-text">
                         
                             
-
-
-    
-    
-    生活杂记
-    
-        h3 {
-            text-align:center;
-        }
-        a {
-            text-decoration
+    无题
+     &nbsp;&nbsp;&nbsp;&nbsp; 窗前摆着一轧书靠着生锈的铁栏杆，挂在墙上的旧蜘蛛网由于停电不再被窗帘遮盖，终于重见天日。大团大团的云挤在一起，透过蒙着灰的窗玻璃映在我的眼里，云后的光映得云泛黄发亮
                         
                     </div>
                     <div class="publish-info">
@@ -1595,7 +1588,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.8k</span>&nbsp;字
+                class="white-color">22.2k</span>&nbsp;字
             
             
             

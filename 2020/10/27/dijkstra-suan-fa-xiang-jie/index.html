@@ -23,8 +23,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Dijkstra算法详解, Journey to paradise">
-    <meta name="description" content="">
+    <meta name="keywords" content="Dijkstra算法详解, HTML,CSS,JavaScript,React,数据结构与算法等">
+    <meta name="description" content="个人技术学习记录总结，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,7 +36,7 @@
 
 
     <title>Dijkstra算法详解 | Journey to paradise</title>
-    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -60,7 +60,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/favicon.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Journey to paradise</span>
                 </a>
@@ -158,12 +158,12 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/favicon.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Journey to paradise</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            个人技术学习记录总结，分享知识
             
         </div>
     </div>
@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    2.8k
                 </div>
                 
 
@@ -509,21 +509,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dijkstra算法详解</title>
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Journey to paradise" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-<body>
+                
     Dijkstra算法与<a href="https://icecream-tu.cn/2020/10/27/prim-suan-fa-xiang-jie/" target="_blank" rel="noopener"> Prim算法</a>思路很类似，都是通过所有局部最优达到整体最优（贪心算法）。
 <h3>Dijkstra算法概述：</h3>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp迪杰斯特拉(Dijkstra)算法是典型最短路径算法，用于计算一个顶点到其他所有顶点的最短路径。它的主要特点是以起始点为中心向外层层扩展(广度优先搜索思想)，直到扩展到终点为止。（引用）<br>
- &nbsp&nbsp&nbsp&nbsp&nbsp 大概思路是：将所有顶点分为 已找到到起始点的最短路径的顶点 和 未找到到起始点的最短路径的顶点 两部分,用一个bool数组Final记录。dist[i]记录顶点i到起始点的最短距离,在Final==0的顶点中，找出最小dist，将对应的顶点 标记为已找到最小路径即其Final==1，由于新增一条最短路径，其他顶点到起始点的最短距离会发生改变，将Final==0的顶点依次通过其相邻顶点中Final==1的顶点到达起始点的距离相比较，选出最小值及最小值对应的Final==1的顶点，该值为该Final==0顶点到起始点的最短距离，则该顶点到起始点的最短路径已找到，置该点的Final==1。该Final==1顶点为该Final==0顶点的前一顶点，用prior[i]记录顶点i的前一顶点。以此类推，直到所有点的Final都等于0， 即所有顶点到起始点的最短路径均找到。由于顶点的最短路径依赖于另一个顶点的最短路径，这种算法必须依次求出各个顶点的最短路径直到目标终止顶点。
-</p><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;迪杰斯特拉(Dijkstra)算法是典型最短路径算法，用于计算一个顶点到其他所有顶点的最短路径。它的主要特点是以起始点为中心向外层层扩展(广度优先搜索思想)，直到扩展到终点为止。（引用）<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 大概思路是：将所有顶点分为 已找到到起始点的最短路径的顶点 和 未找到到起始点的最短路径的顶点 两部分,用一个bool数组Final记录。dist[i]记录顶点i到起始点的最短距离,在Final==0的顶点中，找出最小dist，将对应的顶点 标记为已找到最小路径即其Final==1，由于新增一条最短路径，其他顶点到起始点的最短距离会发生改变，将Final==0的顶点依次通过其相邻顶点中Final==1的顶点到达起始点的距离相比较，选出最小值及最小值对应的Final==1的顶点，该值为该Final==0顶点到起始点的最短距离，则该顶点到起始点的最短路径已找到，置该点的Final==1。该Final==1顶点为该Final==0顶点的前一顶点，用prior[i]记录顶点i的前一顶点。以此类推，直到所有点的Final都等于0， 即所有顶点到起始点的最短路径均找到。<strong> 由于顶点的最短路径依赖于另一个顶点的最短路径，这种算法必须依次求出各个顶点的最短路径直到目标终止顶点。<strong>
+</strong></strong></p><strong><strong><br>
 <h3>算法步骤及解释：</h3>
 <ol>
     <li>最开始所有顶点到起始点的最短路径都没找到，初始化所有顶点的Final为0。将起始点标记，Final[0]=1,记录顶点i到起始顶点的最短距离dist[i],若顶点i与起始顶点不相邻，则dist[i]为infinity</li>
@@ -539,7 +531,7 @@ eg：对于原图 <br>
 <br>
 1.将起始点v0加入最短路径中并将其标记，Final[0]=1，起始点在其最短路径中没有上一顶点，prior[0]记为-1。记录其他点到v0的最短距离dist，若与起始点不相邻则dist为infinity <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -587,12 +579,12 @@ eg：对于原图 <br>
         <td>8</td>
         <td></td>
     </tr>
-</table>
+</tbody></table>
 <br>
 <img src="https://images0.cnblogs.com/blog/175043/201501/281631318781591.jpg" alt="图例"> <br><br>
 2.选出dist中未找到最短路径的顶点（Final==0）到起始顶点的的最短距离（dist）中的最小值4对应的顶点v1，则找到v1的最短路径(置Final[1]=1)，v1的前一顶点是v0（置prior[1]=0）,v1到顶点最短距离为4（置dist[1]=4）
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -640,11 +632,11 @@ eg：对于原图 <br>
         <td>8</td>
         <td></td>
     </tr>
-</table>
+</tbody></table>
 <br>
 3.由于新添加了一条最短路径，v2可以通过与v2相邻且已知最短路径的顶点v1到达v0，v2到初始顶点v0的最短路径有3种情况：1.一条边直通起始点（距离为infinity） 2.通过其已知最短路径的相邻顶点v1到起始点（距离为8+4=12）3.原路径对应的最小距离，选出最小值12为dist[2]，则prior[2]=1,更新表<br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -692,11 +684,11 @@ eg：对于原图 <br>
         <td>8</td>
         <td></td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 <img src="https://images0.cnblogs.com/blog/175043/201501/281635078621307.jpg" alt="图例"><br><br>
 4.选出Final==0的顶点中dist最小值8对应的顶点v7，则找到v7的最短路径(置Final[7]==1)，v7的前一顶点是v0（置prior[7]=0） <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -744,10 +736,10 @@ eg：对于原图 <br>
         <td>8</td>
         <td></td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 5.由于新添加了一条最短路径，v6,v8可以通过与其相邻且已知最短路径的顶点v7到达v0，v6，v8到初始顶点v0的最短路径有3种情况：1.一条边直通起始点  2.通过其已知最短路径的相邻顶点v7到起始点 3.原路径对应的最小距离，分别选出v6,v8的最短距离9，15，则prior[6]=7,prior[8]=1,更新表 <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -795,11 +787,11 @@ eg：对于原图 <br>
         <td>8</td>
         <td>15</td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 <img src="https://images0.cnblogs.com/blog/175043/201501/281637061284639.jpg" alt="图例"><br><br>
 6.选出Final==0的顶点中dist最小值9对应的顶点v6，则找到v6的最短路径(置Final[6]==1)，v6的前一顶点是v7（置prior[6]=7） <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -847,10 +839,10 @@ eg：对于原图 <br>
         <td>8</td>
         <td>15</td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 7.由于新添加了一条最短路径(v6)，v5,v8可以通过与其相邻且已知最短路径的顶点v6到达v0，v5，v8到初始顶点v0的最短路径有3种情况：1.一条边直通起始点  2.通过其已知最短路径的相邻顶点v7到起始点 3.原路径对应的最小距离，分别选出v5,v8的最短距离11，15，则prior[5]=6,prior[8]=6更新表<br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -898,11 +890,11 @@ eg：对于原图 <br>
         <td>8</td>
         <td>15</td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 <img src="https://images0.cnblogs.com/blog/175043/201501/281638430509082.jpg" alt="图例"><br><br>
 8.选出Final==0的顶点中dist最小值11对应的顶点v5，则找到v5的最短路径(置Final[5]==1)，v5的前一顶点是v6（置prior[5]=6） <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -950,11 +942,11 @@ eg：对于原图 <br>
         <td>8</td>
         <td>15</td>
     </tr>
-</table>
+</tbody></table>
 
 <p>9.由于新添加了一条最短路径(v5)，Final为0的v3,v4可以通过与其相邻且已知最短路径的顶点v5到达v0，v3,v4到初始顶点v0的最短路径有两3情况：1.一条边直通起始点  2.通过其已知最短路径的相邻顶点v5到起始点 3.原路径对应的最小距离， 分别选出v3,v4的最短距离25，21，则prio[3]=5,prior[4]=5,更新表<br></p>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -1002,10 +994,10 @@ eg：对于原图 <br>
         <td>8</td>
         <td>15</td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 10.选出Final==0的顶点中dist最小值12对应的顶点v2，则找到v2的最短路径(置Final[2]==1)，v2的前一顶点是v1（置prior[2]=1） <br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -1053,10 +1045,10 @@ eg：对于原图 <br>
         <td>8</td>
         <td>15</td>
     </tr>
-</table><br>
+</tbody></table><br>
 11.由于新添加了一条最短路径(v2)，Final为0的v3,v8可以通过与其相邻且已知最短路径的顶点v2到达v0，v3,v8到初始顶点v0的最短路径有3种情况：1.一条边直通起始点  2.通过其已知最短路径的相邻顶点v2到起始点 3.原路径对应的最小距离，分别选出v3,v8的最短距离19，14，则prior[3]=2,prior[8]=2,更新表<br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -1104,11 +1096,11 @@ eg：对于原图 <br>
         <td>8</td>
         <td>14</td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 依次类推。。。 <br>
 最后得到的结果为：<br>
 <table>
-    <tr>
+    <tbody><tr>
         <th>index</th>
         <td>0</td>
         <td>1</td>
@@ -1156,13 +1148,13 @@ eg：对于原图 <br>
         <td>8</td>
         <td>14</td>
     </tr>
-</table> <br>
+</tbody></table> <br>
 <img src="https://images0.cnblogs.com/blog/175043/201501/281640391919096.jpg" alt="图例"><br><br>
 <h3>代码：</h3>
 
 <pre><code>#include &lt;iostream&gt;
 #include &lt;iomanip&gt;
-#include &quot;graph.h&quot;
+#include "graph.h"
 using namespace std;
 
 /**
@@ -1217,7 +1209,7 @@ void Dijkstra(MGraph g, int v, float dist[], int prior[])
         for (k = 0; k &lt; n; k++)
         {
             w = g.arcs[u][k];
-            /* 若从顶点u &quot;扩展&quot;一条边&lt;u,k&gt;的SP长度更短 */
+            /* 若从顶点u "扩展"一条边&lt;u,k&gt;的SP长度更短 */
             if (!Final[k] &amp;&amp; w &lt; INFINITY &amp;&amp;
                     dist[u]+w &lt; dist[k] )
             {
@@ -1235,11 +1227,11 @@ void Traceback(MGraph g, int prior[],int v)
 {
     if( prior[v] == -1 )
     {
-        cout &lt;&lt; g.vexs[v] &lt;&lt; &quot; &quot;;
+        cout &lt;&lt; g.vexs[v] &lt;&lt; " ";
         return;
     }
     Traceback(g,prior,prior[v]);
-    cout &lt;&lt; g.vexs[v] &lt;&lt; &quot; &quot;;
+    cout &lt;&lt; g.vexs[v] &lt;&lt; " ";
 }
 
 /** 输出从源点s到v的各条SP,及其长度 */
@@ -1251,14 +1243,14 @@ void Dijkstra_SP(MGraph g, int v)
     int   prior[n];
 
     Dijkstra(g,v,dist,prior);
-    cout &lt;&lt; &quot;Shortest Path from &quot; &lt;&lt; g.vexs[v] &lt;&lt; endl;
+    cout &lt;&lt; "Shortest Path from " &lt;&lt; g.vexs[v] &lt;&lt; endl;
     for(int i=0; i&lt;n; i++)
     {
 
         if(i==v || dist[i] == INFINITY) //i为源点,或源点到i无路径,就算哒
             continue;
 
-        cout &lt;&lt;&quot;\t sp_len =  &quot; &lt;&lt;  dist[i] &lt;&lt; &quot;  &quot;;  //输出SP长度
+        cout &lt;&lt;"\t sp_len =  " &lt;&lt;  dist[i] &lt;&lt; "  ";  //输出SP长度
         Traceback(g,prior,i);      //输出SP
 
         cout &lt;&lt; endl;
@@ -1272,8 +1264,26 @@ Shortest Path from A
         sp_len =  60  A E D F
 
 
---------------------------------  </code></pre></body>
-</html>
+--------------------------------  </code></pre>
+</strong></strong><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1785,16 +1795,8 @@ Shortest Path from A
                     <div class="summary block-with-text">
                         
                             
-
-
-    
-    
-    其他问题合集
-
-
-
     python连接数据库报错:(20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect:
-    解
+    解决方法： https://www.cnblogs.c
                         
                     </div>
                     <div class="publish-info">
@@ -1844,17 +1846,9 @@ Shortest Path from A
                     <div class="summary block-with-text">
                         
                             
-
-
-    
-    
-    Prim算法
-
-
-
     Prim算法可用来构造图的最小生成树
 大概思路:
-&nbsp&nbsp&nbsp&nbsp&nbsp将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将图分为两部分，第一部分是已经加入最小生成树中的点，第二部分是未加入最小生成树的点，初始时，第一部分只有一个任选的顶点。
                         
                     </div>
                     <div class="publish-info">
@@ -2113,7 +2107,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.8k</span>&nbsp;字
+                class="white-color">22.2k</span>&nbsp;字
             
             
             
