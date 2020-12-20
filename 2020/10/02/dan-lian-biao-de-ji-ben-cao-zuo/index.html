@@ -568,26 +568,28 @@ List L1,L2;</code></pre><h3>创建链表并赋值</h3>
 <br>
 <br>
 <h4>头插法</h4>
-    void InsertByHead(List L)
-    {
-        node* p=(node*)malloc(sizeof(node))        //创建新结点 
 
-<pre><code>    printf("Enter the element to insert by head:\n");
+<pre><code>void InsertByHead(List L)
+{
+    node* p=(node*)malloc(sizeof(node))        //创建新结点 
+
+    printf("Enter the element to insert by head:\n");
     scanf("%d",&amp;p-&gt;data);                                 //输入要插的数并存放在新结点的数据域 
 
     p-&gt;next=L-&gt;next;                                     //将新结点插入链表头部 
     L-&gt;next=p; 
 }</code></pre><h4>尾插法</h4>
-    void InsertByTail(List L1) 
-    {
-        node *p,*q;                        //p从头遍历找到链表的尾结点，q是要插入的新结点 
-        p=L1;
-        q=(node*)malloc(sizeof(node)) ;
-        printf("Enter an element to insert to the tail:\n");
-        scanf("%d",&amp;q-&gt;data);
-        q-&gt;next=0;
 
-<pre><code>    while(p-&gt;next)
+<pre><code>void InsertByTail(List L1) 
+{
+    node *p,*q;                        //p从头遍历找到链表的尾结点，q是要插入的新结点 
+    p=L1;
+    q=(node*)malloc(sizeof(node)) ;
+    printf("Enter an element to insert to the tail:\n");
+    scanf("%d",&amp;q-&gt;data);
+    q-&gt;next=0;
+
+    while(p-&gt;next)
       {
         p=p-&gt;next;
       }
