@@ -530,7 +530,7 @@
 
 <h3>算法步骤</h3>
     <ol>
-        <li>定义两个矩阵Dij记录顶点i与j的最短距离，prior记录j的前一个顶点</li>
+        <li>定义两个矩阵,D[i][j]记录顶点i与j的最短距离，prior[j]记录j的前一个顶点</li>
         <li>初始化矩阵Dij为顶点i与j的直通距离，若不能直通则为infinity，矩阵priorij为i，j顶点最短路径经过的中间顶点，即j的前一个顶点，初始时i，j顶点之间没有中间顶点，若i，j直通则j的前一个顶点priorij为i，否则j没有前一个顶点，priorij记为－1。</li>
         <li>构造三层循环，最外层循环从第一个顶点产生中间顶点k，第二层循环从第一个顶点开始产生起始点i，最后一层循环从第一个顶点开始产生终点j，依次将中间顶点加入所有任意两顶点i，j之间，比较Dik+Dkj与原来Dij的大小，若Dij较大，则加入的中间顶点k使顶点i到j的距离更近，更新Dij＝Dik+Dkj，priorij＝k，重复上述操作，直到外层循环结束，即任意两点之间试过所有中间顶点，找到最短路径。</li>
     </ol>
@@ -1139,51 +1139,54 @@ E D     E D F</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/30/floyd-suan-fa-xiang-jie/">
+                <a href="/2021/02/05/ji-suan-ji-xi-tong-gai-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Floyd算法详解">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="计算机系统概述">
                         
-                        <span class="card-title">Floyd算法详解</span>
+                        <span class="card-title">计算机系统概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-Floyd算法概述
-    Floyd算法又称为插点法，是一种利用动态规划的思想寻找给定的加权图中任意两顶点之间最短路径的算法，与 Dijkstra算法类似都是属于贪心算法。
-        基本思路：首先定义两个数组，数组D[i][j]
+    新的学期开始啦，今天简要介绍一下计算机系统的层次结构即其性能指标
+    计算机系统
+    
+    
+    计算机系统的层次结构
+    
+    冯.诺依曼体系结构
+     &nbsp;&nbsp;&nbsp; 美国科学
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-30
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-05
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="post-category">
+                                    计算机组成原理
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Floyd%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">Floyd算法</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+                        <span class="chip bg-color">计算机系统概述</span>
                     </a>
                     
                 </div>
@@ -1470,7 +1473,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.2k</span>&nbsp;字
+                class="white-color">24.5k</span>&nbsp;字
             
             
             

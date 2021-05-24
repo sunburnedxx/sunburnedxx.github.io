@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2020-11-04T10:15:28.300Z</updated>
+  <updated>2021-05-04T13:28:04.496Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -17,11 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据信息的表示</title>
+    <link href="https://sunburnedxx.github.io/2021/03/02/shu-ju-xin-xi-de-biao-shi-shu-zhi-bu-fen/"/>
+    <id>https://sunburnedxx.github.io/2021/03/02/shu-ju-xin-xi-de-biao-shi-shu-zhi-bu-fen/</id>
+    <published>2021-03-02T12:01:00.000Z</published>
+    <updated>2021-05-04T13:28:04.496Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &amp;nbsp; &amp;nbsp; &amp;nbsp;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机组成原理" scheme="https://sunburnedxx.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="数据信息的表示" scheme="https://sunburnedxx.github.io/tags/%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机系统概述</title>
+    <link href="https://sunburnedxx.github.io/2021/02/05/ji-suan-ji-xi-tong-gai-shu/"/>
+    <id>https://sunburnedxx.github.io/2021/02/05/ji-suan-ji-xi-tong-gai-shu/</id>
+    <published>2021-02-05T14:46:00.000Z</published>
+    <updated>2021-05-04T13:08:57.534Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;p&gt;新的学期开始啦，今天简要介绍一下计算机系统的层次结构即其性能指标&lt;/p&gt;
+    &lt;h2&gt;计算机系统&lt;/h2&gt;
+    &lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机组成原理" scheme="https://sunburnedxx.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="计算机系统概述" scheme="https://sunburnedxx.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Floyd算法详解</title>
     <link href="https://sunburnedxx.github.io/2020/10/30/floyd-suan-fa-xiang-jie/"/>
     <id>https://sunburnedxx.github.io/2020/10/30/floyd-suan-fa-xiang-jie/</id>
     <published>2020-10-30T05:02:00.000Z</published>
-    <updated>2020-11-04T10:15:28.300Z</updated>
+    <updated>2021-03-23T02:42:42.989Z</updated>
     
     <summary type="html">
     
@@ -313,7 +371,7 @@
     <link href="https://sunburnedxx.github.io/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/"/>
     <id>https://sunburnedxx.github.io/2020/10/02/dan-lian-biao-de-ji-ben-cao-zuo/</id>
     <published>2020-10-02T08:19:51.000Z</published>
-    <updated>2020-12-20T02:00:32.004Z</updated>
+    <updated>2021-04-28T15:23:49.568Z</updated>
     
     <summary type="html">
     
@@ -324,7 +382,10 @@
           
     &lt;h2&gt;单向链表的基本操作&lt;/h2&gt;
     &lt;p&gt;链表呢是一种十分基础的数据结构类型，分为单向链表，双向链表以及循环链表，今天我们就来讲讲单向链表的基本操作。&lt;br&gt;
-    &lt;img
+&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt; &lt;h3&gt;什么是单向链表&lt;/h3&gt; 
+首先我们来看看什么是链表 &lt;br&gt;
+
         
       
     
@@ -417,29 +478,6 @@
     
     
       <category term="软件安装" scheme="https://sunburnedxx.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://sunburnedxx.github.io/2020/09/05/hello-world/"/>
-    <id>https://sunburnedxx.github.io/2020/09/05/hello-world/</id>
-    <published>2020-09-05T10:25:12.012Z</published>
-    <updated>2020-09-05T10:25:12.116Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
     
     
   </entry>
