@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunburnedxx.github.io/"/>
-  <updated>2021-05-04T13:28:04.496Z</updated>
+  <updated>2021-05-27T04:09:18.013Z</updated>
   <id>https://sunburnedxx.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>配置文件反射加载类和执行函数</title>
+    <link href="https://sunburnedxx.github.io/2021/05/27/dong-tai-jia-zai-lei-he-zhi-xing-han-shu-fan-she-pei-zhi-wen-jian/"/>
+    <id>https://sunburnedxx.github.io/2021/05/27/dong-tai-jia-zai-lei-he-zhi-xing-han-shu-fan-she-pei-zhi-wen-jian/</id>
+    <published>2021-05-27T02:37:26.000Z</published>
+    <updated>2021-05-27T04:09:18.013Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+    &lt;h2&gt;利用反射技术和读配置文件的方式实现动态加载类和执行函数&lt;/h2&gt;
+   
+        
+      
+    
+    </summary>
+    
+    
+      <category term="语言学习" scheme="https://sunburnedxx.github.io/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="JAVA" scheme="https://sunburnedxx.github.io/tags/JAVA/"/>
+    
+  </entry>
   
   <entry>
     <title>数据信息的表示</title>
@@ -434,7 +463,7 @@
     <link href="https://sunburnedxx.github.io/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/"/>
     <id>https://sunburnedxx.github.io/2020/09/07/ubuntu18.4.5-de-an-zhuang-ji-jie-mian-diao-zheng/</id>
     <published>2020-09-07T03:42:33.000Z</published>
-    <updated>2020-09-06T16:17:45.596Z</updated>
+    <updated>2021-05-27T04:09:53.562Z</updated>
     
     <summary type="html">
     
