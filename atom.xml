@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Journey to paradise</title>
+  <icon>https://sunburnedxx.github.io/icon.png</icon>
+  <subtitle>涂涂の博客</subtitle>
+  <link href="https://sunburnedxx.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://sunburnedxx.github.io/"/>
+  <updated>2022-10-08T08:17:12.760Z</updated>
+  <id>https://sunburnedxx.github.io/</id>
+  
+  <author>
+    <name>涂爽</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>动态规划刷题总结</title>
+    <link href="https://sunburnedxx.github.io/2022/10/01/dong-tai-gui-hua-shua-ti-zong-jie/"/>
+    <id>https://sunburnedxx.github.io/2022/10/01/dong-tai-gui-hua-shua-ti-zong-jie/</id>
+    <published>2022-09-30T16:00:00.000Z</published>
+    <updated>2022-10-08T08:17:12.760Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么是动态规划？&quot;&gt;&lt;a href=&quot;#什么是动态规划？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="力扣刷题" scheme="https://sunburnedxx.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="https://sunburnedxx.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot简述</title>
+    <link href="https://sunburnedxx.github.io/2022/06/30/springboot-jian-xi/"/>
+    <id>https://sunburnedxx.github.io/2022/06/30/springboot-jian-xi/</id>
+    <published>2022-06-29T16:00:00.000Z</published>
+    <updated>2022-07-13T10:06:50.233Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-JavaConfig&quot;&gt;&lt;a href=&quot;#1-JavaConfig&quot; class=&quot;headerlink&quot; title=&quot;1. JavaConfig&quot;&gt;&lt;/a&gt;1. JavaConfig&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;为什么要使用 Spring</summary>
+        
+      
+    
+    
+    
+    <category term="JavaWeb" scheme="https://sunburnedxx.github.io/categories/JavaWeb/"/>
+    
+    
+    <category term="SpringBoot" scheme="https://sunburnedxx.github.io/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CRM项目SSM框架构建（三）</title>
+    <link href="https://sunburnedxx.github.io/2022/06/24/crm-xiang-mu-ssm-kuang-jia-gou-jian-san/"/>
+    <id>https://sunburnedxx.github.io/2022/06/24/crm-xiang-mu-ssm-kuang-jia-gou-jian-san/</id>
+    <published>2022-06-23T16:00:00.000Z</published>
+    <updated>2022-10-01T04:15:48.720Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;完成业务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;市场活动主页的显示&lt;/li&gt;
+&lt;li&gt;创建市场活动&lt;/li&gt;
+&lt;li&gt;查询市场活动&lt;/li&gt;
+&lt;li&gt;修改市场活动&lt;/li&gt;
+&lt;li&gt;删除市场活动&lt;/li&gt;
+&lt;li&gt;批量导出市场活动&lt;/li&gt;
+&lt;li&gt;批量导入市场活动&lt;/li&gt;
+&lt;/u</summary>
+        
+      
+    
+    
+    
+    <category term="JavaWeb" scheme="https://sunburnedxx.github.io/categories/JavaWeb/"/>
+    
+    
+    <category term="ssm" scheme="https://sunburnedxx.github.io/tags/ssm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CRM项目SSM框架构建（四）</title>
+    <link href="https://sunburnedxx.github.io/2022/06/24/crm-xiang-mu-ssm-kuang-jia-gou-jian-si/"/>
+    <id>https://sunburnedxx.github.io/2022/06/24/crm-xiang-mu-ssm-kuang-jia-gou-jian-si/</id>
+    <published>2022-06-23T16:00:00.000Z</published>
+    <updated>2022-10-01T02:10:47.940Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;完成业务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;添加市场活动备注&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;删除市场活动备注&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改市场活动备注&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;查看市场活动明细&quot;&gt;&lt;a href=&quot;#查看市场活动明细&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaWeb" scheme="https://sunburnedxx.github.io/categories/JavaWeb/"/>
+    
+    
+    <category term="ssm" scheme="https://sunburnedxx.github.io/tags/ssm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CRM项目SSM框架构建（二）</title>
+    <link href="https://sunburnedxx.github.io/2022/06/23/crm-xiang-mu-ssm-kuang-jia-gou-jian-er/"/>
+    <id>https://sunburnedxx.github.io/2022/06/23/crm-xiang-mu-ssm-kuang-jia-gou-jian-er/</id>
+    <published>2022-06-22T16:00:00.000Z</published>
+    <updated>2022-09-29T11:36:12.324Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;完成业务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首页功能&lt;/li&gt;
+&lt;li&gt;用户登录&lt;/li&gt;
+&lt;li&gt;安全退出&lt;/li&gt;
+&lt;li&gt;登录验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最终效果：&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="JavaWeb" scheme="https://sunburnedxx.github.io/categories/JavaWeb/"/>
+    
+    
+    <category term="ssm" scheme="https://sunburnedxx.github.io/tags/ssm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CRM项目SSM框架构建（一）</title>
+    <link href="https://sunburnedxx.github.io/2022/06/22/crm-xiang-mu-ssm-kuang-jia-gou-jian-yi/"/>
+    <id>https://sunburnedxx.github.io/2022/06/22/crm-xiang-mu-ssm-kuang-jia-gou-jian-yi/</id>
+    <published>2022-06-21T16:00:00.000Z</published>
+    <updated>2022-09-29T11:36:25.332Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;CRM项目简介&quot;&gt;&lt;a href=&quot;#CRM项目简介&quot; class=&quot;headerlink&quot; title=&quot;CRM项目简介&quot;&gt;&lt;/a&gt;CRM项目简介&lt;/h3&gt;&lt;p&gt;​	Customer Relationship Management</summary>
+        
+      
+    
+    
+    
+    <category term="JavaWeb" scheme="https://sunburnedxx.github.io/categories/JavaWeb/"/>
+    
+    
+    <category term="ssm" scheme="https://sunburnedxx.github.io/tags/ssm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis简介</title>
+    <link href="https://sunburnedxx.github.io/2022/06/20/redis-jian-xi/"/>
+    <id>https://sunburnedxx.github.io/2022/06/20/redis-jian-xi/</id>
+    <published>2022-06-19T16:00:00.000Z</published>
+    <updated>2022-09-02T05:46:49.781Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Redis简介&quot;&gt;&lt;a href=&quot;#Redis简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="SQL" scheme="https://sunburnedxx.github.io/categories/SQL/"/>
+    
+    
+    <category term="Redis" scheme="https://sunburnedxx.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux常用命令</title>
+    <link href="https://sunburnedxx.github.io/2022/06/19/linux-chang-yong-ming-ling/"/>
+    <id>https://sunburnedxx.github.io/2022/06/19/linux-chang-yong-ming-ling/</id>
+    <published>2022-06-18T16:00:00.000Z</published>
+    <updated>2022-09-02T05:46:49.784Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;文件和目录操作&quot;&gt;&lt;a href=&quot;#文件和目录操作&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="速查备忘" scheme="https://sunburnedxx.github.io/categories/%E9%80%9F%E6%9F%A5%E5%A4%87%E5%BF%98/"/>
+    
+    
+    <category term="linux" scheme="https://sunburnedxx.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中的常用正则</title>
+    <link href="https://sunburnedxx.github.io/2022/06/10/js-zhong-de-chang-yong-zheng-ze/"/>
+    <id>https://sunburnedxx.github.io/2022/06/10/js-zhong-de-chang-yong-zheng-ze/</id>
+    <published>2022-06-10T10:33:09.000Z</published>
+    <updated>2022-06-19T09:31:35.042Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;​	正则表达式定义字符串的匹配模式，可用用来判断指定的具体字符串是否符合匹配模式。&lt;/p&gt;
+&lt;h3 id=&quot;语法通则&quot;&gt;&lt;a href=&quot;#语法通则&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="速查备忘" scheme="https://sunburnedxx.github.io/categories/%E9%80%9F%E6%9F%A5%E5%A4%87%E5%BF%98/"/>
+    
+    
+    <category term="正则表达式" scheme="https://sunburnedxx.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDBC核心技术</title>
+    <link href="https://sunburnedxx.github.io/2022/04/22/jdbc/"/>
+    <id>https://sunburnedxx.github.io/2022/04/22/jdbc/</id>
+    <published>2022-04-22T09:21:09.000Z</published>
+    <updated>2022-09-02T05:46:49.789Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-JDBC概述&quot;&gt;&lt;a href=&quot;#1-JDBC概述&quot; class=&quot;headerlink&quot; title=&quot;1. JDBC概述&quot;&gt;&lt;/a&gt;1. JDBC概述&lt;/h2&gt;&lt;h3 id=&quot;1-1-数据的持久化&quot;&gt;&lt;a href=&quot;#1-1-数据的持久化&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/categories/JavaSE/"/>
+    
+    
+    <category term="JDBC" scheme="https://sunburnedxx.github.io/tags/JDBC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>unity做的两个小游戏</title>
+    <link href="https://sunburnedxx.github.io/2022/04/10/unity-zuo-de-liang-ge-xiao-you-xi/"/>
+    <id>https://sunburnedxx.github.io/2022/04/10/unity-zuo-de-liang-ge-xiao-you-xi/</id>
+    <published>2022-04-10T15:58:03.000Z</published>
+    <updated>2022-09-02T05:46:49.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;​	上Unity3D课最后做了两个简陋的小游戏，两个小游戏的制作基本囊括了课上所有学到的知识点，下面放出游戏演示和大概系统设计。&lt;/p&gt;
+&lt;h3 id=&quot;TowerDefence&quot;&gt;&lt;a href=&quot;#TowerDefence&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Unity3D" scheme="https://sunburnedxx.github.io/categories/Unity3D/"/>
+    
+    
+    <category term="unity3d" scheme="https://sunburnedxx.github.io/tags/unity3d/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS简介</title>
+    <link href="https://sunburnedxx.github.io/2022/03/23/css-jian-jie/"/>
+    <id>https://sunburnedxx.github.io/2022/03/23/css-jian-jie/</id>
+    <published>2022-03-22T16:00:00.000Z</published>
+    <updated>2022-10-01T07:06:12.177Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;CSS简介&quot;&gt;&lt;a href=&quot;#CSS简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaWeb" scheme="https://sunburnedxx.github.io/categories/JavaWeb/"/>
+    
+    
+    <category term="CSS" scheme="https://sunburnedxx.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySql基础（一）</title>
+    <link href="https://sunburnedxx.github.io/2022/03/23/mysql-ji-chu-yi/"/>
+    <id>https://sunburnedxx.github.io/2022/03/23/mysql-ji-chu-yi/</id>
+    <published>2022-03-22T16:00:00.000Z</published>
+    <updated>2022-10-22T15:20:13.594Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;MySql基础（一）&quot;&gt;&lt;a href=&quot;#MySql基础（一）&quot; class=&quot;headerlink&quot; title=&quot;MySql基础（一）&quot;&gt;&lt;/a&gt;MySql基础（一）&lt;/h2&gt;&lt;h3 id=&quot;SQL分类&quot;&gt;&lt;a href=&quot;#SQL分类&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="SQL" scheme="https://sunburnedxx.github.io/categories/SQL/"/>
+    
+    
+    <category term="MySql" scheme="https://sunburnedxx.github.io/tags/MySql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二叉树刷题总结</title>
+    <link href="https://sunburnedxx.github.io/2022/03/18/er-cha-shu-shua-ti-zong-jie/"/>
+    <id>https://sunburnedxx.github.io/2022/03/18/er-cha-shu-shua-ti-zong-jie/</id>
+    <published>2022-03-17T16:00:00.000Z</published>
+    <updated>2022-10-01T09:43:48.550Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;​     本篇总结主要来源于&lt;a href=&quot;https://labuladong.gitee.io/algo/]&quot;&gt;https://labuladong.gitee.io/algo/]&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;二叉树递归遍历框架&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="力扣刷题" scheme="https://sunburnedxx.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="力扣刷题、二叉树" scheme="https://sunburnedxx.github.io/tags/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E3%80%81%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单链表刷题总结</title>
+    <link href="https://sunburnedxx.github.io/2022/03/13/lian-biao-shua-ti-zong-jie/"/>
+    <id>https://sunburnedxx.github.io/2022/03/13/lian-biao-shua-ti-zong-jie/</id>
+    <published>2022-03-13T01:05:22.000Z</published>
+    <updated>2022-10-01T09:45:24.696Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta</summary>
+        
+      
+    
+    
+    
+    <category term="力扣刷题" scheme="https://sunburnedxx.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="力扣刷题、单链表" scheme="https://sunburnedxx.github.io/tags/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E3%80%81%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java中的进程</title>
+    <link href="https://sunburnedxx.github.io/2021/12/01/xian-cheng-gai-shu/"/>
+    <id>https://sunburnedxx.github.io/2021/12/01/xian-cheng-gai-shu/</id>
+    <published>2021-12-01T08:25:02.000Z</published>
+    <updated>2022-09-02T05:46:49.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta</summary>
+        
+      
+    
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/categories/JavaSE/"/>
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>反射机制</title>
+    <link href="https://sunburnedxx.github.io/2021/11/15/fan-she-ji-zhi-he-zhu-jie-jian-jie/"/>
+    <id>https://sunburnedxx.github.io/2021/11/15/fan-she-ji-zhi-he-zhu-jie-jian-jie/</id>
+    <published>2021-11-15T06:19:15.000Z</published>
+    <updated>2022-04-12T14:22:27.341Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta</summary>
+        
+      
+    
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/categories/JavaSE/"/>
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IO流</title>
+    <link href="https://sunburnedxx.github.io/2021/11/12/io-liu-cao-zuo-jian-shu/"/>
+    <id>https://sunburnedxx.github.io/2021/11/12/io-liu-cao-zuo-jian-shu/</id>
+    <published>2021-11-12T08:31:28.000Z</published>
+    <updated>2022-09-02T05:46:49.790Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta</summary>
+        
+      
+    
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/categories/JavaSE/"/>
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java中集合(Map部分)</title>
+    <link href="https://sunburnedxx.github.io/2021/10/24/java-zhong-de-ji-he-map-bu-fen/"/>
+    <id>https://sunburnedxx.github.io/2021/10/24/java-zhong-de-ji-he-map-bu-fen/</id>
+    <published>2021-10-24T07:18:35.000Z</published>
+    <updated>2022-09-17T08:57:02.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta</summary>
+        
+      
+    
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/categories/JavaSE/"/>
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java中集合(Collection部分)</title>
+    <link href="https://sunburnedxx.github.io/2021/10/18/java-zhong-de-ji-he-collection-bu-fen/"/>
+    <id>https://sunburnedxx.github.io/2021/10/18/java-zhong-de-ji-he-collection-bu-fen/</id>
+    <published>2021-10-18T13:51:45.000Z</published>
+    <updated>2022-09-02T05:46:49.790Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta</summary>
+        
+      
+    
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/categories/JavaSE/"/>
+    
+    
+    <category term="JavaSE" scheme="https://sunburnedxx.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+</feed>
