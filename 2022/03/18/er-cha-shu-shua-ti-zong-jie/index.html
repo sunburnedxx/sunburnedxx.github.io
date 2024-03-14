@@ -567,7 +567,7 @@
 <p>​	</p>
 <p>综上，<strong>遇到一道二叉树题，可以这样思考：是否可以通过遍历一遍二叉树得到答案？如果不能，是否可以定义一个递归函数，通过子问题（子树）的答案推导出原问题的答案？</strong></p>
 <h4 id="二叉树题解时机"><a href="#二叉树题解时机" class="headerlink" title="二叉树题解时机"></a>二叉树题解时机</h4><p>​	关于在什么时候做，如前文所述，处理二叉树结点有三个时间点：前、中、后，不同时间点由于其所处位置的特性不同，处理问题的效果也不尽相同。</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.6drhgfd5ovpc.webp" alt="二叉树遍历顺序"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.6drhgfd5ovpc.webp" alt="二叉树遍历顺序"></p>
 <ul>
 <li><p>前序位置为刚刚进入节点的时刻，意味着前序位置的代码只能从函数参数中获取父节点传递来的数据。</p>
 <ul>
@@ -676,11 +676,11 @@
 <p>​	力扣 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/">889. 根据前序和后序遍历构造二叉树</a></p>
 <p>本次就只讲解从前序与中序遍历序列构造二叉树，另外两题思路差不多（以前写过好像）。</p>
 <p>我们先来回顾一下前序遍历和中序遍历：</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.2feflsdwnvr4.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.2feflsdwnvr4.webp"></p>
 <p>解决本题需要考虑：①如何得到根节点，②如何确定左右子树。然后通过递归对每个结点做相同的事，最终构造出整棵二叉树。</p>
 <p>①如何找到根节点：前序遍历的第一个值 <code>preorder[0]</code> 就是根节点的值。</p>
 <p>②如何确定左右子树：前序序列获得根节点值，在中序序列找到根节点所在的索引下标index,index两端分别是左右子树，即可得到左右子树的前序序列和中序序列。</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.o6ty434d08g.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.o6ty434d08g.webp"></p>
 <p>解法代码：</p>
 <pre class="line-numbers language-java"><code class="language-java">TreeNode <span class="token function">build</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> preorder<span class="token punctuation">,</span> <span class="token keyword">int</span> preStart<span class="token punctuation">,</span> <span class="token keyword">int</span> preEnd<span class="token punctuation">,</span> 
             <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> inorder<span class="token punctuation">,</span> <span class="token keyword">int</span> inStart<span class="token punctuation">,</span> <span class="token keyword">int</span> inEnd<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
@@ -719,7 +719,7 @@
 <blockquote>
 <p>eg：根据前后序序列构造二叉树中，我们假设前序遍历的第二个元素是左子树的根节点，但实际上左子树可能是空指针，这个元素可能是右子树的根节点。由于这里无法确切进行判断，所以导致了最终答案的不唯一。</p>
 </blockquote>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/dog.3pyl3rpl47pc.gif"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/dog.3pyl3rpl47pc.gif"></p>
 
             </div>
             <hr/>

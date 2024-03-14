@@ -513,9 +513,9 @@ java已经将常见的数据结构实现了封装成集合类，我们只需要�
 Collection集合和Map集合没有关系，二者独立存在。
 </code></pre>
 <h4>Collection继承结构图(常用部分)<h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1ejc2t4pian4.png" alt="Collection的继承结构图"><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1ejc2t4pian4.png" alt="Collection的继承结构图"><br>
 <h4>Map继承结构图(常用部分)：<h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.547v1dewazk0.png" alt="Map的继承结构图"><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.547v1dewazk0.png" alt="Map的继承结构图"><br>
 <br>
 <h3>Map接口中常用方法</h3>
 <h4>要点</h4>
@@ -564,7 +564,7 @@ Collection集合和Map集合没有关系，二者独立存在。
             注意:Map集合通过entrySet()方法转换成的这个Set集合，Set集合中元素的类型是Map.Entry&lt;K,V&gt;,
                 Map.Entry和String一样，都是一种类型的名字，只不过Map.Entry是Map中的静态内部类
 </code></pre>
-<p>Map.Entry源码：<br><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1dpzr889zuf4.png" alt=""><br></p>
+<p>Map.Entry源码：<br><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1dpzr889zuf4.png" alt=""><br></p>
 <h4>Map集合的遍历(重要！！！)</h4>
 
 <pre><code>public class MapTest&#123;
@@ -703,7 +703,7 @@ for(Map.Entry&lt;Integer,String&gt; node : set)&#123;
     在JDK8之后，如果哈希表单向链表中元素超过8个，单向链表会变成红黑树结构，
     当红黑树上的结点数量小于6时，会重新把红黑树变成单向链表。这样缩小扫描范围，提高检索效率。
 </code></pre>
-<p>HashMap中Node的结构：<br><br><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1eml1x8o0zls.png" alt="Node"><br><br>HashMap中Node的源码：<br><br><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1dpzr889zuf4.png" alt=""><br></p>
+<p>HashMap中Node的结构：<br><br><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1eml1x8o0zls.png" alt="Node"><br><br>HashMap中Node的源码：<br><br><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1dpzr889zuf4.png" alt=""><br></p>
 <h4>实例</h4>
 
 <pre><code>public class HashMapTest01 &#123;

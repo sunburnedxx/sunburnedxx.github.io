@@ -517,7 +517,7 @@
 <h3>图的邻接表储存</h3>
     <p>&nbsp&nbsp&nbsp&nbsp图是一个多对多的关系，那么如何将图中的各个顶点储存并且可以表现顶点与顶点之间的关系呢？<br>
     这里我们介绍邻接表的储存方式：<br>将图的所有顶点储存在一个结构体数组中，每个顶点结构体包括顶点数据和一个指向顶点邻接顶点的指针域，而邻接顶点结点包括邻接顶点的数据和指向下一个邻接结点的指针，这样一来一个顶点的所有邻接顶点就构成了一个链表。此种储存方式中，通过顶点构成的数组的下标可以不重复地找到所有顶点，而每个顶点的邻接顶点可以通过顶点的指针域指向的链表找到，这样既可以得到所有顶点的数据又可以很清晰地表示顶点与顶点之间的关系。邻接表适合稀疏图。<br></p> 
-    <img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.58cn38kqobgg.png" alt="邻接表储存图示"> <br><br>
+    <img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.58cn38kqobgg.png" alt="邻接表储存图示"> <br><br>
     代码：
 
 <pre><code>    //先定义边表的边结点类型ArcNode
@@ -586,7 +586,7 @@ ALGraph crateGraph(char* fn)
 <h4>深搜（DFS）</h4>
 <strong>大概思路</strong>：<br> 图的深搜类似于树的前序遍历，先访问一个未被访问过的顶点，访问它的一个邻接顶点，访问邻接顶点的一个邻接顶点，将访问过的顶点标记，若遇到访问过的顶点则回到上一个顶点，访问上一个顶点的另一个邻接顶点，直到所有的相邻的顶点均被访问。从上述可以看出，深搜可以将所有连续相邻的顶点访问到，如果是连通图一次深搜就可以将所有顶点访问到，而对于非连通图一次深搜是不能将所有顶点都访问到。<br>
 <strong>连接表分析：</strong> <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp eg：对于<br><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.58cn38kqobgg.png" alt="连接表"> <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp eg：对于<br><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.58cn38kqobgg.png" alt="连接表"> <br>
 初始时所有顶点都未被访问过，则访问过程如下：<br>
 <ol>
     <li>从A开始，在顶点数组中找到A，访问A，标记A，在A的边链表中找到A的邻接顶点B</li>

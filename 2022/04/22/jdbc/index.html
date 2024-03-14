@@ -513,7 +513,7 @@
 <ul>
 <li>总结如下：</li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.4rub99q6tkw0.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.4rub99q6tkw0.webp"></p>
 <h3 id="1-4-JDBC体系结构"><a href="#1-4-JDBC体系结构" class="headerlink" title="1.4 JDBC体系结构"></a>1.4 JDBC体系结构</h3><ul>
 <li>JDBC接口（API）包括两个层次：<ul>
 <li><strong>面向应用的API</strong>：Java API，抽象接口，供应用程序开发人员使用（连接数据库，执行SQL语句，获得结果）。</li>
@@ -525,7 +525,7 @@
 <p><strong>JDBC是sun公司提供一套用于数据库操作的接口，java程序员只需要面向这套接口编程即可。</strong></p>
 <p><strong>不同的数据库厂商，需要针对这套接口，提供不同实现。不同的实现的集合，即为不同数据库的驱动。																————面向接口编程</strong></p>
 </blockquote>
-<h3 id="1-5-JDBC程序编写步骤"><a href="#1-5-JDBC程序编写步骤" class="headerlink" title="1.5 JDBC程序编写步骤"></a>1.5 JDBC程序编写步骤</h3><p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.68itsy7016gw.webp"></p>
+<h3 id="1-5-JDBC程序编写步骤"><a href="#1-5-JDBC程序编写步骤" class="headerlink" title="1.5 JDBC程序编写步骤"></a>1.5 JDBC程序编写步骤</h3><p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.68itsy7016gw.webp"></p>
 <blockquote>
 <p>补充：ODBC(<strong>Open Database Connectivity</strong>，开放式数据库连接)，是微软在Windows平台下推出的。使用者在程序中只需要调用ODBC API，由 ODBC 驱动程序将调用转换成为对特定的数据库的调用请求。</p>
 </blockquote>
@@ -552,7 +552,7 @@
 <li><p><strong>使用DriverManager.registerDriver(com.mysql.jdbc.Driver)来注册驱动</strong></p>
 </li>
 <li><p>通常不用显式调用 DriverManager 类的 registerDriver() 方法来注册驱动程序类的实例，因为 Driver 接口的驱动程序类<strong>都</strong>包含了静态代码块，在这个静态代码块中，会调用 DriverManager.registerDriver() 方法来注册自身的一个实例。下图是MySQL的Driver实现类的源码：</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.2gqd350uqg4.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.2gqd350uqg4.webp"></p>
 </li>
 </ul>
 </li>
@@ -569,7 +569,7 @@
 </ul>
 </li>
 <li><p>举例：</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.7a82080h84qo.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.7a82080h84qo.webp"></p>
 </li>
 <li><p><strong>几种常用数据库的 JDBC URL</strong></p>
 <ul>
@@ -763,7 +763,7 @@
 <li>PrepatedStatement：SQL 语句被预编译并存储在此对象中，可以使用此对象多次高效地执行该语句。</li>
 <li>CallableStatement：用于执行 SQL 存储过程</li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.10ev8byxtar4.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.10ev8byxtar4.webp"></p>
 </li>
 </ul>
 <h3 id="3-2-使用Statement操作数据表的弊端"><a href="#3-2-使用Statement操作数据表的弊端" class="headerlink" title="3.2 使用Statement操作数据表的弊端"></a>3.2 使用Statement操作数据表的弊端</h3><ul>
@@ -899,7 +899,7 @@ ResultSet executeQuery<span class="token punctuation">(</span>String sql<span cl
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>综上：</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1mv25vf32ae8.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1mv25vf32ae8.webp"></p>
 <h3 id="3-3-PreparedStatement的使用"><a href="#3-3-PreparedStatement的使用" class="headerlink" title="3.3 PreparedStatement的使用"></a>3.3 PreparedStatement的使用</h3><h4 id="3-3-1-PreparedStatement介绍"><a href="#3-3-1-PreparedStatement介绍" class="headerlink" title="3.3.1 PreparedStatement介绍"></a>3.3.1 PreparedStatement介绍</h4><ul>
 <li><p>可以通过调用 Connection 对象的 <strong>preparedStatement(String sql)</strong> 方法获取 PreparedStatement 对象</p>
 </li>
@@ -1079,7 +1079,7 @@ ResultSet executeQuery<span class="token punctuation">(</span>String sql<span cl
 <li><p>…</p>
 </li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.6n0ak2bmc5xc.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.6n0ak2bmc5xc.webp"></p>
 </li>
 </ul>
 <h4 id="3-4-2-ResultSetMetaData"><a href="#3-4-2-ResultSetMetaData" class="headerlink" title="3.4.2 ResultSetMetaData"></a>3.4.2 ResultSetMetaData</h4><ul>
@@ -1104,7 +1104,7 @@ ResultSet executeQuery<span class="token punctuation">(</span>String sql<span cl
 </ul>
 </li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.6f6vsjks5r40.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.6f6vsjks5r40.webp"></p>
 <p><strong>问题1：得到结果集后, 如何知道该结果集中有哪些列 ？ 列名是什么？</strong></p>
 <p>​     需要使用一个描述 ResultSet 的对象， 即 ResultSetMetaData</p>
 <p><strong>问题2：关于ResultSetMetaData</strong></p>
@@ -1113,7 +1113,7 @@ ResultSet executeQuery<span class="token punctuation">(</span>String sql<span cl
 <li><strong>获取 ResultSet 中有多少列</strong>：调用 ResultSetMetaData 的 getColumnCount() 方法</li>
 <li><strong>获取 ResultSet 每一列的列的别名是什么</strong>：调用 ResultSetMetaData 的getColumnLabel() 方法</li>
 </ol>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1sniav5q63nk.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1sniav5q63nk.webp"></p>
 <h3 id="3-5-资源的释放"><a href="#3-5-资源的释放" class="headerlink" title="3.5 资源的释放"></a>3.5 资源的释放</h3><ul>
 <li>释放ResultSet, Statement,Connection。</li>
 <li>数据库连接（Connection）是非常稀有的资源，用完后必须马上释放，如果Connection不能及时正确的关闭将导致系统宕机。Connection的使用原则是<strong>尽量晚创建，尽量早的释放。</strong></li>
@@ -1156,7 +1156,7 @@ ResultSet executeQuery<span class="token punctuation">(</span>String sql<span cl
 <li><p>MySQL的四种BLOB类型(除了在存储的最大信息量上不同外，他们是等同的)</p>
 </li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.24t2ytbjlasg.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.24t2ytbjlasg.webp"></p>
 <ul>
 <li>实际使用中根据需要存入的数据大小定义不同的BLOB类型。</li>
 <li>需要注意的是：如果存储的文件过大，数据库的性能会下降。</li>
@@ -1462,7 +1462,7 @@ JDBCUtils<span class="token punctuation">.</span><span class="token function">cl
 </ul>
 <h4 id="6-3-2-四种隔离级别"><a href="#6-3-2-四种隔离级别" class="headerlink" title="6.3.2 四种隔离级别"></a>6.3.2 四种隔离级别</h4><ul>
 <li><p>数据库提供的4种事务隔离级别：</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.2z1ekyc7yw3k.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.2z1ekyc7yw3k.webp"></p>
 </li>
 <li><p>Oracle 支持的 2 种事务隔离级别：<strong>READ COMMITED</strong>, SERIALIZABLE。 Oracle 默认的事务隔离级别为: <strong>READ COMMITED</strong> 。</p>
 </li>
@@ -1506,11 +1506,11 @@ grant select,insert,delete,update on atguigudb.* to tom@localhost identified by 
 <li>作用：为了实现功能的模块化，更有利于代码的维护和升级。</li>
 <li>下面是JavaWeb阶段书城项目中DAO使用的体现：</li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.4zaq4cugg0ow.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.4zaq4cugg0ow.webp"></p>
 <ul>
 <li>层次结构：</li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.asnj5yohtmw.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.asnj5yohtmw.webp"></p>
 <h3 id="【BaseDAO-java】"><a href="#【BaseDAO-java】" class="headerlink" title="【BaseDAO.java】"></a>【BaseDAO.java】</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>tu<span class="token punctuation">.</span>bookstore<span class="token punctuation">.</span>dao<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span>ParameterizedType<span class="token punctuation">;</span>
@@ -1918,11 +1918,11 @@ grant select,insert,delete,update on atguigudb.* to tom@localhost identified by 
 <li><p>数据库连接池在初始化时将创建一定数量的数据库连接放到连接池中，这些数据库连接的数量是由<strong>最小数据库连接数来设定</strong>的。无论这些数据库连接是否被使用，连接池都将一直保证至少拥有这么多的连接数量。连接池的<strong>最大数据库连接数量</strong>限定了这个连接池能占有的最大连接数，当应用程序向连接池请求的连接数超过最大连接数量时，这些请求将被加入到等待队列中。</p>
 </li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1puvm3z4x468.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1puvm3z4x468.webp"></p>
 <ul>
 <li><strong>工作原理：</strong></li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.2ayx6ofq7zsw.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.2ayx6ofq7zsw.webp"></p>
 <ul>
 <li><p><strong>数据库连接池技术的优点</strong></p>
 <p><strong>1. 资源重用</strong></p>
@@ -2300,8 +2300,8 @@ filters<span class="token operator">=</span>wall
 <li><p>API包说明：</p>
 </li>
 </ul>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.43i6ha1i3vcw.webp"></p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.gjfess6b28w.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.43i6ha1i3vcw.webp"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.gjfess6b28w.webp"></p>
 <h3 id="9-2-主要API的使用"><a href="#9-2-主要API的使用" class="headerlink" title="9.2 主要API的使用"></a>9.2 主要API的使用</h3><h4 id="9-2-1-DbUtils"><a href="#9-2-1-DbUtils" class="headerlink" title="9.2.1 DbUtils"></a>9.2.1 DbUtils</h4><ul>
 <li>DbUtils ：提供如关闭连接、装载JDBC驱动程序等常规工作的工具类，里面的所有方法都是静态的。主要方法如下：<ul>
 <li><strong>public static void close(…) throws java.sql.SQLException</strong>：　DbUtils类提供了三个重载的关闭方法。这些方法检查所提供的参数是不是NULL，如果不是的话，它们就关闭Connection、Statement和ResultSet。</li>

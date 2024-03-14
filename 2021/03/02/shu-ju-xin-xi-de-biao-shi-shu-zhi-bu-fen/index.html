@@ -501,28 +501,28 @@
 <h3>有符号数</h3>
 <p>有符号数包括符号和数值两部分，保存在存储器或寄存器中，最高位为符号位，0表示正数，1表示负，<strong>在计算机中没有专门的硬件用于表示小数点，计算机中，定点小数的小数点默认在符号位后面，定点整数的小数点默认在最低位后面</strong></p>
 <h4>机器数和真值</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.5kafpq0j94ow.png" alt="机器数和真值"><br><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.5kafpq0j94ow.png" alt="机器数和真值"><br><br>
 将符号数值化的表示方法为原码表示<br><br>
 <h3>原码表示方法</h3><br>
 原码即带符号的绝对值表示，正数的原码是它本身，0可以是正的也可以是负的，故0的原码有两种形式。为了方便理解，下面在原码的表示中，用逗号隔开符号位和数值，小数则标出小数点，<strong>但是在实际硬件中是没有逗号和小数点的存储的<strong>。原码是保存在计算机中的数，<strong>求某一个真值的原码表示形式必须知道机器数的数值长度是多少且该长度包含了一个符号位</strong> <br>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.4m31n7597tog.png" alt="">
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.10u8700lnfb4.png" alt=""><br><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.4m31n7597tog.png" alt="">
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.10u8700lnfb4.png" alt=""><br><br>
 其实简单来说<br>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1ll2rwz5oytc.png" alt=""><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1ll2rwz5oytc.png" alt=""><br>
 定点小数x的表现形式为0.***），定点整数的表现形式为***(位数不限),所有数都可以用定点小数和定点整数相组合得到。<br><br>
 原码的运算较麻烦，符号位不参加运算（符号位会受数值进位的的影响，故符号位不参与运算），加法运算器要“同号求和，异号求差”，减法运算器要“同号求差，异号求和”，求差的时候还要比较两数的大小，用大数减去小数，再确定符号位。很麻烦，那么我们能不能将减法可以变成加法，只做加法呢？我们需要找到一个与负数等价的正数将减法运算转变成加法运算，这就引出了补码。<br><br>
 <h3>补码表示法</h3>
 <h4>补的概念</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.6zbksyqx60ao.png" alt=""><br><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.6zbksyqx60ao.png" alt=""><br><br>
 
 <p>**<strong>一个负数加上“模”即得该负数的补数，一个正数和一个负数互为补数时它们的绝对值之和即为模数。正数的补数为它本身</strong><br></p>
 <h4>补码的定义</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.2s5kjtwr4rgg.png" alt=""><br>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1jvmvojwz2cg.png" alt=""><br><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.2s5kjtwr4rgg.png" alt=""><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1jvmvojwz2cg.png" alt=""><br><br>
 <strong>n位2进制整数数的模为2^(n+1),2进制定点小数的模为2</strong><br><br>
 <h4>补码的便捷求法</h4>
 <h4>反码法</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.122frljmikwg.png" alt="">
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.122frljmikwg.png" alt="">
 将10000变成11111+1来运算就不会产生借位，方便运算。<br>
 
 <h4>扫描法</h4>
@@ -531,17 +531,17 @@
 <h3>反码的表示法</h3>
 <h4>定义</h4>
 将原码符号位不变，数值位各位取反<br><br>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.6a7ryqvwwg3k.png" alt=""><br>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.xgbumjf4aio.png" alt="">
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.6a7ryqvwwg3k.png" alt=""><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.xgbumjf4aio.png" alt="">
 <br>
 <br>Eg
 <br>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.48a3itabk740.png" alt=""><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.48a3itabk740.png" alt=""><br>
 由上图可看出，补码的大小顺序和对应真值的大小顺序并不一定相同，如对于二进制代码01111111和10000000，无符号数对应的真值分别为127、128显然127小于128 大小顺序正确可以直接比较，而补码对应的真值为127、-128，127并不小于-128，大小顺序并不和对应真值大小顺序相同，不能根据补码直接比较真值的大小。因此需要对补码进行修正，使其大小顺序和对应真值的大小顺序相同，由此引出移码。<br><br>
 <h3>移码表示法</h3>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.210lzv7787sw.png" alt="">
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.210lzv7787sw.png" alt="">
 <h4>移码的定义</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.7ijs2oxxugsg.png" alt=""><br><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.7ijs2oxxugsg.png" alt=""><br><br>
 <strong>移码没有小数形式，都是整数，可以直接比较大小，因此移码通常用来表示浮点数的阶码。最小真值-2^n的移码为全0</strong>给出不同真值，分别求对应的移码和补码，可得出 <strong>移码和补码的符号位相反，数值位相同</strong><br>
 <strong>0的移码只有一种形式</strong><br><br>
 <h2>数的定点表示和浮点表示</h2>
@@ -549,20 +549,20 @@
 <p>计算机中没有硬件来表示小数点，小数点的位置由设计计算机体系结构人员决定，一般小数 小数点的位置默认为符号位后面数值位前面，称为定点小数，该机器称为小数定点机；整数 小数点的位置默认为数值部分后面，称为定点整数，该机器称为整数定点机</p>
 <h3>数的浮点表示</h3>
  <p> &nbsp&nbsp&nbsp当计算机需要表示一个位数十分大的数，而该数的高位大多均是零，那么就需要很大的存储单元，而该数可能只会用到一次，就会造成存储容量的浪费。因此我们引入浮点数表示，提高存储容量的利用率。</p>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.5o97ja4g7ncw.png" alt="">
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.5o97ja4g7ncw.png" alt="">
 在计算机中只需保存尾数、阶数、基数即可保存一个浮点数。<br><br>
 <h4>浮点数的表示形式</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.6798lfjm8cqo.png" alt=""><br><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.6798lfjm8cqo.png" alt=""><br><br>
 <h4>浮点数的表示范围</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.6bb9e3hrt1xc.png" alt="">
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.6bb9e3hrt1xc.png" alt="">
 上溢：阶码大于最大阶码 ————————————————— 发生上溢，计算机系统按计算出错处理
 下溢：阶码小于最小阶码 ————————————————— 发生下溢，计算机系统按机器零处理<br><br>
 <h4>浮点数的规格化表示</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1j9dryxjc6rk.png" alt=""><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1j9dryxjc6rk.png" alt=""><br>
 <strong>所谓规格化处理就是使得尾数真值最高有效位为1，也就是尾数的绝对值应大于或等于（0.1）（2进制），（0.5）（十进制）</strong><br><br>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.eaoqqruly74.png" alt=""><br><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.eaoqqruly74.png" alt=""><br><br>
 <h4>IEEE754标准</h4>
-<img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/image.1d92289kx97k.png" alt=""><br>
+<img src="https://github.com/sunburnedxx/BlogImages/raw/main/image.1d92289kx97k.png" alt=""><br>
 IEE754标准中阶码用移码表示，而移码的偏移量由阶码的位数及浮点数的精度决定，eg:8位阶码单精度浮点数对应移码的偏移量为127。具体标准可自行查询，这里不做过多说明。
 </body>
 </html>

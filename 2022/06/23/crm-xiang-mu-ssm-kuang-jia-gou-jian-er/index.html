@@ -492,9 +492,9 @@
 <li>登录验证</li>
 </ul>
 <p>最终效果：</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/QQ%E5%BD%95%E5%B1%8F.3r3n8y9cdd4w.gif"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/QQ%E5%BD%95%E5%B1%8F.3r3n8y9cdd4w.gif"></p>
 <h3 id="首页功能"><a href="#首页功能" class="headerlink" title="首页功能"></a>首页功能</h3><h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><p>用户访问项目首页，首先进入登录页面。</p>
-<h4 id="时序-amp-流程"><a href="#时序-amp-流程" class="headerlink" title="时序&amp;流程"></a>时序&amp;流程</h4><p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/20220619/%E9%A6%96%E9%A1%B5-%E6%B5%81%E7%A8%8B%E5%9B%BE.637pj9v46ku8.webp"></p>
+<h4 id="时序-amp-流程"><a href="#时序-amp-流程" class="headerlink" title="时序&amp;流程"></a>时序&amp;流程</h4><p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/20220619/%E9%A6%96%E9%A1%B5-%E6%B5%81%E7%A8%8B%E5%9B%BE.637pj9v46ku8.webp"></p>
 <p>** 前端要先访问首页index.jsp，再跳转到登录页面login.jsp,但页面资源都WEB-INF中不能直接访问,只能通过代码访问，通过Controller层请求页面，所以要在后端要做两件事,先根据用户输入跳转到首页,再根据首页请求跳转到登录页面。</p>
 <blockquote>
 <p>Tomcat的web.xml配置在<welcome-file-list>标签中规定了启动要显示的页面为首页</p>
@@ -550,7 +550,7 @@
 <li><p>登录失败,页面不跳转,提示信息</p>
 </li>
 </ul>
-<h4 id="时序-amp-流程-1"><a href="#时序-amp-流程-1" class="headerlink" title="时序&amp;流程"></a>时序&amp;流程</h4><p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/20220619/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95.1u5rfos8p5z4.webp"></p>
+<h4 id="时序-amp-流程-1"><a href="#时序-amp-流程-1" class="headerlink" title="时序&amp;流程"></a>时序&amp;流程</h4><p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/20220619/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95.1u5rfos8p5z4.webp"></p>
 <h4 id="Mapper层"><a href="#Mapper层" class="headerlink" title="Mapper层"></a>Mapper层</h4><p><strong>UserMapper.java</strong></p>
 <p>​	创建查询封装好的用户名和密码的方法</p>
 <pre class="line-numbers language-java"><code class="language-java">User <span class="token function">selectUserByLoginActAndPwd</span><span class="token punctuation">(</span>Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span>Object<span class="token operator">></span> map<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -703,7 +703,7 @@ $("#loginBtn").click(function () &#123;
 <li>安全退出，清空cookie，销毁session</li>
 <li>退出完成，跳转到首页</li>
 </ul>
-<h4 id="时序-amp-流程-2"><a href="#时序-amp-流程-2" class="headerlink" title="时序&amp;流程"></a>时序&amp;流程</h4><p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/20220619/%E5%AE%89%E5%85%A8%E9%80%80%E5%87%BA.5n4qoarvrc3k.webp"></p>
+<h4 id="时序-amp-流程-2"><a href="#时序-amp-流程-2" class="headerlink" title="时序&amp;流程"></a>时序&amp;流程</h4><p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/20220619/%E5%AE%89%E5%85%A8%E9%80%80%E5%87%BA.5n4qoarvrc3k.webp"></p>
 <h4 id="Controller层-2"><a href="#Controller层-2" class="headerlink" title="Controller层"></a>Controller层</h4><p><strong>UserController</strong></p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/settings/qx/user/logout.do"</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> String <span class="token function">logout</span><span class="token punctuation">(</span>HttpServletResponse response<span class="token punctuation">,</span> HttpSession session<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
@@ -872,7 +872,7 @@ window<span class="token punctuation">.</span>location<span class="token punctua
 </li>
 </ul>
 <p>功能上拦截器是高配版的过滤器，但他们的底层实现不同，具体请看–》</p>
-<p><img src="https://cdn.staticaly.com/gh/sunburnedxx/BlogImages@main/bird.6fum2gvcv37k.gif"></p>
+<p><img src="https://github.com/sunburnedxx/BlogImages/raw/main/bird.6fum2gvcv37k.gif"></p>
 
             </div>
             <hr/>
